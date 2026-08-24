@@ -6,7 +6,7 @@ rd_sample). Writes RESULTS + CSV. All numbers script output."""
 import csv
 from collections import defaultdict
 EL="inputs/elections"
-rows=list(csv.DictReader(open(f"{EL}/analysis/referendum_issuance_link.csv")))
+rows=list(csv.DictReader(open(f"analysis/referendum_issuance_link.csv")))
 def f(x):
     try: return float(x)
     except: return None
@@ -43,7 +43,7 @@ L.append("\n## Read")
 L.append("Dense cells (both P and F in the dozens–hundreds at ±5pp) support a local RD /")
 L.append("event study; thin cells fall back to matched DiD (match on entity, purpose, amount")
 L.append("decile, state, year) per the brief. See per-cell table above.")
-open(f"{EL}/analysis/step0/E1_RESULTS.md","w").write("\n".join(L)+"\n")
-with open(f"{EL}/analysis/step0/e1_margin_bands.csv","w",newline="") as fo:
+open(f"analysis/step0/E1_RESULTS.md","w").write("\n".join(L)+"\n")
+with open(f"analysis/step0/e1_margin_bands.csv","w",newline="") as fo:
     csv.writer(fo).writerows(out)
 print("\n".join(L))

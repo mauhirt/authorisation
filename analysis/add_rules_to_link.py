@@ -9,7 +9,7 @@ go_debt (the HMS-comparable treatment); CA keeps CDIAC's per-measure threshold, 
 the threshold-centered margin already in the panel stays authoritative for CA."""
 import csv
 EL="inputs/elections"
-LINK=f"{EL}/analysis/referendum_issuance_link.csv"
+LINK=f"analysis/referendum_issuance_link.csv"
 RULES=f"{EL}/rules/state_debt_rules.csv"
 CT2ENT={"municipal":"municipality","township":"municipality","county":"county",
         "school_district":"school_district","dep_school_district":"school_district",

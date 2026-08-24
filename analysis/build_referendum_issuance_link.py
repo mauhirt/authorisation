@@ -16,7 +16,7 @@ from collections import defaultdict
 XW="inputs/elections/crosswalk/referendum_unit_crosswalk.csv"
 EL="inputs/elections"
 AUTH="inputs/corpus/auth_os.csv.gz"
-OUT=f"{EL}/analysis/referendum_issuance_link.csv"
+OUT=f"analysis/referendum_issuance_link.csv"
 WINDOW_Y=6
 
 def money(s):

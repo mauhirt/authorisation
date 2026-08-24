@@ -97,5 +97,5 @@ L.append("- Covenant fields exist as `has_*` booleans (not `additional_bonds_tes
 L.append("- Corpus `election_date` coverage is thin (~5%); the auth tier-2 pass is expected to raise it.")
 L.append("- Scope change vs prior work: BRIEF fixes the causal core at **CA/WI/TX**; MA/LA/NC/IL/IN/MN are extra coverage, not required.")
 
-open(f"{EL}/analysis/step0/RESULTS.md","w").write("\n".join(L)+"\n")
+open(f"analysis/step0/RESULTS.md","w").write("\n".join(L)+"\n")
 print("\n".join(L))
