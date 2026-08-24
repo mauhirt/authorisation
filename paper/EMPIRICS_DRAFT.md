@@ -1,469 +1,468 @@
-# Who Must Agree — Empirical Sections (full draft for review)
+# Who Must Agree: Empirical Sections (round-3 regeneration)
 
-*Draft 2026-08-24, from repo state through the N6 commit. Every number traces to
-a committed RESULTS file (script→results map in `analysis/ANALYSIS_REVIEW.md`).
-Bracketed **[REVIEW]** notes mark author decisions; **[PENDING]** marks results
-that cannot be cited as final until the named data pass lands. Table/figure
-callouts name the exhibit that fills the slot.*
+*Draft 2026-08-24 (round 3). Every number traces to a committed RESULTS file
+(script-to-results map in `analysis/ANALYSIS_REVIEW.md`). **[PENDING]** marks
+claims held on a named data pass. The honesty record (nulls, pending items,
+data limits) now lives in the online appendix
+(`paper/ONLINE_APPENDIX_HONESTY.md`). House style applied throughout:
+impersonal constructions, no em dashes, British spelling.*
 
 ---
 
 ## 4 · Data: observing the consent requirement end to end
 
-Testing a theory of authorization rules requires observing three things that no
+Testing a theory of authorisation rules requires observing three things that no
 single dataset contains: the **rule** (who must agree, at what threshold), the
 **asking** (what governments put before voters, and what happened), and the
 **borrowing** (what was ultimately issued, under what security, for what
-purpose, and — critically — on whose authority). We assemble all three at the
-level of the individual local government, nationwide, and at the level of the
-individual referendum in nine states.
+purpose, and, critically, on whose authority). The analysis assembles all three
+at the level of the individual local government nationwide, and at the level of
+the individual referendum in nine states.
 
-**Referenda.** We compile 47,235 local bond and tax referenda from nine state
-administrative sources: California (CDIAC), Texas (Bond Review Board), Wisconsin
-(DPI), Louisiana (Secretary of State), North Carolina (NCSBE), Massachusetts
-(DLS Proposition 2½ databank), Minnesota, Illinois, and Indiana. Each measure is
-crosswalked to its Census of Governments unit: 40,924 (86.6%) resolve to a
-government ID, with exact tiers verified at ~100% and the fuzzy-match tier
-independently audited by a research assistant at 95.1% accuracy. Restricting to
-measures at a *genuine mandatory-ballot statutory cutoff* leaves 23,577; the
-regression-discontinuity frame is its general-obligation-bond subset, **11,889
-GO measures** (Texas 8,062, California 2,189, Wisconsin 999, Louisiana 361,
-North Carolina 278) across three thresholds: 50% (TX, WI, LA, NC), 55%
-(California schools), and 66.7% (California non-school), with California
-thresholds assigned per measure from CDIAC.
+**Referenda.** The referendum panel compiles 47,235 local bond and tax measures
+from nine state administrative sources: California (CDIAC), Texas (Bond Review
+Board), Wisconsin (DPI), Louisiana (Secretary of State), North Carolina
+(NCSBE), Massachusetts (DLS Proposition 2½ databank), Minnesota, Illinois and
+Indiana. Each measure is crosswalked to its Census of Governments unit: 40,924
+(86.6%) resolve to a government identifier, with exact tiers verified at
+approximately 100% and the fuzzy-match tier independently audited at 95.1%
+accuracy. Restricting to measures at a genuine mandatory-ballot statutory
+cutoff leaves 23,577; the regression-discontinuity frame is its
+general-obligation subset, **11,889 GO measures** (Texas 8,062, California
+2,189, Wisconsin 999, Louisiana 361, North Carolina 278) across three
+thresholds: 50% (TX, WI, LA, NC), 55% (California schools) and 66.7%
+(California non-school), with California thresholds assigned per measure from
+CDIAC.
 
-**Borrowing, with its authority attached.** The outcome side combines two
-independent sources. First, a corpus of 258,762 official statements (2005–2025,
-all fifty states; 43,030 issuers), from which we extract, for every issue: par,
-security pledge class (GO / revenue / lease / special tax), use-of-proceeds
-lines classified into 118 functional activities, and — the variable this paper
-turns on — the **authorization mode evidenced in the document itself**: voter
-approval (with the election date the OS cites), governing-board action, or
-statutory authority. Second, the Census Government Finance Database (1967–2023;
-2.1 million local unit-years) and its 2022–24 public-use continuation, giving a
-survey-based issuance measure that includes the bank loans and private
-placements no official statement records. The two sides share the Census
-government ID, so every referendum, every OS, and every survey year of the same
-government link deterministically.
+**The outcome architecture.** The outcome of record throughout is the
+**official-statement corpus**: 258,762 official statements (2005–2025, all
+fifty states; 43,030 issuers), from which are extracted, for every issue, the
+par amount, the security pledge class (GO, revenue, lease, special tax),
+use-of-proceeds lines classified into 118 functional activities, and the
+variable the paper turns on, the **authorisation mode evidenced in the document
+itself**: voter approval (with the election date the document cites), governing
+board action, or statutory authority. It is the richest available measure of
+what was borrowed, for what, and on whose authority, and every headline
+provision claim in the paper (issuance, channel, purpose, project continuation)
+rides on it. The Census survey data enter in two deliberately subordinated
+roles, each occupying a single table row: the Government Finance Database debt
+items (1967–2023; 2.1 million local unit-years, extended to fiscal 2024 by the
+public-use continuation) serve one purpose, a survivorship robustness check on
+the disclosure corpus; and the survey capital-outlay items serve one purpose,
+a bound on the channel the corpus cannot see by construction, capital spending
+without debt (the pay-go bound, Section 6). Neither survey use displaces the
+corpus as the outcome of record.
 
-**Validation.** Because the authorization mode is extracted, not administrative,
-we validate it against the election record before using it (Table 4.1). Where an
-OS cites an election date, that date matches a referendum we independently
-observe for the same unit 67.9% of the time pooled — and 95.4% in Wisconsin,
-the state whose registry is known-complete; conditional on a match, 91.3% of
-cited elections are *passed* measures (98.0% in California, 98.8% in North
-Carolina). Shortfalls concentrate exactly where registry coverage is
-known-short (Minnesota's registry begins in 2020; Massachusetts dates votes at
-month grain), and the voter-mode support rate (76.2% of voter-mode new-money
-documents have a passed referendum within six years in our records) is a lower
-bound driven by authorizations older than our windows — Texas districts issue
-against decade-old voter authorizations in series. The survey side is validated
-in the other direction: the 2022 public-use file's issuance item matches the GFD
-within 0.5% for 99.9% of bridged units.
+**Validation.** Because the authorisation mode is extracted rather than
+administrative, it is validated against the election record before use
+(Table 4.1). Where an official statement cites an election date, that date
+matches an independently observed referendum for the same unit 67.9% of the
+time pooled, and 95.4% in Wisconsin, the state whose registry is
+known-complete; conditional on a match, 91.3% of cited elections are passed
+measures (98.0% in California, 98.8% in North Carolina). Shortfalls
+concentrate exactly where registry coverage is known-short (Minnesota's
+registry begins in 2020; Massachusetts dates votes at month grain), and the
+voter-mode support rate (76.2% of voter-mode new-money documents have a passed
+referendum within six years in the records) is a lower bound driven by
+authorisations older than the observation windows: Texas districts issue
+against decade-old voter authorisations in series. The survey side is
+validated in the other direction: the 2022 public-use file's issuance item
+matches the GFD within 0.5% for 99.9% of bridged units.
 
-**The rules panel.** State × entity-type × purpose × year coding of referendum
-requirements (threshold, ballot mandate, stringency). **[PENDING]** The panel is
-a first-pass machine coding cross-validated at 78% (29/37 codable states)
-against an independent hand coding; a 21-cell human verification pass is in
-progress. Until it lands, every rule coefficient below is presented as a
-*first stage* — the association between the coded rule and observed
-authorization behavior — never as a causal estimate. The convention is marked
+**The rules panel.** State by entity-type by purpose by year coding of
+referendum requirements (threshold, ballot mandate, stringency). **[PENDING]**
+The panel is a first-pass machine coding cross-validated at 78% (29/37 codable
+states) against an independent hand coding; a 21-cell human verification pass
+is with the owner. Until it lands, every rule coefficient below is presented
+as a first stage (the association between the coded rule and observed
+authorisation behaviour), never as a causal estimate. The convention is marked
 in each table note.
 
-> **Table 4.1** Validation of extracted authorization fields (by state: date
-> match, matched→passed, voter-mode support, council-mode consistency).
-> **Table 4.2** Frame construction (universe → crosswalked → cutoff sample → GO
-> RD frame), with per-state counts.
+> **Table 4.1** Validation of extracted authorisation fields. **Table 4.2**
+> Frame construction (universe, crosswalk, cutoff sample, GO RD frame), with
+> per-state counts.
 
 ---
 
-## 5 · The institutional landscape: what consent governs, and for whom
+## 5 · The institutional landscape and the fifty-state first stage
 
-Before estimating anything, we document the object. Three facts organize
-everything that follows.
+Before estimating anything, the object itself is documented; the coded rules
+are then confronted with observed behaviour across the whole local state.
+
+### 5.1 Three facts about the landscape
 
 **Fact 1: entity types hold radically different menus of exits from the voted
 channel.** Table 5.1 tabulates, for the national new-money corpus (59,912
-canonical issues), the share of determined dollars authorized *without* a vote,
+canonical issues), the share of determined dollars authorised without a vote,
 by entity type. School districts route only **29.8%** of new-money dollars
 through non-voted channels; townships 48.8%; special districts 68.5%; counties
 **80.9%**; municipalities **82.7%**; and authority-class issuers (housing,
-health-hospital, utility conduits) **96.8%**. The full matrix (security class ×
-authorization mode, per entity and rule regime) shows why: a school district's
-menu is essentially GO-or-nothing, while a city can finance most of what it
-does through revenue bonds, leases, and conduit authorities that never face an
-electorate. "Who must agree" is not one institution: it is a menu that varies
-by the kind of government doing the asking.
+health-hospital and utility conduits) **96.8%**. The full matrix (security
+class by authorisation mode, per entity and rule regime) shows why: a school
+district's menu is essentially GO-or-nothing, while a city can finance most of
+what it does through revenue bonds, leases and conduit authorities that never
+face an electorate. "Who must agree" is not one institution: it is a menu that
+varies by the kind of government doing the asking.
 
 **Fact 2: the balloted local state is the non-chargeable civic core; the
 chargeable perimeter never votes.** Classifying ballot purposes across 19,600
-bond measures, K–12 schools alone account for 38.2% of everything put before
-voters, followed by water/sewer, roads, parks, and fire protection (Table 5.2,
-Panel A). Panel B lists the corpus functions whose dollars are voted on less
-than 2% of the time: public hospitals ($197.5B of local project dollars),
-multifamily housing ($69.1B), electric generation ($67.0B), gas utilities,
-airport terminals. A $0.84B Harris County Hospital District line, San
-Francisco's multifamily housing revenue program, Energy Northwest's generation
-debt — none faced a ballot; Los Angeles Unified's $9.0B ask in 2024 did. The
-nationwide sorting is stark at the channel level: the voted channel carries
-**11.1%** chargeable dollars; the board channel 60.5%; the statutory channel
-72.5%. What the consent requirement governs, overwhelmingly, is the class of
-goods that cannot be charged to users — precisely the goods H2 says it should.
+bond measures, K-12 schools alone account for 38.2% of everything put before
+voters, followed by water and sewer, roads, parks and fire protection
+(Table 5.2, Panel A). Panel B lists the corpus functions whose dollars are
+voted on less than 2% of the time: public hospitals ($197.5B of local project
+dollars), multifamily housing ($69.1B), electric generation ($67.0B), gas
+utilities, airport terminals. A $0.84B Harris County Hospital District line,
+San Francisco's multifamily housing revenue programme, Energy Northwest's
+generation debt: none faced a ballot; Los Angeles Unified's $9.0B ask in 2024
+did. The nationwide sorting is stark at the channel level: the voted channel
+carries **11.1%** chargeable dollars, the board channel 60.5%, the statutory
+channel 72.5%. What the consent requirement governs, overwhelmingly, is the
+class of goods that cannot be charged to users, precisely the goods H2 says it
+should.
 
 **Fact 3: the same legal sentence assembles coalitions that differ by five
 orders of magnitude.** Where vote counts exist (TX, WI, LA, NC; 7,473 GO
-measures — California's CDIAC reports percentages only), the median school bond
-was decided by **768** yes-votes; the median off-cycle city measure by
-**1,179**; the median special-district election by **34**. Under the identical
-Texas 50% rule, Harris County's road program required 511,375 yes-votes of
-1,022,748 cast, while a developer municipal utility district was authorized by
-**two votes of two cast** (Table 5.3). The "coalition" a referendum requirement
-demands is not a constant of the law but a variable of the electorate the law
-convenes — the observation that motivates the heterogeneity analysis of
-Section 9. **[REVIEW: Harris-vs-MUD is the paper's most quotable exhibit —
-main text or box?]** (Texas rows with the registry's counts-unknown placeholder
-convention — 3,188 rows recorded "1–0" — are excluded and documented; no RD
-estimate is affected.)
+measures, since California's CDIAC reports percentages only), the median
+school bond was decided by **768** yes-votes, the median off-cycle city
+measure by **1,179**, and the median special-district election by **34**.
+Under the identical Texas 50% rule, Harris County's road programme required
+511,375 yes-votes of 1,022,748 cast, while a developer municipal utility
+district was authorised by **two votes of two cast** (Table 5.3). The
+coalition a referendum requirement demands is not a constant of the law but a
+variable of the electorate the law convenes, the observation that motivates
+the heterogeneity analysis of Section 8. (Texas rows carrying the registry's
+counts-unknown placeholder convention, 3,188 rows recorded "1-0", are excluded
+and documented; no RD estimate is affected.)
 
-> **Table 5.1** The menu matrix: non-voted share of new-money dollars by entity
-> type (+ security × mode detail in appendix). **Table 5.2** The balloted and
-> submerged local state. **Table 5.3** Absolute coalition sizes (votes cast,
-> yes-votes required; p10/p50/p90 by entity × election timing).
+### 5.2 The rule and the channel: the fifty-state first stage
 
----
+A panel of **90,604 local governments** (every county, municipality, township,
+school district and special district in the national GFD universe) carries the
+coded rule for its class, demographic and fiscal characteristics (population
+or enrolment; revenue, property tax, debt stock; ACS homeownership, age,
+diversity and income at place grain for cities and county grain otherwise;
+county presidential partisanship), and its borrowing 2005–25 from the corpus
+and 2005–23 from the survey. A subpanel of roughly 570 large cities adds
+form-of-government institutions, tax-and-expenditure-limit stringency,
+city-level partisanship and mayoral party. Estimation: weighted least squares
+with state-clustered standard errors, Census-region fixed effects, and the
+characteristics above as controls.
 
-## 6 · The rule and the channel: fifty-state evidence
+**The rule shows up in behaviour, most where the theory says it must.** Under
+a strict rule, the OS-evidenced voted share of determined new-money dollars is
+higher by **+0.78 for school districts (t = 7.0)**, +0.20 for special
+districts (t = 3.2), +0.17 for municipalities (t = 2.9) and +0.14 (n.s.) for
+counties (Table 5.4). Raw magnitudes tell the same story: 72.5% of school
+dollars are voted under strict rules against 7.5% under lax ones; 22.1%
+against 5.0% for cities. Figure 5.1 maps the resulting geography of consent:
+the observed voted share of local new-money debt ranges from roughly 80% in
+Oklahoma and two-thirds in Texas to essentially zero in New York,
+Pennsylvania and Kentucky. The one reversal in the class table, townships
+(18.2% strict against 46.6% non-strict), is itself diagnostic: townships
+carry a proxy (municipality) rule in the panel, and New England towns borrow
+by town-meeting vote in states coded lax for cities. The panel is signalling
+that the coding needs a township class; it is flagged rather than absorbed.
+**[PENDING: rules pass-2; the township column is on its worklist.]**
 
-We first ask whether coded rules predict observed authorization behavior across
-the whole local state — the empirical first stage of the institutional claim,
-and the validation screen for the rules panel itself.
+**Cities under strict rules substitute away from the voted instrument.** At
+the unit grain with full controls, general-purpose governments in strict
+states carry a GO security share **34.5 points lower** (t = −5.1) and a
+non-chargeable project share **17.1 points lower** (t = −3.3) than their
+counterparts in lax states (Table 5.5). This is the fifty-state
+generalisation of the sorting in Fact 2: where the GO instrument requires a
+coalition, governments that can finance through chargeable, unvoted
+instruments do. The state-level fixed-effects version of the same test gives
+−0.162 (t = −1.83). **[PENDING: both are held as first-stage or descriptive
+until the rules pass-2.]**
 
-**Design.** We build a panel of **90,604 local governments** — every county,
-municipality, township, school district, and special district in the national
-GFD universe — carrying (i) the coded rule for its class (strict referendum
-requirement for GO debt vs not), (ii) demographic and fiscal characteristics
-(population or enrollment; revenue, property tax, debt stock; ACS homeownership,
-age, diversity, income at place grain for cities and county grain otherwise;
-county presidential partisanship), and (iii) its borrowing 2005–25 from the
-corpus (security class, authorization mode, purpose composition) and 2005–23
-from the survey. A ~570-city subpanel adds form-of-government institutions,
-tax-and-expenditure-limit stringency, city-level partisanship, and mayoral
-party. Estimation: WLS with state-clustered standard errors, Census-region
-fixed effects, and the characteristics above as controls.
-
-**The rule shows up in behavior — most where the theory says it must.** Under a
-strict rule, the OS-evidenced voted share of determined new-money dollars is
-higher by **+0.78 for school districts (t = 7.0)**, +0.20 for special districts
-(t = 3.2), +0.17 for municipalities (t = 2.9), and +0.14 (n.s.) for counties
-(Table 6.1). Raw magnitudes tell the same story: 72.5% of school dollars are
-voted under strict rules against 7.5% under lax ones; 22.1% against 5.0% for
-cities. The one reversal — townships, 18.2% strict vs 46.6% non-strict — is
-itself diagnostic: townships carry a proxy (municipality) rule in the panel,
-and New England towns borrow by town-meeting vote in states coded lax for
-cities. The panel is telling us the coding needs a township class; we flag it
-rather than absorb it. **[PENDING: rules pass-2; the township column is now on
-its worklist.]**
-
-**Cities under strict rules substitute away from the voted instrument.** At the
-unit grain with full controls, general-purpose governments in strict states
-carry a GO security share **34.5 points lower** (t = −5.1) and a non-chargeable
-project share **17.1 points lower** (t = −3.3) than their counterparts in lax
-states (Table 6.2). This is the fifty-state generalization of the sorting in
-Fact 2: where the GO instrument requires a coalition, governments that *can*
-finance through chargeable, unvoted instruments do. The state-level FE version
-of the same test (non-chargeable share on rule stringency, weighted, 45 states)
-gives −0.162 (t = −1.83). **[PENDING: both are held as first-stage/descriptive
-until the rules pass-2; the coefficient stability across grains is the reason
-to expect the final version to survive.]**
-
-**The extensive margin is quiet.** Whether a government borrows *at all*
+**The extensive margin is quiet.** Whether a government borrows at all
 (2005–25) and how much it issues in survey totals are not significantly
 associated with the rule (t ≈ −1.3). The rule moves the channel and the
-composition, not the existence of borrowing — exactly the pattern the
-regression-discontinuity results of Section 7 rationalize: authorization rules
-operate on *when* and *how*, less on *whether*.
+composition, not the existence of borrowing, exactly the pattern the
+regression-discontinuity results of Section 6 rationalise.
 
 **Reform events: the honest state of play.** The strongest available national
-causal design — California's Proposition 39 (November 2000), which cut the
+causal design, California's Proposition 39 (November 2000), which cut the
 school threshold from two-thirds to 55% while leaving every other California
-government and every other state untouched — does not yet deliver a verdict at
-the state-mean grain: the schools-only DiD is +0.45 log points (permutation
-p = 0.15 across 49 placebo states) with a visible pre-trend, and the
-sector-differenced triple-diff is ≈ 0. Two data facts discipline the design:
-GFD's pre-2005 security split is degenerate for schools (FFC ≡ 100% by
-classification), so the COP→GO composition shift Prop 39 should produce is
-invisible in Census data; and California's state matching-bond waves (Props 47
-and 55, 2002/2004) confound the totals margin. **[PENDING: the publishable
-version is a district-level two-way-FE design with enrollment weights,
-Conley–Taber inference, OPSC matching-fund controls, and the CDIAC issuance
-database (CA security types to 1985) for the composition margin. Oregon's
-Measure 56 (2008) is retained as a sketch only — it sits on the financial
-crisis.]** We therefore let the reform record play its role in Section 10 as
-evidence on the *politics* of the rule, and rest the causal weight on the
-within-state designs of Section 7.
+government and every other state untouched, does not yet deliver a verdict at
+the state-mean grain: the schools-only difference-in-differences is +0.45 log
+points (permutation p = 0.15 across 49 placebo states) with a visible
+pre-trend, and the sector-differenced triple-difference is approximately
+zero. Two data facts discipline the design: the GFD's pre-2005 security split
+is degenerate for schools (full-faith-credit debt is 100% of school long-term
+debt by classification), so the certificates-of-participation-to-GO
+composition shift Proposition 39 should produce is invisible in Census data;
+and California's state matching-bond waves (Propositions 47 and 55, 2002 and
+2004) confound the totals margin. **[PENDING: the publishable version is a
+district-level two-way fixed-effects design with enrolment weights,
+Conley-Taber inference, state matching-fund controls, and the CDIAC issuance
+database for the composition margin; a journal-version item.]** The reform
+record accordingly plays its role in Section 9 as evidence on the politics of
+the rule, and the causal weight rests on the within-state designs of
+Section 6.
 
-> **Table 6.1** First stage: voted $ share on strict rule, by entity class
-> (controls, region FE, state clusters). **Table 6.2** Substitution: GO
-> security share and non-chargeable share on strict rule. **Figure 6.1** The
-> geography of consent: observed voted share of local new-money debt by state
-> × entity. **[REVIEW: map figure not yet generated — one script away from the
-> panel.]**
+> **Table 5.1** The menu matrix. **Table 5.2** The balloted and submerged
+> local state. **Table 5.3** Absolute coalition sizes. **Table 5.4** First
+> stage by entity class. **Table 5.5** Substitution. **Figure 5.1** The
+> geography of consent (built: `analysis/fig_consent_map.svg`; entity-class
+> small multiples in the appendix).
 
 ---
 
-## 7 · Authorization at the margin: regression-discontinuity evidence
+## 6 · Authorisation at the margin: regression-discontinuity evidence
 
-**Design.** For the 11,889 GO measures at statutory thresholds we compare
-governments that barely won authorization to those that barely lost it, in the
-threshold-centered vote margin. Identification requires that nothing else
-changes discontinuously at the cutoff; we present the full battery below.
-Estimation is local-linear with a triangular kernel; following the round-2
-convention we report **robust bias-corrected (RBC) inference as the lead**
-(local-quadratic at h, robust variance — the ρ=1 case of Calonico–Cattaneo–
-Titiunik) with conventional estimates alongside.
+**Design.** For the 11,889 GO measures at statutory thresholds, governments
+that barely won authorisation are compared with those that barely lost it, in
+the threshold-centred vote margin. Estimation is local-linear with a
+triangular kernel; robust bias-corrected (RBC) inference is the lead
+convention (local-quadratic at h with robust variance), with conventional
+estimates alongside.
 
 **The naive gap, and what survives design discipline.** Passed measures are
-followed by issuance 35.6% of the time against 14.6% for failed ones — a 21-
-point gap that is mostly selection. At the cutoff, the six-year effect of
-authorization on GO issuance is **+11.0 points (RBC, robust z = 2.30;
+followed by issuance 35.6% of the time against 14.6% for failed ones, a
+21-point gap that is mostly selection. At the cutoff, the six-year effect of
+authorisation on GO issuance is **+11.0 points (RBC, robust z = 2.30;
 conventional +14.6, z = 4.47)** at the ±10 bandwidth; any-issuance gives
-+11.6/+14.4. The effect replicates state by state across three different
-thresholds — California +16.6 (z 3.0), Texas +14.1 (z 3.3), Wisconsin +21.2
-(z 3.1) — three statutes, one answer. Louisiana's negative cell (−27.6,
-z −1.9) is a data-grain artifact (measures fold to the parish); excluding it
-moves the pooled estimate to +16.2. **[REVIEW: which number leads the abstract —
-+0.110 RBC or +0.146 conventional? Current: RBC first, conventional beside.]**
++11.6 and +14.4. The effect replicates state by state across three different
+thresholds: California +16.6 (z 3.0), Texas +14.1 (z 3.3), Wisconsin +21.2
+(z 3.1). Three statutes, one answer. Louisiana's negative cell (−27.6,
+z −1.9) is a data-grain artefact (measures fold to the parish); excluding it
+moves the pooled estimate to +16.2.
 
-**The intensive margin doubles, in two independent sources.** Log new-money par
-per capita rises +0.92 (z 3.0) in the disclosure corpus and — decisively for
-the survivorship critique — **+0.83 (z 3.3) in the Census survey measure**,
-which includes the bank loans and private placements no OS records; both are
-RBC-stable (+0.94, +0.88) and the survey pre-period placebo is null (+0.41,
-z 1.5).
+**The intensive margin doubles, in two independent sources.** Log new-money
+par per capita rises +0.92 (z 3.0) in the disclosure corpus and, decisively
+for the survivorship critique, **+0.83 (z 3.3) in the Census survey measure**,
+which includes the bank loans and private placements no official statement
+records; both are RBC-stable (+0.94, +0.88) and the survey pre-period placebo
+is null (+0.41, z 1.5). This is the survey debt items' single appearance, as
+Section 4's architecture prescribes.
 
 **Validity.** Covariate balance: 0 of 7 pre-vote fiscal covariates imbalanced
 at ±5 (max |t| = 1.36). Density: there is excess mass just above the cutoff
-(McCrary θ = +0.24, z = 4.6) — it is Texas-specific (TX +0.21, z 2.7; every
-other state ≈ 0), carries the signature of endogenous proposal timing
-documented since Cellini–Ferreira–Rothstein (2010), and is itself agenda-margin
-evidence (Section 10); identification survives it, because donut estimates
-excluding the contested region are stable to *larger* (+0.19 to +0.20, z
-3.7–5.3). Inference: state-of-the-art alternatives agree — clustering by unit
-(z 4.11) or county (z 3.47); Lee bounds for crosswalk selection at trim 2.52%
-are [+0.138, +0.163]; randomization inference in the ±2 window rejects at
-p < 0.0002 (0 of 5,000 permutations). The two flexible-fit diagnostics that do
-not reject — the IK bandwidth (h = 1.8pp, τ ≈ 0) and RBC at ±5 (CI
-[−0.09, +0.17]) — are reported with their reconciliation: on two points of
-support, slope terms absorb a level shift that the design-based tests at the
-same window detect decisively. Nothing is hidden; the table shows all of it.
+(McCrary θ = +0.24, z = 4.6); it is Texas-specific (TX +0.21, z 2.7; every
+other state approximately zero), carries the signature of endogenous proposal
+timing documented since Cellini, Ferreira and Rothstein (2010), and is itself
+agenda-margin evidence (Section 9). Identification survives it: donut
+estimates excluding the contested region are stable to larger (+0.19 to
++0.20, z 3.7–5.3). Inference alternatives agree: clustering by unit (z 4.11)
+or county (z 3.47); Lee bounds for crosswalk selection at trim 2.52% are
+[+0.138, +0.163]; randomisation inference in the ±2 window rejects at
+p < 0.0002 (0 of 5,000 permutations). The two flexible-fit diagnostics that
+do not reject, the IK bandwidth (h = 1.8pp, τ ≈ 0) and RBC at ±5 (confidence
+interval [−0.09, +0.17]), are reported with their reconciliation: on two
+points of support, slope terms absorb a level shift that the design-based
+tests at the same window detect decisively. The battery's final row is **the
+pay-go bound**: rerunning the design with survey capital outlay per capita as
+the outcome, the schools post-minus-pre differenced estimate is **+0.377
+(z 2.9; RBC +0.464, z 2.4)** beside an issuance effect of +1.43, and trimmed
+levels imply an outlay-to-issuance ratio of **0.92** at the cutoff. Refused
+governments do not detectably replace lost borrowing with pay-go building
+(caveats: outlay spreads over construction years, so six-year windows
+understate long-project differences; the positive pre-period outlay RD from
+endogenous timing is netted by the differenced specification; total outlay
+only). Nothing in the battery is hidden; the table shows all of it.
 
-**It is a timing effect — and the wedge is measurable.** The event study loads
+**It is a timing effect, and the wedge is measurable.** The event study loads
 the entire effect on the vote year (τ₀ = +0.236, z = 7.8; every pre- and
-post-year ≈ 0). Cumulative curves for the |margin| ≤ 5 window (Figure 7.2) turn
-this into the paper's quantities: among six-year issuers, the median
-barely-authorized government reaches the market in **0.33 years**; the median
-barely-refused one in **1.15** — a delay of **0.8 years** — and the refused
-side *never* reaches the authorized side's end-of-vote-year issuance level
-within six years. By year six, 50.1% of barely-refused governments have still
-issued nothing, against 40.0% of barely-authorized ones: a ten-point wedge that
-is the durable residue after all catch-up.
+post-year approximately zero). Cumulative curves for the |margin| ≤ 5 window
+(Figure 6.2) turn this into the paper's quantities: among six-year issuers,
+the median barely-authorised government reaches the market in **0.33 years**,
+the median barely-refused one in **1.15**, a delay of **0.8 years**, and the
+refused side never reaches the authorised side's end-of-vote-year issuance
+level within six years. By year six, 50.1% of barely-refused governments have
+still issued nothing, against 40.0% of barely-authorised ones: a ten-point
+wedge that is the durable residue after all catch-up.
 
-> **Table 7.1** Main RD estimates (RBC lead + conventional; extensive and
-> intensive margins; per state). **Table 7.2** The validity battery (one row
-> per check). **Figure 7.1** Event study. **Figure 7.2** The cumulative wedge
-> (committed: `fig_cumulative_wedge.svg`).
+> **Table 6.1** Main RD estimates. **Table 6.2** The validity battery,
+> including the pay-go-bound row. **Figure 6.1** Event study. **Figure 6.2**
+> The cumulative wedge (built: `fig_cumulative_wedge.svg`).
 
 ---
 
-## 8 · The response margin: what refusal buys
+## 7 · The response margin: what refusal buys
 
-The theory's distinctive claim is that a coalition requirement prices *delay*,
-not denial. We follow every refused measure forward.
+The theory's distinctive claim is that a coalition requirement prices delay,
+not denial. Every refused measure is followed forward.
 
 **Refusal is a pause.** Of 2,680 failed GO measures, the re-submission hazard
-is front-loaded — 26.7% return within a year, 22.8% of survivors in the second
-— cumulating to **58.2% within four years**, with the median return at **1.02
-years**: the next election. Returns win: **61.9%** pass. And districts re-ask
+is front-loaded (26.7% return within a year, then 22.8%, 15.8%, 12.4%),
+cumulating to **58.2% within four years**, with the median return at **1.02
+years**: the next election. Returns win: **61.9%** pass. Districts re-ask
 rather than concede: the median returning measure asks for **100% of the
 original amount** (n = 1,354; only 45.9% downsize).
 
 **The fate of the marginal refusal.** For the 2005–19 cohort with full
-observation windows, per 100 *barely*-refused measures (Table 8.1): **54 are
+observation windows, per 100 barely-refused measures (Table 7.1): **54 are
 re-approved by voters within four years; 13 more return and wait; 14 borrow
 anyway on other authority** (5 via board or statutory channels, 9 on older
-voter authorizations); **18 are extinguished** within the horizon. The
+voter authorisations); **18 are extinguished** within the horizon. The
 transition matrix behind it shows what the cutoff actually moves: voter-mode
-first issuance (48.4% vs 36.7%) against no-issuance (43.1% vs 54.2%), while
-board-mode first issuance is ~8% on *both* sides — the board channel is a
-floor, not the treatment margin. Consistent with this, the authorization mix of
-what barely-refused governments still issue tilts toward the board channel
-(council share τ = −0.064, z = −2.0).
+first issuance (48.4% against 36.7%) against no issuance (43.1% against
+54.2%), while board-mode first issuance is roughly 8% on both sides. The
+board channel is a floor, not the treatment margin. Consistent with this, the
+authorisation mix of what barely-refused governments still issue tilts
+towards the board channel (council share τ = −0.064, z = −2.0).
 
-**The project itself survives.** Matching ballot purposes to the use-of-
-proceeds functions of subsequent issues (deterministic category bridge,
-blind-audited at **80.0% precision / 88.9% recall** — all numbers cite the
-audit), same-purpose financing appears within six years for 44.7% of
-barely-passed measures and **33.4% of barely-failed ones** (RD +0.072,
-z = 2.1), with median arrival 0.32 vs **1.67 years**. A third of narrowly
-refused *projects* get financed anyway — later. On re-submission, bundles are
-not recomposed: 78.2% of original purpose categories are retained.
+**The project itself survives.** Matching ballot purposes to the
+use-of-proceeds functions of subsequent issues (deterministic category
+bridge, blind-audited at **80.0% precision and 88.9% recall**; every number
+cites the audit), same-purpose financing appears within six years for 44.7%
+of barely-passed measures and **33.4% of barely-failed ones** (RD +0.072,
+z = 2.1), with median arrival 0.32 against **1.67 years**. A third of
+narrowly refused projects get financed anyway, later. On re-submission,
+bundles are not recomposed: 78.2% of original purpose categories are
+retained. The pay-go bound (Section 6) closes the remaining loophole on the
+provision side: the same design run on survey capital outlay shows building
+falling with borrowing at a ratio near one, so the continuation gap measured
+in the corpus is not being quietly filled by debt-free construction.
 **[PENDING: nine disputed audit pairs queued for the disagreement review.]**
 
-**The supermajority's distinct signature: re-approved but unissued.** Within
-California, near-miss failures (majority support short of the supermajority
-threshold) re-submit far more than decisive failures (42.2% vs 27.4%; 51.3% vs
-30.8% among schools) and show no jump at the symbolic 50% line — the response
-tracks proximity, not the majority label. Yet their issuance is *lower* — and
-the deficit is not a truncation artifact: it **widens** from −5.3 points at six
-years to −6.4 at eight (schools −6.7 → −8.0), under per-cell observability
-restrictions. The chain shows why: near-miss failures convert by re-vote four
-times as often (107 vs 25 passed returns) but the conversions sit undrawn —
-median pass-to-first-issue **6.2 years** against 2.9 — and only 5.5% see a
-voter-mode issue within eight years. Where the bar is a supermajority, even
-re-assembled consent does not become borrowing on the study horizon.
-**[REVIEW: this is a new stylized fact ("authorization banked, drawdown
-deferred") — promote to its own subsection or leave inside the response
-margin? A 10y+ horizon pass is queued.]**
+### 7.1 Authorisation banked, drawdown deferred
 
-> **Table 8.1** The fate table (per 100 barely-refused) + transition matrix.
-> **Table 8.2** Re-submission hazard, pass rates, amount ratios. **Table 8.3**
-> Project continuation and bundle recomposition (with audit precision).
-> **Table 8.4** The near-miss chain (P3).
+The supermajority regime produces a distinct fate for near-misses. Within
+California, failures with majority support short of the threshold re-submit
+far more than decisive failures (42.2% against 27.4%; 51.3% against 30.8%
+among schools) and show no jump at the symbolic 50% line: the response tracks
+proximity, not the majority label. Yet their issuance is lower, and the
+deficit is not a truncation artefact: it **widens** from −5.3 points at six
+years to −6.4 at eight (schools −6.7 to −8.0), under per-cell observability
+restrictions. The chain shows why. Near-miss failures convert by re-vote four
+times as often (107 against 25 passed returns), but the conversions sit
+undrawn: median pass-to-first-issue **6.2 years** against 2.9, and only 5.5%
+see a voter-mode issue within eight years. Where the bar is a supermajority,
+even re-assembled consent does not become borrowing on the study horizon.
+
+A candidate mechanism, that Proposition 39's statutory tax-rate caps meter
+the drawdown of 55%-route authorisations, was tested by splitting Californian
+conversions by the route of the passing return: the uncapped two-thirds cell
+is too thin to test (9 school conversions against 118 capped) and its point
+direction runs against the cap story (median 9.7 years to first issue against
+4.9 capped). The mechanism is neither supported nor excluded at this sample
+size; the fact stands documented and unexplained, with county assessed-value
+rolls and the CDIAC sold-versus-authorised series as the upgrade path.
+
+> **Table 7.1** The fate table and transition matrix. **Table 7.2**
+> Re-submission hazard, pass rates, amount ratios. **Table 7.3** Project
+> continuation and bundle recomposition (with audit precision). **Table 7.4**
+> The near-miss chain and the rate-cap split.
 
 ---
 
-## 9 · Where the requirement binds: exits and electorates
+## 8 · Where the requirement binds: exits and electorates
 
 The RD average conceals the theory's structure. Two partitions recover it.
 
 **By exit menu.** Splitting the RD frame by entity class and aligning each
-class against its *independently measured* national menu (Section 5, Fact 1):
-school districts — non-voted share 29.8%, window-chargeable menu 0.4% — show
+class against its independently measured national menu (Section 5, Fact 1):
+school districts (non-voted share 29.8%, window-chargeable menu 0.4%) show
 the binding effect (+0.147, z 4.0; RBC +0.123, z 2.3) and the highest
-re-submission rate (59.2%); general-purpose governments — non-voted share
-80.4% — show **no discontinuity at all** (+0.073, z 0.9; RBC −0.02) and the
-lowest re-submission (25.3%); special districts sit between, with the largest
-GO-specific jump (+0.463, z 2.8) that shrinks at any-issuance (+0.362) as part
-of the gap reroutes to non-GO instruments. **[REVIEW: utilities cell is n =
-1,576 — current treatment cites the ordering, flags the magnitude.]** The rule
-binds exactly where the menu offers no exit; where exits exist, refusal is
-nearly costless and rarely re-litigated. This is the fork the fifty-state
-substitution results (Section 6) show in cross-section.
+re-submission rate (59.2%); general-purpose governments (non-voted share
+80.4%) show no discontinuity at all (+0.073, z 0.9; RBC −0.02) and the lowest
+re-submission (25.3%); special districts sit between, with the largest
+GO-specific jump that shrinks at any-issuance as part of the gap reroutes to
+non-GO instruments. The special-district cells are small and the ordering,
+not the magnitude, is the cited object. The rule binds exactly where the menu
+offers no exit; where exits exist, refusal is nearly costless and rarely
+re-litigated. This is the fork the fifty-state substitution results
+(Section 5.2) show in cross-section.
 
-**By electorate.** At the proper demographic grain (place for cities, district
-for schools), the authorization effect concentrates where property owners
-dominate a stable consenting public: homeownership above the frame median,
-τ = **+0.182 (z 3.5)** against +0.056 (n.s.) below; 65+ share +0.194 vs
-+0.036; racial-ethnic homogeneity +0.232 vs −0.018. It is ownership, not
-affluence — the income split is flat (+0.129 vs +0.122) and the district-grain
-child-poverty split repeats the affluence gradient only weakly — and it is
+**By electorate: the stable propertied public.** The naive assembly-cost
+reading of H3 predicts that the authorisation effect weakens wherever
+coalition-building is harder, and in particular that demographic
+heterogeneity raises the price of assembly. The data falsify that version on
+its own sign: at the proper demographic grain, the effect is carried by
+homogeneous electorates (+0.232 against −0.018 in diverse ones), not blocked
+by them. What the moderator profile consistently favours is a
+**stable-propertied-public** account: authorisation binds where the
+consenting public is durable and propertied, because it is those electorates
+whose refusals stay refused and whose approvals licence long-horizon
+drawdown. Homeownership above the frame median gives τ = **+0.182 (z 3.5)**
+against +0.056 (n.s.) below; the 65-plus share gives +0.194 against +0.036;
+and the effect is stronger on-cycle (+0.252 against +0.099 off-cycle), when
+the broad durable electorate is the one consulted. It is ownership, not
+affluence (the income split is flat: +0.129 against +0.122), and
 institutional, not partisan: county presidential partisanship yields a flat
-split (+0.121 vs +0.111, terciles non-monotone), replicated with precinct-level
-city partisanship and mayoral party in the 577-city panel (all n.s.), and the
-national first stage shows at most a *weaker channel effect* in Democratic
-counties (interaction −0.75, t −2.2, descriptive). Timing matters the way a
-coalition story predicts: on-cycle measures show +0.252 against +0.099
-off-cycle. **[REVIEW: the homogeneity sign runs against a naive assembly-cost
-reading of H3 — the "stable propertied public" reframing is drafted but
-unadjudicated.]**
+split (+0.121 against +0.111, terciles non-monotone), replicated with
+precinct-level city partisanship and mayoral party in the 577-city panel
+(all n.s.), and the national first stage shows at most a weaker channel
+association in Democratic counties (interaction −0.75, t −2.2, descriptive).
+The reframing is stated as it is: an account adopted after seeing the
+homogeneity sign, offered with its transmission story, and flagged as
+post hoc rather than pre-registered.
 
-**The incidence of the higher bar.** Blocked majorities — measures with
-majority support short of a supermajority threshold (California only, by
-construction) — arise in places that sit *between* the decisive-failure and
-comfortable-passage places on renter share, diversity, and inequality, and
-among schools they are the **poorer** places (median household income −$3.8k
-vs cleared, SE 1.5k; child poverty −2.0pp *below* cleared — the blocked are
-poorer than passers but less poor than decisive failers). Descriptive, but it
-locates the supermajority's demographic cost: majorities in less affluent,
-mid-composition districts. **[PENDING: within-matched ACS caveat as throughout;
-special districts remain on county-proxy demographics until the shapefile
-interpolation pass.]**
+**The incidence of the higher bar.** Blocked majorities (measures with
+majority support short of a supermajority threshold; California only, by
+construction) arise in places that sit between the decisive-failure and
+comfortable-passage places on renter share, diversity and inequality, and
+among schools they are the poorer places (median household income −$3.8k
+against cleared places, SE 1.5k). Descriptive, but it locates the
+supermajority's demographic cost: majorities in less affluent,
+mid-composition districts. **[PENDING: within-matched ACS caveat as
+throughout; special districts remain on county-proxy demographics.]**
 
-> **Table 9.1** The fork against the menu. **Table 9.2** Moderator splits
-> (ownership, age, homogeneity, income, partisanship ×2 grains, timing).
-> **Table 9.3** Demography of blocked majorities.
+> **Table 8.1** The fork against the menu. **Table 8.2** Moderator splits.
+> **Table 8.3** Demography of blocked majorities.
 
 ---
 
-## 10 · The agenda margin and the politics of the rule
+## 9 · The agenda margin and the politics of the rule
 
 **Rules discipline what is asked.** Under California's 55% bar, school
-districts bring **8.8 proposals per 100 districts per year** at a median $39M,
-62.7% on-cycle; under Texas's 50% bar, **20.1** per 100 at $15M, 14.1%
-on-cycle; Wisconsin sits between on all three margins. Fewer, larger,
-better-timed: the coalition requirement operates before any vote is cast. Pass
-rates make the same point in reverse — nearly invariant between the 50% and
-55% regimes (79.2% vs 77.6%), collapsing only at two-thirds (47.6%): a
+districts bring **8.8 proposals per 100 districts per year** at a median
+$39M, 62.7% on-cycle; under Texas's 50% bar, **20.1** per 100 at $15M, 14.1%
+on-cycle; Wisconsin sits between on all three margins. Fewer, larger, better
+timed: the coalition requirement operates before any vote is cast. Pass rates
+make the same point in reverse, nearly invariant between the 50% and 55%
+regimes (79.2% against 77.6%) and collapsing only at two-thirds (47.6%): a
 moderate bar is absorbed by the agenda; an extreme bar defeats even what
 selection permits. The Texas 2019 reform (HB 3) closes the loop within-state:
-when the state mandated separate propositions for stadiums, natatoriums, and
+when the state mandated separate propositions for stadiums, natatoria and
 performing-arts facilities, propositions per election jumped from 1.5–1.7 to
-2.0–2.4 and the multi-proposition share doubled within two cycles —
-bundling is a rule-governed choice, not a habit. The near-cutoff excess mass of
-Section 7 belongs to this same family: proposals are timed to win.
+2.0–2.4 and the multi-proposition share doubled within two cycles. Bundling
+is a rule-governed choice, not a habit. The near-cutoff excess mass of
+Section 6 belongs to the same family: proposals are timed to win.
 
-**At fixed voter support, the rule alone moves outcomes.** In the 50–55% band,
-the identical electoral result is a failure for a California school district
-and a success for a Texan or Wisconsin one. The difference-in-differences
-across the adjacent band gives **+11.5 points of six-year issuance (SE 4.8)**
-attributable to the rule at fixed support — indistinguishable from the RD
-estimate obtained from an entirely different comparison, an out-of-design
-calibration that we regard as the single strongest check in the paper.
+**At fixed voter support, the rule alone moves outcomes.** In the 50–55%
+band, the identical electoral result is a failure for a California school
+district and a success for a Texan or Wisconsin one. The
+difference-in-differences across the adjacent band gives **+11.5 points of
+six-year issuance (SE 4.8)** attributable to the rule at fixed support,
+indistinguishable from the RD estimate obtained from an entirely different
+comparison: an out-of-design calibration regarded here as the strongest
+single check in the paper.
 
 **The polity fights over the rule exactly where the theory predicts.** Since
 1990, nearly every attempt to lower a local borrowing threshold has targeted
-schools — the class our menu matrix shows holding the poorest exit menu:
-California's Props 170 (1993, failed), 26 (2000, failed), and 39 (2000, passed
-53–47, schools only, with a $30M elite-financed bipartisan campaign);
-Washington's 2023–25 school-bond bills (all stalled); Idaho's roughly eleven
-legislative attempts (none passed). The one recent *non-school* attempt —
-California's Proposition 5 (2024), extending the 55% bar to housing and
-infrastructure — failed. Where exits exist, no one spends thirty million
+schools, the class the menu matrix shows holding the poorest exit menu:
+California's Propositions 170 (1993, failed), 26 (2000, failed) and 39
+(2000, passed 53–47, schools only, with a $30M elite-financed bipartisan
+campaign); Washington's 2023–25 school-bond bills (all stalled); Idaho's
+roughly eleven legislative attempts (none passed). The one recent non-school
+attempt, California's Proposition 5 (2024), extending the 55% bar to housing
+and infrastructure, failed. Where exits exist, no one spends thirty million
 dollars to lower the bar. **[PENDING: the reform table is compiled from
 secondary sources and marked `secondary_unverified` pending primary-record
-verification; the national event-study estimates for Prop 39 remain
-inconclusive at the state grain (Section 6) — the reform record is cited here
-as evidence on reform *politics*, not as a causal estimate.]**
+verification; the national event-study estimates for Proposition 39 remain
+inconclusive at the state grain (Section 5.2). The reform record is cited
+here as evidence on reform politics, not as a causal estimate.]**
 
-> **Table 10.1** Proposal behavior by regime; pass-rate invariance. **Table
-> 10.2** The institutional wedge (W1). **Table 10.3** The reform record
-> (appendix). **Figure 10.1** TX-2019 unbundling.
-
----
-
-## 11 · What does not appear, and what is still open
-
-For review completeness, the record of honest nulls and pending items that the
-paper must carry:
-
-- **Nulls, informative:** partisanship (three measures, two grains); the
-  extensive margin nationally; entity midwifery (no detectable spawning of new
-  issuers in refused units' counties, coarse grain); the D2b signal test (no
-  jump in response at the symbolic 50% among institutional failures); TEL ×
-  rule on the big-city subpanel (power-limited by design — big cities are the
-  exit-rich class).
-- **Pending, blocking specific claims:** rules pass-2 (C2/H2 finals; N-suite
-  causal upgrades; township rule column); Prop 39 district-level design (OPSC
-  controls; CDIAC issuance pull for the composition margin); B5 audit
-  disagreement review (9 pairs); 10y+ horizon for the re-approved-but-unissued
-  cohort; specials-grade demographics; R1 primary-source verification; IL/IN
-  vote margins (harvest paused).
-- **Known data limits, stated where used:** LA parish-fold grain; MN purpose
-  classification gap; GFD FFC/NG split unreported post-2005 (and degenerate for
-  schools before); TX BRB placeholder rows; EMMA-era truncation (2005+);
-  within-matched moderator coverage.
+> **Table 9.1** Proposal behaviour by regime; pass-rate invariance.
+> **Table 9.2** The institutional wedge. **Table 9.3** The reform record
+> (appendix). **Figure 9.1** TX-2019 unbundling.
 
 ---
 
-### Figure/Table inventory (drafted ↔ to build)
+### Exhibit inventory (drafted ↔ to build)
 | exhibit | status |
 |---|---|
-| T4.1 validation · T4.2 frame | numbers final (VALIDATION, LINK) |
-| T5.1 menu · T5.2 panels · T5.3 coalitions | numbers final (M1–M3) |
-| T6.1 first stage · T6.2 substitution | numbers final, **labels first-stage until pass-2** |
-| F6.1 consent map | **to build** (one script on the entity panel) |
-| T7.1–T7.2, F7.1 event study | numbers final (RD, P1, POLISH) |
-| F7.2 cumulative wedge | **built** (`fig_cumulative_wedge.svg`) |
-| T8.1–T8.4 response margin | numbers final (FAILURE, FATE, B5, P3) |
-| T9.1–T9.3 heterogeneity | numbers final (D4, ACS, D5*, D6) |
-| T10.1–10.3, F10.1 agenda/politics | numbers final (AGENDA, WEDGE, R1) |
+| T4.1 validation · T4.2 frame | numbers final |
+| T5.1 menu · T5.2 panels · T5.3 coalitions · T5.4 first stage · T5.5 substitution | numbers final (rule rows labelled first-stage until pass-2) |
+| F5.1 consent map | **built** (`fig_consent_map.svg`) |
+| T6.1 RD · T6.2 battery incl. pay-go row · F6.1 event study | numbers final |
+| F6.2 cumulative wedge | **built** (`fig_cumulative_wedge.svg`) |
+| T7.1–7.4 response margin incl. rate-cap split | numbers final |
+| T8.1–8.3 heterogeneity | numbers final |
+| T9.1–9.3, F9.1 agenda and politics | numbers final |
+
+*The honesty record (informative nulls, pending items, known data limits) is
+the online appendix: `paper/ONLINE_APPENDIX_HONESTY.md`.*
