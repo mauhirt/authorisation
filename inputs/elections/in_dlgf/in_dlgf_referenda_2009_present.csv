@@ -1,0 +1,291 @@
+state,election,election_year,election_month,referendum_type,gov_unit_name,county,gov_type,amount_or_rate,result_raw,result
+IN,November 2009,2009,11,Controlled Project,Batesville Community School Corporation,Franklin and Ripley Counties,school,,FAILED,Failed
+IN,November 2009,2009,11,Controlled Project,MSD of Perry Township,Marion County,school,,FAILED,Failed
+IN,November 2009,2009,11,Controlled Project,Southwest Dubois County School Corporation,Dubois County,school,,PASSED,Passed
+IN,November 2009,2009,11,Controlled Project,Tell City - Troy Township School Corporation,Perry County,school,,FAILED,Failed
+IN,November 2009,2009,11,Controlled Project,Wishard Hospital Project,Marion County,hospital,,PASSED,Passed
+IN,November 2009,2009,11,School Operating/Capital Levy,Beech Grove City Schools,Marion County,school,"$1.5 million; $114 per year for a property owner with a home valued at $100,000 (according to district)",PASSED,Passed
+IN,November 2009,2009,11,School Operating/Capital Levy,Franklin Township Community School Corporation,Marion County,school,$0.3333 on each $100 of assessed value,FAILED,Failed
+IN,November 2009,2009,11,School Operating/Capital Levy,Franklin Township Community School Corporation,Marion County,school,$0.1667 on each $100 of assessed value,FAILED,Failed
+IN,November 2009,2009,11,School Operating/Capital Levy,Hamilton Southeastern Schools,Hamilton County,school,"$5,500,000",PASSED,Passed
+IN,November 2009,2009,11,School Operating/Capital Levy,Southern Wells Community Schools,Wells County,school,$0.127 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,Controlled Project,Decatur County Community School Corporation,Decatur and Shelby Counties,school,,FAILED,Failed
+IN,May 2010,2010,05,Controlled Project,Johnson County Jail Expansion Project,Johnson County,county,,FAILED,Failed
+IN,May 2010,2010,05,Controlled Project,MSD of Pike Township - New Guion Creek Elementary,Marion County,school,,PASSED,Passed
+IN,May 2010,2010,05,Controlled Project,Noblesville School Corporation,Hamilton County,school,,PASSED,Passed
+IN,May 2010,2010,05,Controlled Project,Northern Wells Community Schools,Wells County,school,,FAILED,Failed
+IN,May 2010,2010,05,Controlled Project,Rensselaer Central School Corporation,Jasper County,school,,PASSED,Passed
+IN,May 2010,2010,05,Controlled Project,Rossville Consolidated School District,Carroll and Clinton Counties,school,,FAILED,Failed
+IN,May 2010,2010,05,School Operating/Capital Levy,Carmel Clay Schools,Hamilton County,school,$0.16 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,School Operating/Capital Levy,Clark Community School Corporation,Clark County,school,$0.24 on each $100 of assessed value,FAILED,Failed
+IN,May 2010,2010,05,School Operating/Capital Levy,MSD of Washington Township,Marion County,school,$0.08 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,School Operating/Capital Levy,Noblesville Schools,Hamilton County,school,$0.2115 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,School Operating/Capital Levy,School Town of Speedway,Marion County,school,$0.59 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,School Operating/Capital Levy,West Lafayette School Corporation,Tippecanoe County,school,$0.43 on each $100 of assessed value,PASSED,Passed
+IN,May 2010,2010,05,School Operating/Capital Levy,Western Boone County Community School Corporation,Boone County,school,$0.19 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,Controlled Project,Hamilton Southeastern Schools,Hamilton County,school,,PASSED,Passed
+IN,November 2010,2010,11,Controlled Project,Lebanon Community School Corporation,Boone County,school,,PASSED,Passed
+IN,November 2010,2010,11,Controlled Project,Randolph Central School Corporation (Winchester Community Fieldhouse),Randolph County,school,,FAILED,Failed
+IN,November 2010,2010,11,Controlled Project,Randolph Central School Corporation (Winchester Community High School and Lee L. Driver Middle School Combo Building),Randolph County,school,,FAILED,Failed
+IN,November 2010,2010,11,Controlled Project,Tell City-Troy Township School Corporation,Perry County,school,,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Anderson Community School Corporation,Madison County,school,$0.55 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Brown County Schools,Brown County,school,$0.01 on each $100 of assessed value,PASSED,Passed
+IN,November 2010,2010,11,School Operating/Capital Levy,Cannelton City Schools,Perry County,school,$0.41 on each $100 of assessed value,PASSED,Passed
+IN,November 2010,2010,11,School Operating/Capital Levy,Center Grove Community School Corporation,,school,$0.15 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,East Allen County Schools,Allen County,school,$0.3709 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Elwood Community School Corporation,Madison County,school,$0.50 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Monroe County Community School Corporation,Monroe County,school,$0.1402 on each $100 of assessed value,PASSED,Passed
+IN,November 2010,2010,11,School Operating/Capital Levy,Mt. Vernon Community School Corporation,Hancock County,school,$0.1233 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Northwestern Consolidated School,Shelby County,school,$0.116 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Southern Hancock County Community School,Hancock County,school,$0.24 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Westfield-Washington Schools,Hamilton County,school,$0.23 on each $100 of assessed value,PASSED,Passed
+IN,November 2010,2010,11,School Operating/Capital Levy,Whitko Community Schools,Kosciusko County,school,$0.20 on each $100 of assessed value,FAILED,Failed
+IN,November 2010,2010,11,School Operating/Capital Levy,Zionsville School Corporation,Boone County,school,$0.295 on each $100 of assessed value,FAILED,Failed
+IN,May 2011,2011,05,Controlled Project,MSD Perry Township School Corporation,Marion County,school,,PASSED,Passed
+IN,May 2011,2011,05,Controlled Project,Oak Hill United School Corporation,Grant and Miami Counties,school,,FAILED,Failed
+IN,May 2011,2011,05,School Operating/Capital Levy,Avon Community School Corporation,Hendricks County,school,$0.1705 on each $100 of assessed value,FAILED,Failed
+IN,May 2011,2011,05,School Operating/Capital Levy,Crown Point Community School Corporation,Lake County,school,$0.2100 on each $100 of assessed value,PASSED,Passed
+IN,May 2011,2011,05,School Operating/Capital Levy,Franklin Township Community School Corporation,Marion County,school,$0.7500 on each $100 of assessed value,FAILED,Failed
+IN,May 2011,2011,05,School Operating/Capital Levy,MSD of Perry Township School Corporation,Marion County,school,$0.3078 on each $100 of assessed value,PASSED,Passed
+IN,May 2011,2011,05,School Operating/Capital Levy,North Adams Community School,Adams County,school,$0.2045 on each $100 of assessed value,FAILED,Failed
+IN,November 2011,2011,11,Bond Refunding,Zionsville Community Schools,Boone County,school,,PASSED,Passed
+IN,November 2011,2011,11,Controlled Project,City of Greenwood,Johnson County,city,,Did not appear on ballot.,Not on ballot
+IN,November 2011,2011,11,Controlled Project,Jasper Public Library,Dubois County,library,,FAILED,Failed
+IN,November 2011,2011,11,Controlled Project,Lake Central School Corporation,Lake County,school,,PASSED,Passed
+IN,November 2011,2011,11,Controlled Project,Randolph Central School Corporation,Randolph County,school,,FAILED,Failed
+IN,November 2011,2011,11,School Operating/Capital Levy,Sheridan Community Schools,Boone and Hamilton Counties,school,$0.1900 on each $100 of assessed value,PASSED,Passed
+IN,May 2012,2012,05,Bond Refunding,Mt. Vernon Community School Corporation,,school,,Did not appear on ballot.,Not on ballot
+IN,May 2012,2012,05,Controlled Project,Crawfordsville Community School Corporation,,school,,PASSED,Passed
+IN,May 2012,2012,05,Controlled Project,East Allen County Schools,,school,,FAILED,Failed
+IN,May 2012,2012,05,Controlled Project,Fort Wayne Community Schools,,school,,PASSED,Passed
+IN,May 2012,2012,05,Controlled Project,Hartford City Public Library,,library,,,
+IN,May 2012,2012,05,Controlled Project,Johnson County Public Library,,library,,FAILED,Failed
+IN,May 2012,2012,05,Controlled Project,Northern Wells Community School Corporation,,school,,PASSED,Passed
+IN,May 2012,2012,05,School Operating/Capital Levy,Duneland School Corporation,,school,,PASSED,Passed
+IN,May 2012,2012,05,School Operating/Capital Levy,Oregon-Davis School Corporation,,school,,PASSED,Passed
+IN,May 2012,2012,05,School Operating/Capital Levy,Zionsville Community Schools,,school,,PASSED,Passed
+IN,November 2012,2012,11,School Operating/Capital Levy,Bartholomew Consolidated School Corporation,,school,,FAILED,Failed
+IN,November 2012,2012,11,School Operating/Capital Levy,Hamilton Community School Corporation,,school,,PASSED,Passed
+IN,November 2012,2012,11,School Operating/Capital Levy,Mt. Vernon Community School Corporation,,school,,FAILED,Failed
+IN,May 2013,2013,05,Controlled Project,Hamilton Southeastern Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2013,2013,05,Controlled Project,Knox Community School Corporation,Starke County,school,,FAILED,Failed
+IN,May 2013,2013,05,Controlled Project,Noblesville Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2013,2013,05,Controlled Project,The City of Vincennes Parks and Recreation Department,Knox County,city,,PASSED,Passed
+IN,May 2013,2013,05,School Operating/Capital Levy,Barr-Reeve Community Schools Inc,Daviess County,school,,PASSED,Passed
+IN,May 2013,2013,05,School Operating/Capital Levy,MSD Boone Township,Porter County,school,,FAILED,Failed
+IN,May 2013,2013,05,School Operating/Capital Levy,School Town of Munster,Lake County,school,,PASSED,Passed
+IN,May 2013,2013,05,School Operating/Capital Levy,Union Township School Corporation,Porter County,school,,PASSED,Passed
+IN,November 2013,2013,11,Controlled Project,Goshen Community Schools,Elkhart County,school,,PASSED,Passed
+IN,November 2013,2013,11,Controlled Project,School City of Mishawaka,St. Joseph County,school,,FAILED,Failed
+IN,November 2013,2013,11,School Operating/Capital Levy,Michigan City Area Schools,LaPorte & Porter County,school,,FAILED,Failed
+IN,November 2013,2013,11,School Operating/Capital Levy,Muncie Community Schools,Delaware County,school,,FAILED,Failed
+IN,May 2014,2014,05,Controlled Project,Elkhart Community Schools,Elkhart County,school,,PASSED,Passed
+IN,May 2014,2014,05,Controlled Project,Madison Consolidated Schools,Jefferson County,school,,FAILED,Failed
+IN,May 2014,2014,05,School Operating/Capital Levy,Concord Community Schools,Elkhart County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,Elkhart Community Schools,Elkhart County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,Eminence Community School Corporation,Morgan County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,Lanesville Community School Corporation,Harrison County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,MSD Boone Township,Porter County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,MSD of Decatur Township,Marion County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,Mt. Vernon Community School Corporation,Hancock County,school,,PASSED,Passed
+IN,May 2014,2014,05,School Operating/Capital Levy,White River Valley School Corporation,Greene County,school,,PASSED,Passed
+IN,November 2014,2014,11,Controlled Project,East Noble School Corporation,Noble County,school,,FAILED,Failed
+IN,November 2014,2014,11,School Operating/Capital Levy,Bartholomew Consolidated School Corporation,Bartholomew County,school,,FAILED,Failed
+IN,May 2015,2015,05,Controlled Project,Brownsburg Community School Corporation,Hendricks County,school,,FAILED,Failed
+IN,May 2015,2015,05,Controlled Project,Community Schools of Frankfort,Clinton County,school,,PASSED,Passed
+IN,May 2015,2015,05,Controlled Project,New Albany-Floyd County Consolidated School Corporation,Floyd County,school,,FAILED,Failed
+IN,May 2015,2015,05,Controlled Project,Perry Township Schools,Marion County,school,,PASSED,Passed
+IN,May 2015,2015,05,Controlled Project,School City of Beech Grove,Marion County,school,,PASSED,Passed
+IN,May 2015,2015,05,Controlled Project,Valparaiso Community Schools,Porter County,school,,PASSED,Passed
+IN,May 2015,2015,05,Controlled Project,Warsaw Community Schools,Kosciusko County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,Brownsburg Community Schools,Hendricks County,school,,FAILED,Failed
+IN,May 2015,2015,05,School Operating/Capital Levy,Gary Community Schools Corporation,Lake County,school,,FAILED,Failed
+IN,May 2015,2015,05,School Operating/Capital Levy,Hanover Community School Corporation,Lake County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,Metropolitan School District of Wayne Township,Marion County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,Perry Township Schools,Marion County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,Pike County School Corporation,Pike County,school,,FAILED,Failed
+IN,May 2015,2015,05,School Operating/Capital Levy,Rising Sun-Ohio County Community School Corporation,Ohio County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,River Forest Community School Corporation,Lake County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,School City of Beech Grove,Marion County,school,,PASSED,Passed
+IN,May 2015,2015,05,School Operating/Capital Levy,Valparaiso Community Schools,Porter County,school,,PASSED,Passed
+IN,November 2015,2015,11,Controlled Project,East Noble School Corporation,Noble County,school,,PASSED,Passed
+IN,November 2015,2015,11,Controlled Project,Greater Clark County Schools,Clark County,school,,FAILED,Failed
+IN,November 2015,2015,11,Controlled Project,Whitley County Consolidated Schools,Whitley County,school,,PASSED,Passed
+IN,November 2015,2015,11,School Operating/Capital Levy,Fremont Community Schools,Steuben County,school,,PASSED,Passed
+IN,November 2015,2015,11,School Operating/Capital Levy,Lake Station Community Schools,Lake County,school,,FAILED,Failed
+IN,November 2015,2015,11,School Operating/Capital Levy,North Judson-San Pierre School Corporation,Starke and Pulaski Counties,school,,FAILED,Failed
+IN,November 2015,2015,11,School Operating/Capital Levy,Zionsville Community Schools,Boone County,school,,PASSED,Passed
+IN,May 2016,2016,05,Controlled Project,Fort Wayne Community Schools,Allen County,school,,PASSED,Passed
+IN,May 2016,2016,05,Controlled Project,New Prairie United School Corporation,LaPorte & St. Joseph Counties,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,Argos Community Schools,Marshall County,school,,FAILED,Failed
+IN,May 2016,2016,05,School Operating/Capital Levy,Brown County Schools,Brown County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,Hamilton Southeastern Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,MSD of Southwest Allen County,Allen County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,Noblesville Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,School Town of Speedway,Marion County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,Southern Wells Community Schools,Wells County,school,,PASSED,Passed
+IN,May 2016,2016,05,School Operating/Capital Levy,Wabash City Schools,Wabash County,school,,FAILED,Failed
+IN,November 2016,2016,11,Controlled Project,Central Indiana Public Transportation Project,Marion County,transit,,PASSED,Passed
+IN,November 2016,2016,11,Controlled Project,Jasper Public Library,Dubois County,library,,PASSED,Passed
+IN,November 2016,2016,11,Controlled Project,MSD Washington Township,Marion County,school,,PASSED,Passed
+IN,November 2016,2016,11,Controlled Project,New Albany - Floyd County Consolidated School Corporation,Floyd County,school,,PASSED,Passed
+IN,November 2016,2016,11,Controlled Project,School City of Mishawaka,St. Joseph County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,Clinton Central School Corporation,Clinton County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,Gary Community Schools,Lake County,school,,FAILED,Failed
+IN,November 2016,2016,11,School Operating/Capital Levy,MSD Washington Township,Marion County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,Monroe County Community School Corporation,Monroe County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,Northeast Dubois County School Corporation,Dubois County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,School City of Mishawaka,St. Joseph County,school,,PASSED,Passed
+IN,November 2016,2016,11,School Operating/Capital Levy,Westfield Washington Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2017,2017,05,Controlled Project,School Town of Munster,Lake County,school,,PASSED,Passed
+IN,May 2017,2017,05,Controlled Project,Westfield Washington School Corporation,Hamilton County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,Cannelton City Schools,Perry County,school,,FAILED,Failed
+IN,May 2017,2017,05,School Operating/Capital Levy,Carmel Clay Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,Lake Station Community Schools,Lake County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,School City of East Chicago,Lake County,school,,FAILED,Failed
+IN,May 2017,2017,05,School Operating/Capital Levy,School Town of Munster,Lake County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,Sheridan Community Schools,Hamilton County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,Tri-County School Corporation,White County,school,,PASSED,Passed
+IN,May 2017,2017,05,School Operating/Capital Levy,West Lafayette School Corporation,Tippecanoe County,school,,PASSED,Passed
+IN,November 2017,2017,11,Controlled Project,School City of Hammond,Lake County,school,,PASSED,Passed
+IN,November 2017,2017,11,Controlled Project,School City of Hobart,Lake County,school,,PASSED,Passed
+IN,November 2017,2017,11,Controlled Project,West Clark Community Schools,Clark County,school,,FAILED,Failed
+IN,November 2017,2017,11,School Operating/Capital Levy,School City of Hammond,Lake County,school,,PASSED,Passed
+IN,November 2017,2017,11,School Operating/Capital Levy,School City of Hobart,Lake County,school,,PASSED,Passed
+IN,November 2017,2017,11,School Operating/Capital Levy,Westview School Corporation,LaGrange County,school,,PASSED,Passed
+IN,May 2018,2018,05,Controlled Project,Alexandria Community School Corporation,Madison County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,Controlled Project,Anderson Community School Corporation,Madison County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,Controlled Project,Goshen Community Schools,Elkhart County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,Controlled Project,Hancock County,,county,,FAILED (certified),Failed
+IN,May 2018,2018,05,Controlled Project,North West Allen County School Corporation,Allen County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Anderson Community School Corporation,Madison County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Avon Community School Corporation,Hendricks County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Crown Point Community School Corporation,Lake County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Goshen Community Schools,Elkhart County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Lake Central School Corporation,Lake County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,MSD of Warren Township,Marion County,school,,PASSED (certified),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Oregon Davis School Corporation,Starke County,school,,PASSED (unofficial),Passed
+IN,May 2018,2018,05,School Operating/Capital Levy,Smith-Green Community School Corporation,,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,Controlled Project,Indianapolis Public School Corporation,Marion County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,Controlled Project,Lake Ridge School Corporation,Lake County,school,,FAILED (certified),Failed
+IN,November 2018,2018,11,Controlled Project,Manchester Community Schools,Wabash County,school,,FAILED (certified),Failed
+IN,November 2018,2018,11,Controlled Project,Town of Highland Park District,Lake County,town,,FAILED (certified),Failed
+IN,November 2018,2018,11,School Operating/Capital Levy,Cannelton City School Corporation,Perry County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Clark-Pleasant Community School Corporation,Johnson County,school,,PASSED,Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Culver Community School Corporation,Marshall County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Hamilton Community School Corporation,DeKalb and Steuben Counties,school,,FAILED (certified),Failed
+IN,November 2018,2018,11,School Operating/Capital Levy,Indianapolis Public Schools,Marion County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Lake Ridge School Corporation,Lake County,school,,FAILED (certified),Failed
+IN,November 2018,2018,11,School Operating/Capital Levy,Noblesville School Corporation,Hamilton County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Prairie Heights Community School Corporation,LaGrange County,school,,PASSED (certified),Passed
+IN,November 2018,2018,11,School Operating/Capital Levy,Wa-Nee Community School Corporation,Elkhart County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,Controlled Project,DeKalb County Central United School District,DeKalb County and Steuben County,school,,FAILED (certified),Failed
+IN,May 2019,2019,05,Controlled Project,Hanover Community School Corporation,Lake County,school,,FAILED (certified),Failed
+IN,May 2019,2019,05,School Operating/Capital Levy,Duneland School Corporation,Porter County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,School Operating/Capital Levy,Elkhart Community Schools,Elkhart County,school,,FAILED (certified),Failed
+IN,May 2019,2019,05,School Operating/Capital Levy,Franklin Community School Corporation,Johnson County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,School Operating/Capital Levy,Frontier School Corporation,White County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,School Operating/Capital Levy,MSD Decatur Township,Marion County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,School Operating/Capital Levy,MSD Wayne Township,Marion County,school,,PASSED (certified),Passed
+IN,May 2019,2019,05,School Operating/Capital Levy,Plymouth School Corporation,Marshall County,school,,FAILED (certified),Failed
+IN,May 2019,2019,05,School Operating/Capital Levy,River Forest Community School Corporation,Lake County,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,Controlled Project,Danville Community Schools,Hendricks County,school,,FAILED (certified),Failed
+IN,November 2019,2019,11,Controlled Project,Huntington County Community Schools,Huntington County,school,,FAILED (certified),Failed
+IN,November 2019,2019,11,Controlled Project,MSD Lawrence Township,Marion County,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,Controlled Project,Scott County School District Number 1,Scott County,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,Controlled Project,Washington Community Schools,Daviess County,school,,FAILED (certified),Failed
+IN,November 2019,2019,11,Controlled Project,Zionsville Community Schools,Boone County,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,School Operating/Capital Levy,Center Grove Community School Corporation,Johnson County,school,,FAILED,Failed
+IN,November 2019,2019,11,School Operating/Capital Levy,Danville Community School Corporation,Hendricks County,school,,FAILED,Failed
+IN,November 2019,2019,11,School Operating/Capital Levy,Hamilton Community School Corporation,DeKalb & Steuben Counties,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,School Operating/Capital Levy,Huntington County Community School Corporation,Huntington County,school,,FAILED (certified),Failed
+IN,November 2019,2019,11,School Operating/Capital Levy,Vigo County School Corporation,Vigo County,school,,PASSED,Passed
+IN,November 2019,2019,11,School Operating/Capital Levy,Zionsville Community Schools,Boone County,school,,PASSED (certified),Passed
+IN,November 2019,2019,11,School Safety,Carmel Clay School Corporation,Hamilton County,school,,PASSED,Passed
+IN,June 2020,2020,06,Controlled Project,Beech Grove City School Corporation,Marion County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,Controlled Project,Fort Wayne Community School District,Allen County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,Controlled Project,Hanover Community School Corporation,Lake County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,Controlled Project,MSD Washington Township,Marion County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,Controlled Project,South Bend Community School Corporation,St Joseph County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Barr-Reeve Community Schools,Daviess County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Bartholomew Consolidated School Corporation,Bartholomew County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Beech Grove City School Corporation,Marion County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Benton Community School Corporation,Benton County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Crothersville Community School Corporation,Jackson County,school,,Failed,Failed
+IN,June 2020,2020,06,School Operating/Capital Levy,Eminence Community School Corporation,Morgan County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Hanover Community School Corporation,Lake County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Lanesville Community School Corporation,Harrison County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,MSD Washington Township,Marion County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,South Bend Community School Corporation,St Joseph County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Union Township Community School Corporation,Porter County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Operating/Capital Levy,Western Wayne Schools,Wayne County,school,,Passed (certified),Passed
+IN,June 2020,2020,06,School Safety,New Albany-Floyd County School Corporation,Floyd County,school,,Failed (certified),Failed
+IN,November 2020,2020,11,Controlled Project,Town of Middletown and Fall Creek Township,Henry County,town,,,
+IN,November 2020,2020,11,School Operating/Capital Levy,Bremen Public Schools,Marshall County,school,,Passed (certified),Passed
+IN,November 2020,2020,11,School Operating/Capital Levy,Gary Community School Corporation,Lake County,school,,Passed (certified),Passed
+IN,November 2020,2020,11,School Operating/Capital Levy,Southeast Dubois County School Corporation,Dubois County,school,,Passed (certified),Passed
+IN,November 2020,2020,11,School Operating/Capital Levy,Wawasee Community School Corporation,Kosciusko County,school,,Failed (certified),Failed
+IN,May 2021,2021,05,School Operating/Capital Levy,Elkhart Community School Corporation,,school,,FAILED (certified),Failed
+IN,November 2021,2021,11,School Operating/Capital Levy,Concord Community School Corporation,,school,,FAILED (certified),Failed
+IN,November 2021,2021,11,School Operating/Capital Levy,MSD Boone Township,Porter County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,Controlled Project,Franklin Township Community School Corporation,Marion County,school,,FAILED (certified),Failed
+IN,May 2022,2022,05,Controlled Project,Lebanon Community School Corporation,Boone County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,Controlled Project,Vigo County School Corporation,Vigo County,school,,FAILED (certified),Failed
+IN,May 2022,2022,05,School Operating/Capital Levy,Edinburgh Community School Corporation,Bartholomew & Johnson Counties,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,School Operating/Capital Levy,Griffith Public School Corporation,Lake County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,School Operating/Capital Levy,Lebanon Community School Corporation,Boone County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,School Operating/Capital Levy,Mt Vernon Community School Corporation,Hancock County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,School Operating/Capital Levy,Perry Township School Corporation,Marion County,school,,PASSED (certified),Passed
+IN,May 2022,2022,05,School Operating/Capital Levy,Valparaiso Community School Corporation,Porter County,school,,PASSED (certified),Passed
+IN,November 2022,2022,11,Controlled Project,MSD of Wabash County,Wabash County,school,,FAILED (certified),Failed
+IN,November 2022,2022,11,School Operating/Capital Levy,Brown County Schools,Brown County,school,,FAILED,Failed
+IN,November 2022,2022,11,School Operating/Capital Levy,Delphi Community School Corporation,Carroll County,school,,FAILED,Failed
+IN,November 2022,2022,11,School Operating/Capital Levy,Fremont Community Schools,Steuben County,school,,WAS NOT INCLUDED ON BALLOT,Not on ballot
+IN,November 2022,2022,11,School Operating/Capital Levy,MSD of SW Allen County,Allen County,school,,PASSED (certified),Passed
+IN,November 2022,2022,11,School Operating/Capital Levy,Medora Community School Corporation,Jackson County,school,,FAILED,Failed
+IN,November 2022,2022,11,School Operating/Capital Levy,Monroe County Community School Corporation,Monroe County,school,,PASSED (certified),Passed
+IN,November 2022,2022,11,School Operating/Capital Levy,Southern Wells Community Schools,Wells County,school,,PASSED (certified),Passed
+IN,November 2022,2022,11,School Operating/Capital Levy,Westfield Washington Schools,Hamilton County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,Controlled Project,Indianapolis Public Schools,Marion County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,Clinton Central School Corporation,Clinton County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,Fremont Community Schools,Steuben County,school,,FAILED,Failed
+IN,May 2023,2023,05,School Operating/Capital Levy,MSD of Warren Township,Marion County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,School City of Mishawaka,St. Joseph County,school,,PASSED,Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,School Town of Highland,Lake County,school,,FAILED (certified),Failed
+IN,May 2023,2023,05,School Operating/Capital Levy,School Town of Munster,Lake County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,School Town of Speedway,Marion County,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,"Tri-County School Corporation, Benton, Jasper",and White Counties,school,,PASSED (certified),Passed
+IN,May 2023,2023,05,School Operating/Capital Levy,Tri-Creek School Corporation,Lake County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,Controlled Project,School City of Hammond,Lake County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,School Operating/Capital Levy,Carmel-Clay Schools,Hamilton County,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Operating/Capital Levy,Hamilton Southeastern Schools,Hamilton County,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Operating/Capital Levy,Lake Station Community School Corporation,Lake County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,School Operating/Capital Levy,Monroe County Community School Corporation,Monroe County,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Operating/Capital Levy,Northeast Dubois County School Corporation,Dubois County,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Operating/Capital Levy,School City of Hammond,Lake County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,School Operating/Capital Levy,School City of Whiting,Lake County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,School Operating/Capital Levy,Sheridan Community School Corporation,Boone & Hamilton Counties,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Operating/Capital Levy,West Lafayette Community Schools,Tippecanoe County,school,,PASSED (certified),Passed
+IN,November 2023,2023,11,School Safety,Bluffton Harrison MSD,Wells County,school,,FAILED (certified),Failed
+IN,November 2023,2023,11,School Safety,Fort Wayne Community School Corporation,Allen County,school,,PASSED (certified),Passed
+IN,May 2024,2024,05,School Operating/Capital Levy,Blue River Valley School Corporation,Henry County,school,,FAILED (Certified),Failed
+IN,May 2024,2024,05,School Operating/Capital Levy,Brown County Schools,Brown County,school,,PASSED,Passed
+IN,May 2024,2024,05,School Operating/Capital Levy,Fremont Community Schools,Steuben County,school,,PASSED (Certified),Passed
+IN,May 2024,2024,05,School Operating/Capital Levy,MSD Pike Township,Marion County,school,,PASSED (Certified),Passed
+IN,November 2024,2024,11,Controlled Project,Town of Sheridan and Adams Township,Hamilton County,town,,APPROVED (Certified),Passed
+IN,November 2024,2024,11,School Operating/Capital Levy,Kokomo School Corporation,Howard County,school,,FAILED,Failed
+IN,November 2024,2024,11,School Operating/Capital Levy,Lake Station School Corporation,Lake County,school,,PASSED (Certified),Passed
+IN,November 2024,2024,11,School Operating/Capital Levy,Twin Lakes School Corporation,White and Carroll Counties,school,,FAILED (Certified),Failed
+IN,May 2025,2025,05,Controlled Project,Silver Creek Community School Corporation,Clark County,school,,FAILED (certified),Failed
+IN,May 2025,2025,05,Controlled Project,Southwest Parke Community School Corporation,Parke County,school,,FAILED (certified),Failed
+IN,May 2025,2025,05,School Operating/Capital Levy,Central Noble Community Schools,Noble County,school,,FAILED (certified),Failed
+IN,May 2025,2025,05,School Operating/Capital Levy,Crown Point Community School Corporation,Lake County,school,,PASSED (certified),Passed
+IN,May 2025,2025,05,School Operating/Capital Levy,Hamilton Community Schools,DeKalb and Steuben Counties,school,,PASSED (certified),Passed
+IN,May 2025,2025,05,School Operating/Capital Levy,School City of Hobart,Lake County,school,,PASSED (certified),Passed
+IN,May 2025,2025,05,School Operating/Capital Levy,Westview School Corporation,LaGrange County,school,,PASSED (certified),Passed
+IN,November 2025,2025,11,School Operating/Capital Levy,Avon Community School Corporation,Hendricks County,school,,APPROVED (certified),Passed
+IN,November 2025,2025,11,School Operating/Capital Levy,Cannelton City School Corporation,Perry County,school,,APPROVED (certified),Passed
+IN,November 2025,2025,11,School Operating/Capital Levy,Duneland School Corporation,Porter County,school,,,
+IN,November 2025,2025,11,School Operating/Capital Levy,Hanover School Corporation,Lake County,school,,APPROVED (certified),Passed
+IN,November 2025,2025,11,School Operating/Capital Levy,Lake Central School Corporation,Lake County,school,,APPROVED (certified),Passed
+IN,November 2025,2025,11,School Operating/Capital Levy,Northwest Allen Community Schools,Allen County,school,,FAILED (certified),Failed

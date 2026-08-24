@@ -1,0 +1,953 @@
+{
+  "id" : "kbmc-qmvg",
+  "name" : "Local Debt Bond Election Results",
+  "assetType" : "dataset",
+  "attribution" : "Texas Bond Review Board",
+  "attributionLink" : "http://brb.texas.gov",
+  "averageRating" : 0,
+  "category" : "Government and Taxes",
+  "createdAt" : 1503588398,
+  "description" : "To view the full data set please click the Export link above. This data set contains election data for local government Issuers, including cities, community college districts, counties, hospital districts, independent school districts, other special districts and water districts. The election information includes bond amount, bond purpose, proposition number, election votes and election results.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 4686,
+  "hideFromCatalog" : true,
+  "hideFromDataJson" : true,
+  "indexUpdatedAt" : 1543993327,
+  "licenseId" : "PUBLIC_DOMAIN",
+  "locale" : "en_US",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 27209249,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1510251791,
+  "publicationGroup" : 14419488,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowsUpdatedAt" : 1787158459,
+  "rowsUpdatedBy" : "g2zx-jzxy",
+  "tableId" : 14603225,
+  "totalTimesRated" : 0,
+  "viewCount" : 46483,
+  "viewLastModified" : 1593214940,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1510251791,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 552282,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1510251791,
+    "targetAudience" : "public",
+    "workflowId" : 1858,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "g2zx-jzxy",
+      "displayName" : "Bond Review Board"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 329247560,
+    "name" : "GovernmentName",
+    "dataTypeName" : "text",
+    "fieldName" : "governmentname",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372223,
+    "width" : 268,
+    "cachedContents" : {
+      "largest" : "Zephyr ISD",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Plano",
+        "count" : "61"
+      }, {
+        "item" : "Irving",
+        "count" : "53"
+      }, {
+        "item" : "Frisco",
+        "count" : "47"
+      }, {
+        "item" : "McKinney",
+        "count" : "46"
+      }, {
+        "item" : "Austin",
+        "count" : "44"
+      }, {
+        "item" : "Arlington",
+        "count" : "42"
+      }, {
+        "item" : "Carrollton",
+        "count" : "42"
+      }, {
+        "item" : "Fort Worth",
+        "count" : "40"
+      }, {
+        "item" : "Dallas",
+        "count" : "35"
+      }, {
+        "item" : "Hays CISD",
+        "count" : "34"
+      }, {
+        "item" : "Corpus Christi",
+        "count" : "33"
+      }, {
+        "item" : "College Station",
+        "count" : "33"
+      }, {
+        "item" : "Garland",
+        "count" : "32"
+      }, {
+        "item" : "Allen",
+        "count" : "29"
+      }, {
+        "item" : "Rowlett",
+        "count" : "28"
+      }, {
+        "item" : "Judson ISD",
+        "count" : "26"
+      }, {
+        "item" : "Rockwall",
+        "count" : "25"
+      }, {
+        "item" : "Cedar Park",
+        "count" : "24"
+      }, {
+        "item" : "Comal ISD",
+        "count" : "23"
+      }, {
+        "item" : "Boerne ISD",
+        "count" : "23"
+      } ],
+      "smallest" : "290 Betka MMD 1",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247561,
+    "name" : "GovernmentType",
+    "dataTypeName" : "text",
+    "fieldName" : "governmenttype",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372224,
+    "width" : 179,
+    "cachedContents" : {
+      "largest" : "WD",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ISD",
+        "count" : "5059"
+      }, {
+        "item" : "WD",
+        "count" : "3159"
+      }, {
+        "item" : "CITY",
+        "count" : "1912"
+      }, {
+        "item" : "COUNTY",
+        "count" : "267"
+      }, {
+        "item" : "CCD",
+        "count" : "61"
+      }, {
+        "item" : "HHD",
+        "count" : "41"
+      }, {
+        "item" : "OSD",
+        "count" : "20"
+      } ],
+      "smallest" : "CCD",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247562,
+    "name" : "County",
+    "dataTypeName" : "text",
+    "fieldName" : "county",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372225,
+    "width" : 172,
+    "cachedContents" : {
+      "largest" : "Zavala",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Harris",
+        "count" : "1010"
+      }, {
+        "item" : "Fort Bend",
+        "count" : "592"
+      }, {
+        "item" : "Montgomery",
+        "count" : "479"
+      }, {
+        "item" : "Collin",
+        "count" : "477"
+      }, {
+        "item" : "Williamson",
+        "count" : "441"
+      }, {
+        "item" : "Travis",
+        "count" : "411"
+      }, {
+        "item" : "Dallas",
+        "count" : "385"
+      }, {
+        "item" : "Tarrant",
+        "count" : "361"
+      }, {
+        "item" : "Denton",
+        "count" : "297"
+      }, {
+        "item" : "Galveston",
+        "count" : "241"
+      }, {
+        "item" : "Brazoria",
+        "count" : "203"
+      }, {
+        "item" : "Bexar",
+        "count" : "199"
+      }, {
+        "item" : "Hays",
+        "count" : "160"
+      }, {
+        "item" : "Nueces",
+        "count" : "119"
+      }, {
+        "item" : "Ellis",
+        "count" : "115"
+      }, {
+        "item" : "Waller",
+        "count" : "108"
+      }, {
+        "item" : "Hidalgo",
+        "count" : "105"
+      }, {
+        "item" : "Guadalupe",
+        "count" : "103"
+      }, {
+        "item" : "Parker",
+        "count" : "102"
+      }, {
+        "item" : "Kaufman",
+        "count" : "100"
+      } ],
+      "smallest" : "Anderson",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247563,
+    "name" : "ElectionDate",
+    "dataTypeName" : "calendar_date",
+    "fieldName" : "electiondate",
+    "position" : 4,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 52372226,
+    "width" : 154,
+    "cachedContents" : {
+      "largest" : "2026-05-02T00:00:00.000",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025-11-04T00:00:00.000",
+        "count" : "493"
+      }, {
+        "item" : "2026-05-02T00:00:00.000",
+        "count" : "439"
+      }, {
+        "item" : "2023-05-06T00:00:00.000",
+        "count" : "387"
+      }, {
+        "item" : "2022-05-07T00:00:00.000",
+        "count" : "373"
+      }, {
+        "item" : "2022-11-08T00:00:00.000",
+        "count" : "366"
+      }, {
+        "item" : "2024-05-04T00:00:00.000",
+        "count" : "332"
+      }, {
+        "item" : "2021-05-01T00:00:00.000",
+        "count" : "325"
+      }, {
+        "item" : "2023-11-07T00:00:00.000",
+        "count" : "307"
+      }, {
+        "item" : "2025-05-03T00:00:00.000",
+        "count" : "302"
+      }, {
+        "item" : "2007-05-12T00:00:00.000",
+        "count" : "242"
+      }, {
+        "item" : "2024-11-05T00:00:00.000",
+        "count" : "225"
+      }, {
+        "item" : "2021-11-02T00:00:00.000",
+        "count" : "224"
+      }, {
+        "item" : "2019-11-05T00:00:00.000",
+        "count" : "185"
+      }, {
+        "item" : "2019-05-04T00:00:00.000",
+        "count" : "185"
+      }, {
+        "item" : "2006-05-13T00:00:00.000",
+        "count" : "185"
+      }, {
+        "item" : "2006-11-07T00:00:00.000",
+        "count" : "185"
+      }, {
+        "item" : "2017-11-07T00:00:00.000",
+        "count" : "179"
+      }, {
+        "item" : "2020-11-03T00:00:00.000",
+        "count" : "177"
+      }, {
+        "item" : "2015-05-09T00:00:00.000",
+        "count" : "172"
+      }, {
+        "item" : "2014-11-04T00:00:00.000",
+        "count" : "166"
+      } ],
+      "smallest" : "1951-07-07T00:00:00.000",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "left"
+    }
+  }, {
+    "id" : 329247564,
+    "name" : "Amount",
+    "dataTypeName" : "number",
+    "fieldName" : "amount",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 52372227,
+    "width" : 135,
+    "cachedContents" : {
+      "largest" : "5928820000",
+      "non_null" : "10519",
+      "average" : "44851851.61032696",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10000000",
+        "count" : "142"
+      }, {
+        "item" : "5000000",
+        "count" : "130"
+      }, {
+        "item" : "15000000",
+        "count" : "111"
+      }, {
+        "item" : "3000000",
+        "count" : "104"
+      }, {
+        "item" : "20000000",
+        "count" : "104"
+      }, {
+        "item" : "2000000",
+        "count" : "99"
+      }, {
+        "item" : "4000000",
+        "count" : "98"
+      }, {
+        "item" : "6000000",
+        "count" : "96"
+      }, {
+        "item" : "8000000",
+        "count" : "95"
+      }, {
+        "item" : "25000000",
+        "count" : "92"
+      }, {
+        "item" : "12000000",
+        "count" : "86"
+      }, {
+        "item" : "7000000",
+        "count" : "82"
+      }, {
+        "item" : "30000000",
+        "count" : "81"
+      }, {
+        "item" : "2500000",
+        "count" : "79"
+      }, {
+        "item" : "1000000",
+        "count" : "76"
+      }, {
+        "item" : "1500000",
+        "count" : "76"
+      }, {
+        "item" : "7500000",
+        "count" : "65"
+      }, {
+        "item" : "35000000",
+        "count" : "56"
+      }, {
+        "item" : "3500000",
+        "count" : "53"
+      }, {
+        "item" : "50000000",
+        "count" : "53"
+      } ],
+      "smallest" : "0",
+      "not_null" : "6117",
+      "count" : "10519",
+      "sum" : "251035813463.0000",
+      "cardinality" : "10519"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 329247565,
+    "name" : "Purpose",
+    "dataTypeName" : "text",
+    "fieldName" : "purpose",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372228,
+    "width" : 125,
+    "cachedContents" : {
+      "largest" : "Renovations",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Other",
+        "count" : "4956"
+      }, {
+        "item" : "Building",
+        "count" : "3691"
+      }, {
+        "item" : "Refund",
+        "count" : "1180"
+      }, {
+        "item" : "Programs",
+        "count" : "351"
+      }, {
+        "item" : "Renovations",
+        "count" : "341"
+      } ],
+      "smallest" : "Building",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247566,
+    "name" : "PurposeDescription",
+    "dataTypeName" : "text",
+    "fieldName" : "purposedescription",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372232,
+    "width" : 209,
+    "cachedContents" : {
+      "largest" : "Zoo",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "School  Building",
+        "count" : "915"
+      }, {
+        "item" : "School Building",
+        "count" : "881"
+      }, {
+        "item" : "Building",
+        "count" : "751"
+      }, {
+        "item" : "Water, Sewer & Drainage",
+        "count" : "469"
+      }, {
+        "item" : "Road",
+        "count" : "348"
+      }, {
+        "item" : "Refunding",
+        "count" : "303"
+      }, {
+        "item" : "School Building & Buses",
+        "count" : "298"
+      }, {
+        "item" : "Parks & Recreation",
+        "count" : "256"
+      }, {
+        "item" : "Water, Sewer, Drainage, & Refunding",
+        "count" : "246"
+      }, {
+        "item" : "School Building & Security",
+        "count" : "224"
+      }, {
+        "item" : "Street",
+        "count" : "189"
+      }, {
+        "item" : "Technology",
+        "count" : "186"
+      }, {
+        "item" : "Athletic Facilities Improvements",
+        "count" : "185"
+      }, {
+        "item" : "Water & Sewer",
+        "count" : "184"
+      }, {
+        "item" : "Park",
+        "count" : "170"
+      }, {
+        "item" : "Stadium",
+        "count" : "143"
+      }, {
+        "item" : "Roads",
+        "count" : "134"
+      }, {
+        "item" : "Library",
+        "count" : "114"
+      }, {
+        "item" : "Water, Sewer, & Drainage",
+        "count" : "113"
+      }, {
+        "item" : "Refund",
+        "count" : "105"
+      } ],
+      "smallest" : "Acoustics",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247567,
+    "name" : "PropNumber",
+    "dataTypeName" : "text",
+    "fieldName" : "propnumber",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372235,
+    "width" : 92,
+    "cachedContents" : {
+      "largest" : "S",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "4846"
+      }, {
+        "item" : "2",
+        "count" : "1256"
+      }, {
+        "item" : "A",
+        "count" : "846"
+      }, {
+        "item" : "3",
+        "count" : "694"
+      }, {
+        "item" : "B",
+        "count" : "605"
+      }, {
+        "item" : "C",
+        "count" : "436"
+      }, {
+        "item" : "4",
+        "count" : "375"
+      }, {
+        "item" : "D",
+        "count" : "308"
+      }, {
+        "item" : "5",
+        "count" : "215"
+      }, {
+        "item" : "E",
+        "count" : "182"
+      }, {
+        "item" : "6",
+        "count" : "133"
+      }, {
+        "item" : "F",
+        "count" : "117"
+      }, {
+        "item" : "1.2",
+        "count" : "94"
+      }, {
+        "item" : "1.1",
+        "count" : "94"
+      }, {
+        "item" : "G",
+        "count" : "90"
+      }, {
+        "item" : "7",
+        "count" : "54"
+      }, {
+        "item" : "NR",
+        "count" : "29"
+      }, {
+        "item" : "8",
+        "count" : "21"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "H",
+        "count" : "10"
+      } ],
+      "smallest" : "1",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 329247568,
+    "name" : "VotesFor",
+    "dataTypeName" : "number",
+    "fieldName" : "votesfor",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 52372238,
+    "width" : 80,
+    "cachedContents" : {
+      "largest" : "711352",
+      "non_null" : "10519",
+      "average" : "4665.845274254065",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1",
+        "count" : "2952"
+      }, {
+        "item" : "2",
+        "count" : "785"
+      }, {
+        "item" : "0",
+        "count" : "443"
+      }, {
+        "item" : "3",
+        "count" : "49"
+      }, {
+        "item" : "168",
+        "count" : "18"
+      }, {
+        "item" : "4",
+        "count" : "16"
+      }, {
+        "item" : "110",
+        "count" : "15"
+      }, {
+        "item" : "98",
+        "count" : "15"
+      }, {
+        "item" : "176",
+        "count" : "14"
+      }, {
+        "item" : "128",
+        "count" : "13"
+      }, {
+        "item" : "252",
+        "count" : "12"
+      }, {
+        "item" : "140",
+        "count" : "11"
+      }, {
+        "item" : "63",
+        "count" : "11"
+      }, {
+        "item" : "105",
+        "count" : "11"
+      }, {
+        "item" : "204",
+        "count" : "11"
+      }, {
+        "item" : "72",
+        "count" : "10"
+      }, {
+        "item" : "120",
+        "count" : "10"
+      }, {
+        "item" : "6",
+        "count" : "10"
+      }, {
+        "item" : "68",
+        "count" : "10"
+      }, {
+        "item" : "147",
+        "count" : "10"
+      } ],
+      "smallest" : "0",
+      "not_null" : "6117",
+      "count" : "10519",
+      "sum" : "26114736",
+      "cardinality" : "10519"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 329247569,
+    "name" : "VotesAgainst",
+    "dataTypeName" : "number",
+    "fieldName" : "votesagainst",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 52372240,
+    "width" : 93,
+    "cachedContents" : {
+      "largest" : "455109",
+      "non_null" : "10519",
+      "average" : "2549.873146328390",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3932"
+      }, {
+        "item" : "1",
+        "count" : "320"
+      }, {
+        "item" : "59",
+        "count" : "17"
+      }, {
+        "item" : "71",
+        "count" : "17"
+      }, {
+        "item" : "84",
+        "count" : "15"
+      }, {
+        "item" : "38",
+        "count" : "14"
+      }, {
+        "item" : "10",
+        "count" : "14"
+      }, {
+        "item" : "27",
+        "count" : "14"
+      }, {
+        "item" : "2",
+        "count" : "14"
+      }, {
+        "item" : "18",
+        "count" : "13"
+      }, {
+        "item" : "63",
+        "count" : "13"
+      }, {
+        "item" : "99",
+        "count" : "13"
+      }, {
+        "item" : "39",
+        "count" : "13"
+      }, {
+        "item" : "4",
+        "count" : "13"
+      }, {
+        "item" : "23",
+        "count" : "13"
+      }, {
+        "item" : "57",
+        "count" : "13"
+      }, {
+        "item" : "67",
+        "count" : "12"
+      }, {
+        "item" : "47",
+        "count" : "12"
+      }, {
+        "item" : "9",
+        "count" : "12"
+      }, {
+        "item" : "21",
+        "count" : "12"
+      } ],
+      "smallest" : "0",
+      "not_null" : "6117",
+      "count" : "10519",
+      "sum" : "14271640",
+      "cardinality" : "10519"
+    },
+    "format" : {
+      "decimalSeparator" : ".",
+      "groupSeparator" : ","
+    }
+  }, {
+    "id" : 329247570,
+    "name" : "Result",
+    "dataTypeName" : "text",
+    "fieldName" : "result",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372243,
+    "width" : 118,
+    "cachedContents" : {
+      "largest" : "Pending",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Carried",
+        "count" : "8436"
+      }, {
+        "item" : "Defeated",
+        "count" : "1930"
+      }, {
+        "item" : "Cancelled",
+        "count" : "92"
+      }, {
+        "item" : "Pending",
+        "count" : "42"
+      }, {
+        "item" : "NR",
+        "count" : "19"
+      } ],
+      "smallest" : "Cancelled",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  }, {
+    "id" : 329247571,
+    "name" : "Source",
+    "dataTypeName" : "text",
+    "fieldName" : "source",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 52372246,
+    "width" : 130,
+    "cachedContents" : {
+      "largest" : "TSB",
+      "non_null" : "10519",
+      "null" : "0",
+      "top" : [ {
+        "item" : "TBR",
+        "count" : "8779"
+      }, {
+        "item" : "Issuer",
+        "count" : "1423"
+      }, {
+        "item" : "OAG",
+        "count" : "135"
+      }, {
+        "item" : "Other",
+        "count" : "125"
+      }, {
+        "item" : "TSB",
+        "count" : "55"
+      }, {
+        "item" : "BB",
+        "count" : "2"
+      } ],
+      "smallest" : "BB",
+      "not_null" : "6117",
+      "count" : "10519",
+      "cardinality" : "10519"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Public Domain"
+  },
+  "metadata" : {
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "governmenttype",
+        "ascending" : true
+      }, {
+        "columnFieldName" : "governmentname",
+        "ascending" : true
+      }, {
+        "columnFieldName" : "electiondate",
+        "ascending" : true
+      } ]
+    },
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "custom_fields" : {
+      "Dataset Category" : {
+        "Agency" : "Texas Bond Review Board",
+        "Category Tile" : "Government and Taxes"
+      },
+      "Microsite" : {
+        "Tags" : "Government and Taxes"
+      }
+    },
+    "rowIdentifier" : "0",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "rowLabel" : "Local Government Debt Bond Election Results",
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "g2zx-jzxy",
+    "displayName" : "Bond Review Board",
+    "screenName" : "Bond Review Board",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 329247561,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 329247560,
+        "type" : "column"
+      }
+    }, {
+      "ascending" : true,
+      "expression" : {
+        "columnId" : 329247563,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "g2zx-jzxy",
+    "displayName" : "Bond Review Board",
+    "screenName" : "Bond Review Board",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "local government debt", "local debt issuance", "bonds", "elections", "authorizations" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
