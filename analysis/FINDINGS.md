@@ -80,6 +80,25 @@ but conversions sit unissued — median pass→first-issue **6.21y vs 2.93y**;
 voter-mode first issue ≤8y only 5.5% vs 13.5%. Signature: **authorization
 re-assembled, drawdown deferred.** (Longer-horizon pass pending.)
 
+## P5 · The pay-go bound (supporting check; outcome of record = OS corpus)
+Refused governments do not replace lost borrowing with pay-go building at any
+detectable scale: schools capital-outlay RD, DIFFERENCED post−pre (the citable
+row given a positive pre-period RD from endogenous timing): **+0.377 (z 2.9;
+RBC +0.464, z 2.4)** beside issuance +1.434; trimmed levels give an
+outlay/issuance ratio of **0.92**. General-purpose null on both margins;
+specials too thin. One validity-battery row + two sentences in the draft, by
+design. Caveats: 6y windows vs construction spreading; total outlay only
+(no construction itemisation; F-33 not in repo); FY2023 truncation (IUF has
+no outlay items).
+
+## P4 · The rate-cap split — NOT CONFIRMED; the fact stands
+Within CA, conversions classify 118 capped-55 vs 14 uncapped-66.7: the
+uncapped cell is too thin to test and its point direction runs against the cap
+story (median pass→first-issue 9.74y vs 4.93y capped). AV-headroom proxy lacks
+joint coverage. "Re-approved but unissued" remains documented without an
+adjudicated mechanism; upgrade path: county AV rolls + CDIAC
+sold-vs-authorised series.
+
 ## F7 · Substitution toward the council channel
 Council share τ=−0.064 (z −2.03, bw10); modest, direction as predicted; read
 jointly with the transition matrix (council-mode first issuance ~8% both sides —

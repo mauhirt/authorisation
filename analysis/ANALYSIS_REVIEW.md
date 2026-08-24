@@ -116,6 +116,20 @@ school places poorer than cleared (−$3.8k, SE 1.5k). Within-matched caveat.
 Voted channel 11.1% chargeable $ vs council 60.5 / statutory 72.5. C2
 general-purpose β −0.162 (t −1.83) held until rules pass-2 lands.
 
+### P5 · Pay-go bound — VERDICT: SUPPORTED/CAVEAT (deliberately subordinated)
+Schools outlay RD differenced +0.377 (z 2.9; RBC +0.464, z 2.4); offset ratio
+0.92; general-purpose null; specials thin. Enters as ONE validity-battery row
+plus two sentences beside continuation, per the outcome-architecture rule (OS
+corpus = outcome of record). Caveats: construction-year spreading; positive
+pre-period RD owned via the differenced spec; FY2023 truncation; total outlay
+only. Consent map (F6.1) built: OK 80% / TX 67% … NY/PA/KY ≈ 0; 10
+no-coverage states flagged as extraction gaps.
+
+### P4 · Rate-cap mechanism — VERDICT: NOT CONFIRMED (underpowered)
+118 capped vs 14 uncapped conversions; uncapped cell too thin and
+directionally opposite (9.74y vs 4.93y). The banked-authorisation fact stands
+unexplained; upgrade: county AV rolls, CDIAC sold-vs-authorised.
+
 ### N1–N5 · National panel regressions — VERDICT: FIRST-STAGE (rules PRELIMINARY)
 90,604-unit entity panel + 19,539-city view. First stage: schools +0.778
 (t 7.0), specials +0.199, munis +0.171; counties n.s.; township reversal =
