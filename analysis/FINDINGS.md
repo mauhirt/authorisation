@@ -104,6 +104,35 @@ between sub-50 and cleared places on renter share/diversity/Gini, and blocked
 school places are POORER than cleared ones (−$3.8k, SE 1.5k) — the
 supermajority bar's demographic incidence.
 
+## N · Fifty states: the national panels and what they show (round 2b)
+Built: `national_entity_panel.csv.gz` — **90,604 local governments**, all five
+types, with rules, county/place ACS layers, county Dem, the ~570 big-city
+subpanel (FOG/TEL/ACS22/partisanship/mayor), corpus outcomes (security ×
+OS-evidenced auth mode × B3 purpose), GFD flows, and RD drill-down linkage;
+`national_city_panel.csv` is the city view. All rule coefficients are
+FIRST-STAGE/DESCRIPTIVE until the rules pass-2.
+- **N1 first stage** (voted $ share ~ strict, controls + region FE, state
+  clusters): schools **+0.778 (t 7.0)** · specials +0.199 (t 3.2) · munis
+  +0.171 (t 2.9) · counties +0.136 (n.s.). The coded rule predicts the observed
+  channel in 4/5 classes; the township reversal traces to the proxy rule
+  (town-meeting states) → pass-2 needs a township column.
+- **N2 substitution at unit grain**: under strict rules general-purpose
+  governments carry LESS GO security (−0.345, t −5.1) and LESS non-chargeable
+  purpose (−0.171, t −3.3) — the C2 sorting with controls.
+- **N3 extensive margin**: n.s. (rule shifts the channel and composition, not
+  whether a government borrows at all — consistent with F1 being a timing/
+  channel effect).
+- **N5 moderators (first stage)**: strict × county-Dem −0.75 (t −2.2;
+  descriptive), strict × homeownership +0.31 (n.s.).
+- **N6 reform events (honest verdict)**: the coarse state-mean Prop 39 designs
+  do NOT confirm an issuance jump (schools DiD +0.451, permutation p 0.15,
+  visible pre-trend; sector-DDD ≈ 0); the FFC composition margin is DEGENERATE
+  in GFD (school FFC share ≡ 1.000 by classification). The credible rule
+  evidence remains the RD + W1; the district-level TWFE upgrade with
+  state-matching-fund controls (and CDIAC issuance data for the COP→GO
+  composition) is the named path for the national event design. Measure 56 is
+  a crisis-confounded sketch.
+
 ## R1 · The reform record (appendix, secondary_unverified)
 Threshold-lowering attempts since 1990 concentrate in SCHOOLS (CA Prop 170/26/39;
 WA 2023–25 bills; ID ~11 attempts) — the no-exit sector; the one non-school

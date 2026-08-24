@@ -116,6 +116,25 @@ school places poorer than cleared (−$3.8k, SE 1.5k). Within-matched caveat.
 Voted channel 11.1% chargeable $ vs council 60.5 / statutory 72.5. C2
 general-purpose β −0.162 (t −1.83) held until rules pass-2 lands.
 
+### N1–N5 · National panel regressions — VERDICT: FIRST-STAGE (rules PRELIMINARY)
+90,604-unit entity panel + 19,539-city view. First stage: schools +0.778
+(t 7.0), specials +0.199, munis +0.171; counties n.s.; township reversal =
+proxy-rule artifact (pass-2 item). Substitution at unit grain: general-purpose
+GO −0.345 (t −5.1), nc −0.171 (t −3.3). Extensive margin n.s. TEL×rule n.s.
+(570 cities, power-limited by design). strict×county-Dem −0.75 (t −2.2,
+descriptive). MISSING per block (in N_RESULTS.md): rules pass-2; township rule
+column; rule time-variation; state-level TEL panel; specials revenue-size
+proxy; SD-grain national moderators; GFD no-report→0 assumption.
+
+### N6 · Reform events — VERDICT: NOT YET CONFIRMING (upgrade path named)
+Prop 39 state-mean designs: schools DiD +0.451 (permutation p 0.15) with a
+visible pre-trend; sector-DDD ≈ 0. FFC composition margin DEGENERATE in GFD
+(school FFC ≡ 1.000 by classification — a data finding). Required upgrades:
+district-level TWFE with enrollment weights + Conley–Taber CIs; OPSC
+state-matching-fund controls; CDIAC issuance database for the COP→GO
+composition. Measure 56 = crisis-confounded sketch. Treatment here is the
+event, not the coded panel — pass-2 does not gate this design.
+
 ### R1 · Reform appendix — VERDICT: secondary_unverified
 Threshold-lowering attempts concentrate in schools (CA 170/26/39, WA, ID×11);
 the non-school attempt (CA Prop 5 2024) failed; OR tightened then loosened;
@@ -158,7 +177,11 @@ TX HB 3 2019 = ballot-structure regulation. Owner verification before citation.
 12. **R1 is secondary_unverified** — appendix only until owner verification.
 
 ## 6 · Open before submission
-- Rules human pass-2 (21 cells) → C2/H2 finals. (With owner.)
+- Rules human pass-2 (21 cells) → C2/H2 + N1–N5 causal upgrades. (With owner.)
+- Township rule column in pass-2 (town-meeting states break the muni proxy).
+- Prop 39 district-level TWFE + OPSC matching-fund controls; CDIAC issuance
+  pull for the COP→GO composition event study.
+- State-level TEL panel (full universe; big-city index has no time variation).
 - B5 disagreement-review pass (9 disputed pairs; upgrade precision).
 - P3 longer-horizon (10y+) issuance pass on the re-approved-but-unissued cohort.
 - Specials demographics: TWDB/shapefile interpolation (last county-proxy class).
