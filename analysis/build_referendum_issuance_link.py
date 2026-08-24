@@ -68,8 +68,16 @@ for st,(path,yc,nc,pc,rc,dc,thr_row) in SPECS.items():
     for i,r in enumerate(csv.DictReader(open(path))):
         pct=pct_from(r.get(yc),r.get(nc),r.get(pc)) if (yc or pc) else None
         t=thr(st,r); margin=(pct-t) if pct is not None else None
-        d=(r.get(dc) or ""); m=re.search(r"(19|20)\d{2}(-\d\d-\d\d)?",d)
-        edate=m.group(0) if m else None
+        d=(r.get(dc) or "").strip()
+        edate=None
+        m=re.match(r"(\d{1,2})/(\d{1,2})/((?:19|20)\d{2})",d)   # US MM/DD/YYYY (CDIAC)
+        if m: edate=f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}"
+        else:
+            m=re.match(r"((?:19|20)\d{2})-(\d{2})-(\d{2})",d)     # ISO
+            if m: edate=m.group(0)
+            else:
+                m=re.search(r"(19|20)\d{2}",d)                      # bare year (IL/IN)
+                if m: edate=m.group(0)
         ref[f"{st}:{i}"]=dict(pct=pct,margin=margin,passed=passed(r.get(rc)),edate=edate)
 
 # issuance by unit_id
