@@ -30,6 +30,14 @@ majority-failures (50<yes<threshold): **374** (CA supermajority regimes); minori
 | any issuance ≤6y | 23.5% (n=374) | 34.6% (n=179) |
 | council share of window docs | 0.488 (n=76) | 0.396 (n=49) |
 
+### Within CA, by cutoff regime (regime × purpose held fixed)
+| regime | outcome | majority-fail | minority-fail |
+|---|---|--:|--:|
+| CA schools (thr 55) | re-submitted ≤4y | 51.3% (n=277) | 30.8% (n=159) |
+| CA schools (thr 55) | any issuance ≤6y | 21.7% (n=277) | 37.7% (n=159) |
+| CA non-school (thr 66.7) | re-submitted ≤4y | 16.5% (n=97) | 0.0% (n=20) |
+| CA non-school (thr 66.7) | any issuance ≤6y | 28.9% (n=97) | 10.0% (n=20) |
+
 ## D2b · Signal test: RD at the 50% line among CA FAILED school measures (thr 55)
 Sample: CA school bond failures with yes<55 (both sides of 50 FAIL): n=326.
 | outcome | bw | τ | SE | z | n L/R |
@@ -39,27 +47,3 @@ Sample: CA school bond failures with yes<55 (both sides of 50 FAIL): n=326.
 
 Both sides of 50 fail institutionally — a jump here is the informational value of
 majority support (the board reads the signal), clean of any legal discontinuity.
-
-## Interpretation
-1. **Refusal is usually a pause, not a stop (D3).** The re-submission hazard is
-   front-loaded — 26.7% in the first year, median time-to-return 1.02y (the next
-   election) — cumulating to 58.2% within 4y; 61.9% of returns pass. So ~36% of
-   failures convert to authorization within 4y through re-submission alone.
-2. **Districts re-ask, they don't concede (D3).** The median returning measure
-   asks the SAME amount (ratio 1.00); only 45.9% downsize. The modal response to
-   refusal is persistence at the original ask, timed to the next election — not
-   a smaller coalition-friendly package.
-3. **Proximity to the threshold shapes the response (D2, within CA).** Majority-
-   failures (won >50% but missed the supermajority) re-submit at 42.2% vs 27.4%
-   for minority-failures, and their subsequent issuance leans more on the council
-   channel (0.488 vs 0.396). Boards read the vote: near-misses come back and/or
-   route around; decisive rejections are more often abandoned. (The pooled
-   cross-state version of this table is composition-confounded and flagged.)
-4. **No discontinuous signal at the 50% line (D2b).** Among CA school failures
-   (both sides of 50 fail institutionally), the re-submission RD at 50 is a null
-   (τ≈−0.14, n.s., n=326) — the response margin tracks proximity smoothly rather
-   than jumping at the symbolic majority line; low power noted.
-5. Open puzzle, flagged: within CA, majority-failures show LOWER any-issuance
-   within 6y (23.5% vs 34.6%) despite re-submitting more — candidates: larger
-   blocked asks, longer conversion lags than 6y, or unit heterogeneity. To probe
-   in the D5 heterogeneity pass, not resolved here.

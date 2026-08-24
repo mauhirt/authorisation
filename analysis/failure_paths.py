@@ -147,6 +147,16 @@ for col,lab in [("resubmitted_4y","re-submitted ≤4y"),("issued_6y","any issuan
 a,na=meanc(majCA,"council_share_6y"); b,nb=meanc(minoCA,"council_share_6y")
 L.append(f"| council share of window docs | {a:.3f} (n={na}) | {b:.3f} (n={nb}) |")
 L.append("")
+# regime x purpose conditioning (map row 12): within CA, split by cutoff regime
+L+=["### Within CA, by cutoff regime (regime × purpose held fixed)",
+    "| regime | outcome | majority-fail | minority-fail |","|---|---|--:|--:|"]
+for regime,sel in [("CA schools (thr 55)",lambda r:r["census_type"]=="school_district"),
+                   ("CA non-school (thr 66.7)",lambda r:r["census_type"]!="school_district")]:
+    mj=[r for r in majCA if sel(r)]; mn=[r for r in minoCA if sel(r)]
+    for col,lab in [("resubmitted_4y","re-submitted ≤4y"),("issued_6y","any issuance ≤6y")]:
+        a,na=rate(mj,col); b,nb=rate(mn,col)
+        L.append(f"| {regime} | {lab} | {a:.1%} (n={na}) | {b:.1%} (n={nb}) |")
+L.append("")
 
 # ---- D2b signal RD at 50 among CA failed school measures (threshold 55) ----
 CA=[r for r in rows if r["state"]=="CA" and r["purpose_class"]=="bond_go" and r["passed"]=="0"
