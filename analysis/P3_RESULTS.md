@@ -57,5 +57,4 @@ higher because that flag includes refundings) — levels differ, the contrast is
    drawdown deferred beyond the horizon.
 3. F6's open puzzle is therefore reframed, not closed: the deficit is real at
    8y; whether the banked re-authorizations eventually issue (10y+) is left to
-   a longer-horizon pass. Conditional medians ride small n (n=48/21 issue
-   observations) — direction, not magnitude.
+   a longer-horizon pass. Conditional pass→issue medians ride small n — direction, not magnitude.

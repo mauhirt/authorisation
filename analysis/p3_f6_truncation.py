@@ -137,7 +137,6 @@ L+=["","Note: T1/T2 count NEW-MONEY issues only (the FAILURE_PATHS `issued_6y` l
     "   drawdown deferred beyond the horizon.",
     "3. F6's open puzzle is therefore reframed, not closed: the deficit is real at",
     "   8y; whether the banked re-authorizations eventually issue (10y+) is left to",
-    "   a longer-horizon pass. Conditional medians ride small n (n=48/21 issue",
-    "   observations) — direction, not magnitude.",]
+    f"   a longer-horizon pass. Conditional pass→issue medians ride small n — direction, not magnitude."]
 open("analysis/P3_RESULTS.md","w").write("\n".join(L)+"\n")
 print("\n".join(L))
