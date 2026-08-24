@@ -190,7 +190,7 @@ TX HB 3 2019 = ballot-structure regulation. Owner verification before citation.
     unknown (10y+ pass pending).
 12. **R1 is secondary_unverified** — appendix only until owner verification.
 
-## 5b · Newly diagnosed (round 3): the finance-flag coverage gap
+## 5b · Diagnosed round 3, RESOLVED same day (package v3)
 Extraction wave `w2_3_v3.2` left `has_new_money` blank for a subset of states
 (NY, PA, IN, CO, WA, AL, GA, AZ, TN, VA, SC, NC among them) — their documents
 exist in the corpus (NY 25,974; PA 10,240; IN 7,780 …) but never enter
@@ -199,8 +199,17 @@ new-money outcomes. Consequences now flagged at each use: consent map gated at
 0%); N-suite corpus outcomes ride the flag-covered states (cluster counts
 reflect it); NC (an RD state) has near-empty corpus new-money outcomes — its
 RD cell is small and n.s. either way, and GFD outcomes carry it. KY's ≈0%
-voted share is REAL (3,245 flagged docs). FIX: the pending auth tier-2 corpus
-refresh — this diagnosis is its symptom list.
+voted share is REAL (3,245 flagged docs). RESOLUTION: meta session root-caused
+it (five two-axis output files never reached the master build) and shipped
+package v3 same day; acceptance verified independently here (defect states
+97.4–99.5% flagged; TX nm docs exactly unchanged; CA +0.05%). National chain
+RERUN ON V3: map now 46 states (NY 2.2%/PA 1.6%/TN 0.5% are REAL near-zeros);
+menu and first-stage numbers refreshed in M1/N/entity results, FINDINGS and
+the draft. Residuals: five LEGACY states below the 90% flag bar (MN 79, MA 72,
+MO 85, MD 87, ID 85 — pre-existing, listed); pooled N1 composition-sensitive
+(per-class rows are the object); GP nc-substitution attenuated to t −1.6.
+The NINE-STATE referendum panel (link → outcomes → B5) reruns ONCE on v4
+(strict superset, ~a day) rather than twice — deferred deliberately.
 
 ## 6 · Open before submission
 - Rules human pass-2 (21 cells) → C2/H2 + N1–N5 causal upgrades. (With owner.)

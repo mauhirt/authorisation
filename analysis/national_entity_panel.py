@@ -253,9 +253,9 @@ for ent in ("county","municipal","township","special_district","school_district"
         fmt=lambda x: f"{x:.1%}" if x is not None else "–"
         L.append(f"| {ent} | {lab} | {len(G):,} | {fmt(vs)} | {fmt(cs)} | {fmt(gs)} | {fmt(ns)} |")
 L+=["","Reading: in FOUR of five classes the coded rule predicts the OS-evidenced",
-    "voted share, most dramatically for schools (72.5% vs 7.5%) — the rules panel's",
-    "first stage at the grain of the whole local state. The EXCEPTION is townships",
-    "(18.2% strict vs 46.6% non-strict) — and townships are the one class carrying a",
+    "voted share, most dramatically for schools (values in the table above) — the",
+    "rules panel's first stage at the grain of the whole local state. The EXCEPTION",
+    "is townships (strict BELOW non-strict) — and townships are the one class carrying a",
     "PROXY rule (municipality go_debt; the panel has no township class): New-England",
     "town-meeting states are coded non-strict for cities while towns borrow by town",
     "meeting VOTE, which flips the cell. This is not noise — it is the panel telling",

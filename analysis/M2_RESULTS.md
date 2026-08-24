@@ -36,18 +36,18 @@ conduit authorities with unassigned accountable units KEPT — they are the subm
 local state's vehicles; financing mechanics excluded):
 | corpus function | project $B | voted share | lines |
 |---|--:|--:|--:|
-| public_hospital_facility | 197.5 | 1.90% | 2,396 |
-| affordable_multifamily_housing | 69.1 | 1.89% | 5,975 |
-| electric_generation | 67.0 | 0.54% | 1,004 |
-| natural_gas_utility | 50.0 | 0.05% | 224 |
-| airport_terminal | 48.2 | 0.25% | 513 |
-| industrial_development | 32.6 | 0.41% | 807 |
-| senior_housing | 25.8 | 0.33% | 1,085 |
-| student_housing_dormitory | 12.2 | 0.07% | 382 |
-| single_family_homeownership | 11.4 | 0.01% | 570 |
+| public_hospital_facility | 197.7 | 1.89% | 2,404 |
+| affordable_multifamily_housing | 70.0 | 1.87% | 6,017 |
+| electric_generation | 67.1 | 0.54% | 1,062 |
+| natural_gas_utility | 50.0 | 0.05% | 232 |
+| airport_terminal | 48.3 | 0.25% | 540 |
+| industrial_development | 32.6 | 0.41% | 821 |
+| senior_housing | 25.8 | 0.33% | 1,087 |
+| student_housing_dormitory | 12.2 | 0.07% | 383 |
+| single_family_homeownership | 11.4 | 0.01% | 573 |
 | charter_school_facility | 6.9 | 0.00% | 596 |
-| recycling_waste_facility | 6.2 | 0.34% | 339 |
-| tax_increment_project_area | 5.5 | 1.38% | 851 |
+| recycling_waste_facility | 6.2 | 0.34% | 429 |
+| tax_increment_project_area | 5.5 | 1.38% | 852 |
 
 Boundary caveat: state-created finance commissions with unassigned accountable
 units can remain in the housing rows — aggregates carry that blur; the named

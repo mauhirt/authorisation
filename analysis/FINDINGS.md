@@ -15,10 +15,11 @@ thresholds (50%; CA 55 schools / 66.7 others). Outcomes: EMMA OS corpus
 (258,762 docs) + Census GFD/IUF surveys, joined on the shared Census GID.
 
 ## The stage (round-2 legibility exhibits)
-- **M1 · The menu.** Nationally, school districts put only **29.8%** of
+- **M1 · The menu (v3).** Nationally, school districts put only **36.6%** of
   determined new-money dollars through non-voted channels; municipalities
-  **82.7%**, counties **80.9%**, special districts **68.5%**, authority-class
-  issuers **96.8%**. The D4 fork aligns with this independently measured menu:
+  **88.7%**, counties **83.1%**, special districts **73.8%**, authority-class
+  issuers **97.6%** (78,672 canonical new-money issues after the finance-flag
+  fix). The D4 fork aligns with this independently measured menu:
   the poorest menu (schools) shows the binding discontinuity; the richest
   (general-purpose) shows none.
 - **M2 · What is voted on, and what never is.** The balloted local state is
@@ -130,14 +131,14 @@ subpanel (FOG/TEL/ACS22/partisanship/mayor), corpus outcomes (security ×
 OS-evidenced auth mode × B3 purpose), GFD flows, and RD drill-down linkage;
 `national_city_panel.csv` is the city view. All rule coefficients are
 FIRST-STAGE/DESCRIPTIVE until the rules pass-2.
-- **N1 first stage** (voted $ share ~ strict, controls + region FE, state
-  clusters): schools **+0.778 (t 7.0)** · specials +0.199 (t 3.2) · munis
-  +0.171 (t 2.9) · counties +0.136 (n.s.). The coded rule predicts the observed
-  channel in 4/5 classes; the township reversal traces to the proxy rule
-  (town-meeting states) → pass-2 needs a township column.
-- **N2 substitution at unit grain**: under strict rules general-purpose
-  governments carry LESS GO security (−0.345, t −5.1) and LESS non-chargeable
-  purpose (−0.171, t −3.3) — the C2 sorting with controls.
+- **N1 first stage (v3)** (voted $ share ~ strict, controls + region FE, state
+  clusters, 48 clusters): schools **+0.690 (t 4.5)** · munis +0.204 (t 5.8) ·
+  specials +0.176 (t 3.5) · counties +0.108 (n.s.). The pooled coefficient is
+  composition-sensitive across classes (n.s.) — per-class rows are the object.
+  Township reversal (proxy rule, town-meeting states) → pass-2 township column.
+- **N2 substitution at unit grain (v3)**: under strict rules general-purpose
+  governments carry LESS GO security (−0.277, t −3.9); the non-chargeable gap
+  attenuates to −0.087 (t −1.6) with full coverage, direction preserved.
 - **N3 extensive margin**: n.s. (rule shifts the channel and composition, not
   whether a government borrows at all — consistent with F1 being a timing/
   channel effect).

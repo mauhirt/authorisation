@@ -5,7 +5,9 @@
 claims held on a named data pass. The honesty record (nulls, pending items,
 data limits) now lives in the online appendix
 (`paper/ONLINE_APPENDIX_HONESTY.md`). House style applied throughout:
-impersonal constructions, no em dashes, British spelling.*
+impersonal constructions, no em dashes, British spelling. Corpus package v3
+(the finance-flag fix) is folded into every national exhibit below; the
+nine-state referendum panel reruns once on v4.*
 
 ---
 
@@ -92,12 +94,13 @@ are then confronted with observed behaviour across the whole local state.
 ### 5.1 Three facts about the landscape
 
 **Fact 1: entity types hold radically different menus of exits from the voted
-channel.** Table 5.1 tabulates, for the national new-money corpus (59,912
-canonical issues), the share of determined dollars authorised without a vote,
-by entity type. School districts route only **29.8%** of new-money dollars
-through non-voted channels; townships 48.8%; special districts 68.5%; counties
-**80.9%**; municipalities **82.7%**; and authority-class issuers (housing,
-health-hospital and utility conduits) **96.8%**. The full matrix (security
+channel.** Table 5.1 tabulates, for the national new-money corpus (78,672
+canonical issues, package v3), the share of determined dollars authorised
+without a vote, by entity type. School districts route only **36.6%** of
+new-money dollars through non-voted channels; townships 62.0%; special
+districts 73.8%; counties **83.1%**; municipalities **88.7%**; and
+authority-class issuers (housing, health-hospital and utility conduits)
+**97.6%**. The full matrix (security
 class by authorisation mode, per entity and rule regime) shows why: a school
 district's menu is essentially GO-or-nothing, while a city can finance most of
 what it does through revenue bonds, leases and conduit authorities that never
@@ -109,13 +112,13 @@ chargeable perimeter never votes.** Classifying ballot purposes across 19,600
 bond measures, K-12 schools alone account for 38.2% of everything put before
 voters, followed by water and sewer, roads, parks and fire protection
 (Table 5.2, Panel A). Panel B lists the corpus functions whose dollars are
-voted on less than 2% of the time: public hospitals ($197.5B of local project
-dollars), multifamily housing ($69.1B), electric generation ($67.0B), gas
+voted on less than 2% of the time: public hospitals ($197.7B of local project
+dollars), multifamily housing ($70.0B), electric generation ($67.1B), gas
 utilities, airport terminals. A $0.84B Harris County Hospital District line,
 San Francisco's multifamily housing revenue programme, Energy Northwest's
 generation debt: none faced a ballot; Los Angeles Unified's $9.0B ask in 2024
 did. The nationwide sorting is stark at the channel level: the voted channel
-carries **11.1%** chargeable dollars, the board channel 60.5%, the statutory
+carries **11.3%** chargeable dollars, the board channel 60.0%, the statutory
 channel 72.5%. What the consent requirement governs, overwhelmingly, is the
 class of goods that cannot be charged to users, precisely the goods H2 says it
 should.
@@ -150,14 +153,17 @@ characteristics above as controls.
 
 **The rule shows up in behaviour, most where the theory says it must.** Under
 a strict rule, the OS-evidenced voted share of determined new-money dollars is
-higher by **+0.78 for school districts (t = 7.0)**, +0.20 for special
-districts (t = 3.2), +0.17 for municipalities (t = 2.9) and +0.14 (n.s.) for
-counties (Table 5.4). Raw magnitudes tell the same story: 72.5% of school
-dollars are voted under strict rules against 7.5% under lax ones; 22.1%
-against 5.0% for cities. Figure 5.1 maps the resulting geography of consent:
-the observed voted share of local new-money debt ranges from roughly 80% in
-Oklahoma and two-thirds in Texas to essentially zero in New York,
-Pennsylvania and Kentucky. The one reversal in the class table, townships
+higher by **+0.69 for school districts (t = 4.5)**, +0.20 for municipalities
+(t = 5.8), +0.18 for special districts (t = 3.5) and +0.11 (n.s.) for
+counties (Table 5.4); the pooled coefficient is composition-sensitive across
+classes and the per-class rows are the cited object. Raw magnitudes tell the
+same story: 68.4% of school dollars are voted under strict rules against 7.4%
+under lax ones; 22.2% against 3.7% for cities; 23.3% against 5.4% for
+counties. Figure 5.1 maps the resulting geography of consent across 46 states
+with full flag coverage: the observed voted share of local new-money debt
+ranges from roughly 80% in Oklahoma and two-thirds in Texas to under 3% in
+New York, Pennsylvania, Tennessee and Kentucky, the states whose statutes
+require no local ballot. The one reversal in the class table, townships
 (18.2% strict against 46.6% non-strict), is itself diagnostic: townships
 carry a proxy (municipality) rule in the panel, and New England towns borrow
 by town-meeting vote in states coded lax for cities. The panel is signalling
@@ -166,9 +172,10 @@ that the coding needs a township class; it is flagged rather than absorbed.
 
 **Cities under strict rules substitute away from the voted instrument.** At
 the unit grain with full controls, general-purpose governments in strict
-states carry a GO security share **34.5 points lower** (t = −5.1) and a
-non-chargeable project share **17.1 points lower** (t = −3.3) than their
-counterparts in lax states (Table 5.5). This is the fifty-state
+states carry a GO security share **27.7 points lower** (t = −3.9) than their
+counterparts in lax states; the non-chargeable project gap attenuates to
+−8.7 points (t = −1.6) under the fuller v3 coverage, direction preserved
+(Table 5.5). This is the fifty-state
 generalisation of the sorting in Fact 2: where the GO instrument requires a
 coalition, governments that can finance through chargeable, unvoted
 instruments do. The state-level fixed-effects version of the same test gives

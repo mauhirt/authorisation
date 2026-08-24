@@ -141,7 +141,7 @@ for lab,(sel,ent) in CLS.items():
     res2=rd([(f(r["threshold_centered_margin"]),f(r["issued_6y"])) for r in G],10)
     rv=rich.get(ent) if ent else (gp_nv/gp_dt if gp_dt>0 else float("nan"))
     L.append(f"| {lab} | {rv:.1%} | {res['tau']:+.3f} | {res['z']:.2f} | {res2['tau']:+.3f} | {res2['z']:.2f} |")
-L.append("\nRead: schools — the poorest menu (29.8% non-voted $) — are bound (significant τ,"
+L.append(f"\nRead: schools — the poorest menu ({rich.get('school_district',float('nan')):.1%} non-voted $) — are bound (significant τ,"
          "\nGO ≈ ANY: nothing to reroute to). General-purpose governments — the richest menu —"
          "\nshow no discontinuity at all. Special districts sit between: the largest GO-specific"
          "\nτ, shrinking at ANY-issue as part of the gap reroutes to non-GO channels. The menu"

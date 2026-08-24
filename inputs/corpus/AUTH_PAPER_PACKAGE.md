@@ -73,3 +73,44 @@ doc_par_effective.
 - security ladder ~92%; same tier-2 pass lifts toward ~97%.
 - MSRB vote-margin joins: election_date + state + issuer → owner's external
   election-results crosswalk (downstream merge, not extracted).
+
+---
+
+# v3 (2026-08-24) — CHANGELOG: w2_3 finance-flag gap FIXED
+
+**Defect (reported by the analysis session, confirmed):** `has_new_money` /
+`has_refunding` (and the whole functional rollup) were blank for ~100% of docs
+in NY, PA, IN, CO, AL, WA, TN, GA, AZ, VA, SC, NC. Root cause: five completed
+two-axis classification files were never delivered to the master build —
+`two_axis_se_gap` / `west_gap` existed only on the extraction branches'
+sessions, `ny_gap` / `pa_gap` / `in_gap` on branches the fold session never
+had. The rollup stage silently skipped what it could not find. Line-level
+labels were partially unaffected (SE/West present at control rates), which
+matched the reported symptom.
+
+**Fix:** all five files (120,394 classified docs, ~285k use-lines) folded into
+the rollup; os_master functional columns rebuilt. Per-state `has_new_money`
+non-blank now 97–99% in every defect state (NC 99%). Full table:
+`flag_coverage_by_state.csv` (per acceptance criteria).
+
+**Regression guard passed:** TX new-money docs 18,182 → 18,182 (+0.00%), par
++0.00%; CA +0.02% docs, +0.11% par.
+
+**Semantic change to `auth_mode_final2` (changelog entry per contract):** the
+definitional refunding-inference layer, which reads `has_refunding`, had
+under-fired in the defect states. Recomputed on fixed flags: 3,544 → **6,219**
+docs resolved as `refunding_no_new_election`; issue-propagated secondary layer
+1,143 → 1,063. Determination 92.7% → **93.74%** (unknown 18,882 → 16,207). No
+other determination logic touched; finance flags are NOT otherwise an input to
+auth_mode_final2.
+
+**Known limitation (pre-existing, NOT part of this defect, unchanged from v2):**
+five legacy states have partial two-axis coverage below the 90% bar — MN 79%,
+MA 72%, MO 85%, MD 87%, ID 85% (historical fill-run subsets). A completion
+classification pass for these is a scoped follow-up, not a blocker.
+
+**Line grain:** auth_projects now carries NY/PA/IN line labels for the 10,688
+docs (26,371 lines) where the classification's line set aligns exactly with
+the project table (strict count-match guard); the remainder need the next full
+os_projects rebuild from record dirs (fold-session task, noted). SE/West line
+labels were already present at control-normal rates.

@@ -17,18 +17,18 @@ stay HELD for the human pass-2.
 | TEL (big-city subpanel) | 571 | 2.9% |
 | city partisanship (subpanel) | 572 | 2.9% |
 | mayor party (subpanel) | 564 | 2.9% |
-| any corpus new-money 2005–25 | 4,053 | 20.7% |
-| OS-evidenced auth split | 3,915 | 20.0% |
-| B3 purpose split | 3,572 | 18.3% |
+| any corpus new-money 2005–25 | 5,108 | 26.1% |
+| OS-evidenced auth split | 4,956 | 25.4% |
+| B3 purpose split | 3,767 | 19.3% |
 | GFD flows 2005–23 | 10,509 | 53.8% |
 
 ## First-stage exhibit: the rule and the observed authorization channel
 ($-weighted across cities; corpus new-money 2005–25; OS-evidenced modes)
 | rule (muni GO debt) | cities | issuing cities | voted $ share | council $ share | GO security share | non-chargeable $ share |
 |---|--:|--:|--:|--:|--:|--:|
-| referendum-strict | 11,037 | 2,085 | 22.1% | 74.0% | 39.5% | 32.8% |
-| non-strict | 2,305 | 586 | 5.0% | 89.9% | 84.8% | 63.1% |
-| not codable | 6,197 | 1,382 | 5.3% | 83.1% | 58.6% | 51.2% |
+| referendum-strict | 11,037 | 2,591 | 22.2% | 74.1% | 37.7% | 34.2% |
+| non-strict | 2,305 | 690 | 3.7% | 89.2% | 72.1% | 52.6% |
+| not codable | 6,197 | 1,827 | 1.2% | 40.0% | 22.6% | 13.9% |
 
 Reading: the rule and the observed channel line up — under strict rules 22.1%
 of determined municipal new-money dollars are OS-evidenced voter-authorized vs

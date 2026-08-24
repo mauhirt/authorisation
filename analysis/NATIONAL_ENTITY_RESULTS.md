@@ -12,30 +12,30 @@ L3 drill-down: `n_referenda`/`n_rd_sample` join this file to `paper_panel.csv`
 ## Coverage by entity type
 | entity | units | rule coded | ACS (place/county) | county Dem | corpus new-money | OS auth split | GFD flows | in RD frame |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|
-| county | 3,032 | 94% | 100% | 100% | 1,093 | 1,062 | 2,351 | 239 |
-| municipal | 19,539 | 68% | 100% | 99% | 4,053 | 3,915 | 10,526 | 977 |
-| township | 16,358 | 50% | 100% | 100% | 693 | 672 | 4,025 | 0 |
-| special_district | 37,963 | 79% | 100% | 100% | 2,217 | 2,110 | 7,976 | 699 |
-| school_district | 13,712 | 93% | 100% | 100% | 5,817 | 5,616 | 11,223 | 2,157 |
+| county | 3,032 | 94% | 100% | 100% | 1,600 | 1,557 | 2,351 | 239 |
+| municipal | 19,539 | 68% | 100% | 99% | 5,108 | 4,956 | 10,526 | 977 |
+| township | 16,358 | 50% | 100% | 100% | 999 | 976 | 4,025 | 0 |
+| special_district | 37,963 | 79% | 100% | 100% | 2,991 | 2,877 | 7,976 | 699 |
+| school_district | 13,712 | 93% | 100% | 100% | 7,630 | 7,467 | 11,223 | 2,157 |
 
 ## First-stage exhibit: rule × entity → observed channel ($-weighted, corpus 2005–25)
 | entity | rule | units | voted $ share | council $ share | GO security share | non-chargeable share |
 |---|---|--:|--:|--:|--:|--:|
-| county | strict | 2,375 | 21.4% | 71.3% | 50.3% | 57.1% |
-| county | non-strict | 481 | 12.8% | 84.1% | 77.0% | 74.2% |
-| municipal | strict | 11,037 | 22.1% | 74.0% | 39.5% | 32.8% |
-| municipal | non-strict | 2,305 | 5.0% | 89.9% | 84.8% | 63.1% |
-| township | strict | 5,735 | 18.2% | 80.0% | 89.3% | 61.0% |
-| township | non-strict | 2,483 | 46.6% | 51.7% | 97.1% | 75.9% |
-| special_district | strict | 23,373 | 38.1% | 52.0% | 36.3% | 37.7% |
-| special_district | non-strict | 6,801 | 13.4% | 83.6% | 41.4% | 25.6% |
-| school_district | strict | 12,162 | 72.5% | 26.5% | 83.4% | 99.3% |
-| school_district | non-strict | 616 | 7.5% | 90.5% | 45.7% | 99.8% |
+| county | strict | 2,375 | 23.3% | 70.9% | 49.1% | 61.6% |
+| county | non-strict | 481 | 5.4% | 90.7% | 80.7% | 63.1% |
+| municipal | strict | 11,037 | 22.2% | 74.1% | 37.7% | 34.2% |
+| municipal | non-strict | 2,305 | 3.7% | 89.2% | 72.1% | 52.6% |
+| township | strict | 5,735 | 18.0% | 80.2% | 89.3% | 61.0% |
+| township | non-strict | 2,483 | 46.5% | 51.8% | 97.1% | 75.9% |
+| special_district | strict | 23,373 | 33.3% | 57.1% | 33.0% | 30.7% |
+| special_district | non-strict | 6,801 | 13.1% | 83.8% | 33.4% | 18.2% |
+| school_district | strict | 12,162 | 68.4% | 30.6% | 85.4% | 99.4% |
+| school_district | non-strict | 616 | 7.4% | 90.6% | 45.2% | 99.8% |
 
 Reading: in FOUR of five classes the coded rule predicts the OS-evidenced
-voted share, most dramatically for schools (72.5% vs 7.5%) — the rules panel's
-first stage at the grain of the whole local state. The EXCEPTION is townships
-(18.2% strict vs 46.6% non-strict) — and townships are the one class carrying a
+voted share, most dramatically for schools (values in the table above) — the
+rules panel's first stage at the grain of the whole local state. The EXCEPTION
+is townships (strict BELOW non-strict) — and townships are the one class carrying a
 PROXY rule (municipality go_debt; the panel has no township class): New-England
 town-meeting states are coded non-strict for cities while towns borrow by town
 meeting VOTE, which flips the cell. This is not noise — it is the panel telling
