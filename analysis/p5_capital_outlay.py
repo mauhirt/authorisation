@@ -101,12 +101,21 @@ G=[e for e in S if e["cls"]=="school_district"]
 cp=rd(pair(G,"ln_co_pre"),10); bp=rd_rbc(pair(G,"ln_co_pre"),10)
 if cp and bp:
     L.append(f"| schools PLACEBO (−3..−1) | {cp['tau']:+.3f} ({cp['z']:.2f}) | {bp['tau']:+.3f} ({bp['z']:.2f}) | | {cp['nL']}/{cp['nR']} |")
+for e in G:
+    if "ln_co" in e and "ln_co_pre" in e:
+        e["d_co"]=e["ln_co"]-(e["ln_co_pre"]+math.log(2.0))   # 6y window vs 3y window, scale-adjusted
+cd_=rd(pair(G,"d_co"),10); bd_=rd_rbc(pair(G,"d_co"),10)
+if cd_ and bd_:
+    L.append(f"| schools DIFFERENCED (post − pre, scale-adj) | {cd_['tau']:+.3f} ({cd_['z']:.2f}) | {bd_['tau']:+.3f} ({bd_['z']:.2f}) | | {cd_['nL']}/{cd_['nR']} |")
 L.append("")
-L.append("Placebo note: the pooled pre-period rows are mildly positive (z 1.6–1.8) —")
-L.append("outlay is serially correlated across the vote (projects span it, and proposal")
-L.append("timing is endogenous). The close-margin cumulative curves below are the direct")
-L.append("check: the two sides are BALANCED through year −1 and diverge only after the")
-L.append("vote — the schools placebo row carries the class where the effect lives.")
+L.append("Placebo treatment (stated, not hidden): the schools pre-period RD is itself")
+L.append("positive (+0.198, z 2.2) — barely-passed districts were already building more,")
+L.append("consistent with endogenous proposal timing (projects and votes arrive together).")
+L.append("Two answers: (i) the DIFFERENCED row above nets unit-level pre-period outlay")
+L.append("(window-length adjusted) — the post−pre jump is the cited estimate; (ii) at the")
+L.append("tight margin the cumulative curves below are balanced through year −1 and")
+L.append("diverge only after the vote. The outlay effect should be quoted from the")
+L.append("differenced row.")
 L.append("")
 
 # levels + offset (trimmed)

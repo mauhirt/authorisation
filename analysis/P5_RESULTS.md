@@ -26,12 +26,16 @@ Frame: 10244 measures with denominator; 8489 with a 6y outlay window.
 | general-purpose | -0.056 (-0.16) | +0.017 (0.04) | +0.304 (0.49) | 199/406 |
 | special districts | – (n=0 in ±10 — cell too thin) | – | – | – |
 | schools PLACEBO (−3..−1) | +0.198 (2.23) | +0.269 (2.01) | | 1278/2118 |
+| schools DIFFERENCED (post − pre, scale-adj) | +0.377 (2.88) | +0.464 (2.44) | | 996/1621 |
 
-Placebo note: the pooled pre-period rows are mildly positive (z 1.6–1.8) —
-outlay is serially correlated across the vote (projects span it, and proposal
-timing is endogenous). The close-margin cumulative curves below are the direct
-check: the two sides are BALANCED through year −1 and diverge only after the
-vote — the schools placebo row carries the class where the effect lives.
+Placebo treatment (stated, not hidden): the schools pre-period RD is itself
+positive (+0.198, z 2.2) — barely-passed districts were already building more,
+consistent with endogenous proposal timing (projects and votes arrive together).
+Two answers: (i) the DIFFERENCED row above nets unit-level pre-period outlay
+(window-length adjusted) — the post−pre jump is the cited estimate; (ii) at the
+tight margin the cumulative curves below are balanced through year −1 and
+diverge only after the vote. The outlay effect should be quoted from the
+differenced row.
 
 ## Levels and the pay-go offset (trimmed at p99, bw ±10, conventional)
 | outcome ($ per capita, 6y) | τ | SE | z |
