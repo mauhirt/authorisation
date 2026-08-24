@@ -1,0 +1,169 @@
+#!/usr/bin/env python3
+"""M2 — what is voted on, and what never is (round-2, Tier 1).
+
+PANEL A (the balloted local state): bond measures in the panel
+(purpose_class bond_go/bond_other), ballot purpose text fetched from each raw
+source by referendum_row_id, normalized to a shared keyword vocabulary
+(first-match-wins map below — auditable, committed). Count + printed dollars
+(amount parseable: CA/TX/WI/IL/MA; LA/NC/MN/IN text-only).
+CONFLICT FLAG: no formal 'B1' ballot-purpose taxonomy exists in the repo; this
+normalization stands in for it and is labeled as such.
+
+PANEL B (the submerged local state): auth_projects use-side non-subtotal lines
+with printed dollars and a functional_activity label; per function: total $,
+voter-mode $ share. 'Submerged' = voted share < 2%, financial-mechanics
+functions excluded (b3_label_map class 'financial' where the map covers the
+label, plus the explicit financing list below). 3 named examples per panel.
+Writes analysis/M2_RESULTS.md."""
+import csv, gzip, re
+from collections import defaultdict
+
+def money(s):
+    if not s: return None
+    m=re.search(r"\$?\s*([0-9][0-9,]*(?:\.\d+)?)",str(s))
+    if not m: return None
+    try: v=float(m.group(1).replace(",",""))
+    except: return None
+    return v if 1e4<v<1e12 else None
+
+EL="inputs/elections"
+# raw purpose text + amount per source row
+SRC={
+ "CA":("cdiac/cdiac_elections_all.csv", lambda r:(r["Purpose"], r["Amount of Bond/Tax"], r["Agency Name"], r["Election Date"])),
+ "TX":("tx_brb/tx_brb_bond_elections_all.csv", lambda r:(r["purposedescription"] or r["purpose"], r["amount"], r["governmentname"], r["electiondate"])),
+ "WI":("wi_dpi/wi_dpi_referenda_2005_present.csv", lambda r:(r["BriefDescription"] or r["ReferendumType"], r["Amount"], r["AgencyName"], r["VoteDate"])),
+ "LA":("la_sos/la_sos_local_propositions_2005_present.csv", lambda r:(r["specific_title"], "", r["parish"], r["election_date"])),
+ "NC":("nc_ncsbe/nc_ncsbe_bond_referenda_2005_present.csv", lambda r:(r["contest_name"], "", r["county"], r["election_date"])),
+ "IL":("il_sbe/il_sbe_referenda_1995_present.csv", lambda r:(r["description"], r["amount"], r["gov_unit_name"], r["election_year"])),
+ "IN":("in_dlgf/in_dlgf_referenda_2009_present.csv", lambda r:(r["referendum_type"], r["amount_or_rate"], r["gov_unit_name"], r["election_year"])),
+ "MN":("mn_sos/mn_sos_ballot_questions_2020_2025.csv", lambda r:(r["question_name"], "", r["district_or_muni_id"], r["election_date"])),
+ "MA":("ma_dls/ma_prop2_5_borrowing_votes.csv", lambda r:(r["description"] or r["department"], r["amount"], r["municipality"], r["vote_date"])),
+}
+raw={}
+for st,(path,fx) in SRC.items():
+    rows=list(csv.DictReader(open(f"{EL}/{path}")))
+    raw[st]=[fx(r) for r in rows]
+
+# first-match-wins normalization (checked in order)
+NORM=[
+ ("K-12 schools",            r"school|k-?12|elementary|high school|isd\b|education|classroom|campus"),
+ ("higher education",        r"college|university"),
+ ("water / sewer / drainage",r"water|sewer|drain|wastewater|storm|sanita"),
+ ("roads / streets / bridges",r"road|street|highway|bridge|sidewalk|paving"),
+ ("fire / EMS",              r"fire|ems|emergency|ambulance"),
+ ("police / jail / safety",  r"police|public safety|law enforcement|jail|correction|sheriff|justice"),
+ ("parks / recreation",      r"park|recreation|trail|pool|open space|golf"),
+ ("hospital / health",       r"hospital|health|medical|clinic"),
+ ("library",                 r"librar"),
+ ("transit / rail",          r"transit|rail|bus rapid|metro"),
+ ("flood / levee",           r"flood|levee|hurricane"),
+ ("housing",                 r"housing|homeless"),
+ ("stadium / athletics",     r"stadium|athletic|sports|arena|natatorium"),
+ ("technology / equipment",  r"technolog|equipment|bus(es)?\b|vehicle"),
+ ("civic buildings / general",r"city hall|town hall|public building|courthouse|civic|municipal building|general government|capital improvement"),
+ ("electric / gas utility",  r"electric|gas|utility|power|broadband"),
+ ("port / airport",          r"port|airport|harbor"),
+ ("tax levy / operating",    r"levy|operat|tax rate|exceed.*revenue|referenda? to exceed|debt exclusion|override"),
+]
+def norm(text):
+    t=(text or "").lower()
+    for lab,pat in NORM:
+        if re.search(pat,t): return lab
+    return "other / unparsed"
+
+panel=list(csv.DictReader(open("analysis/paper_panel.csv")))
+agg=defaultdict(lambda:[0,0.0,0])   # purpose -> [count, $, n_with_amt]
+biggest=[]
+for r in panel:
+    if r["purpose_class"] not in ("bond_go","bond_other"): continue
+    st,idx=r["referendum_row_id"].split(":")
+    try: txt,amt_s,name,dt=raw[st][int(idx)]
+    except (KeyError,IndexError,ValueError): continue
+    p=norm(txt); a=money(amt_s)
+    agg[p][0]+=1
+    if a: agg[p][1]+=a; agg[p][2]+=1; biggest.append((a,name,st,str(dt)[:10],txt[:80]))
+biggest.sort(reverse=True)
+
+L=["# M2 — what is voted on, and what never is\n",
+   "Generated by `m2_balloted_submerged.py`. CONFLICT FLAG: no formal B1 ballot-purpose",
+   "taxonomy exists in the repo; Panel A uses the committed keyword normalization in this",
+   "script (first-match-wins), labeled as a stand-in. Dollar columns cover sources with",
+   "parseable amounts (CA/TX/WI/IL/MA); LA/NC/MN/IN enter counts only.\n",
+   "## Panel A · The balloted local state (bond measures, 9 states)",
+   "| ballot purpose (normalized) | measures | printed $B | share of measures |",
+   "|---|--:|--:|--:|"]
+tot=sum(v[0] for v in agg.values())
+for p,(n,d,na) in sorted(agg.items(),key=lambda kv:-kv[1][0])[:15]:
+    L.append(f"| {p} | {n:,} | {d/1e9:.1f} | {n/tot:.1%} |")
+L.append(f"\nTotal bond measures classified: {tot:,}. Named examples (largest printed asks):")
+for a,name,st,dt,txt in biggest[:3]:
+    L.append(f"- **{name}** ({st}, {dt}): ${a/1e9:.2f}B — \"{txt}\"")
+
+# ---------- Panel B ----------
+# local = NOT state/territory (by accountable type, or state_agency issuer class
+# when the accountable unit is unassigned). Conduit authorities with unassigned
+# accountable units STAY — they are the submerged local state's vehicles (flagged).
+keep_doc=set()
+with gzip.open("inputs/corpus/auth_os.csv.gz","rt") as fh:
+    for r in csv.DictReader(fh):
+        pt=r["pol_accountable_type"]
+        if pt in ("state","territory"): continue
+        if pt=="" and r["jurisdiction_class"] in ("state_agency","territory"): continue
+        keep_doc.add(r["doc_id"])
+lab_class={}
+for r in csv.DictReader(open("analysis/b3_label_map.csv")):
+    lab_class[r[list(r.keys())[0]]]=r[list(r.keys())[1]]
+FIN={"current_refunding","advance_refunding","reserve_fund_deposit","costs_of_issuance",
+     "capitalized_interest","working_capital_operating","debt_restructuring",
+     "pension_obligation","debt_service_payment","letter_of_credit_fees"}
+fa_agg=defaultdict(lambda:[0.0,0.0,0])   # func -> [tot$, voter$, n]
+fa_top=defaultdict(list)                  # func -> [(amt, doc_id)]
+with gzip.open("inputs/corpus/auth_projects.csv.gz","rt") as fh:
+    for row in csv.DictReader(fh):
+        if row["side"]!="use" or row["is_subtotal_row"]=="True": continue
+        if row["doc_id"] not in keep_doc: continue     # LOCAL state only (non-state issuers)
+        fa=row["functional_activity"]
+        if not fa or fa=="unclassified" or fa in FIN or lab_class.get(fa)=="financial": continue
+        try: a=float(row["amount_usd"])
+        except: continue
+        if a<=0: continue
+        fa_agg[fa][0]+=a; fa_agg[fa][2]+=1
+        if row["auth_mode_final2"]=="voter": fa_agg[fa][1]+=a
+        u=row["pol_accountable_unit_id"] or ""
+        if len(u)>=3 and u[2] in "12345":     # examples: assigned LOCAL units only
+            t=fa_top[fa]
+            t.append((a,row["doc_id"]))
+            if len(t)>3: t.sort(reverse=True); del t[3:]
+
+sub=[(fa,t,v,n) for fa,(t,v,n) in fa_agg.items() if t>=5e9 and v/t<0.02]
+sub.sort(key=lambda x:-x[1])
+L+=["\n## Panel B · The submerged local state",
+    "Corpus project functions ≥$5B whose dollars are voted <2% of the time",
+    "(use-side, printed-amount, non-subtotal lines; state/territory issuers excluded;",
+    "conduit authorities with unassigned accountable units KEPT — they are the submerged",
+    "local state's vehicles; financing mechanics excluded):",
+    "| corpus function | project $B | voted share | lines |","|---|--:|--:|--:|"]
+need=set()
+for fa,t,v,n in sub[:12]:
+    L.append(f"| {fa} | {t/1e9:.1f} | {v/t:.2%} | {n:,} |")
+for fa,t,v,n in sub[:3]:
+    for a,doc in fa_top[fa][:1]: need.add(doc)
+# issuer lookup for examples
+ex={}
+with gzip.open("inputs/corpus/auth_os.csv.gz","rt") as fh:
+    for r in csv.DictReader(fh):
+        if r["doc_id"] in need: ex[r["doc_id"]]=(r["issuer_name"],r["state"],r["year"])
+L.append("\nBoundary caveat: state-created finance commissions with unassigned accountable")
+L.append("units can remain in the housing rows — aggregates carry that blur; the named")
+L.append("examples below are restricted to lines with an ASSIGNED local Census unit.")
+L.append("\nNamed examples (largest single line in the top-3 submerged functions):")
+for fa,t,v,n in sub[:3]:
+    a,doc=fa_top[fa][0]
+    nm,st,yr=ex.get(doc,("?","?","?"))
+    L.append(f"- **{fa}**: {nm} ({st}, {yr}) — ${a/1e9:.2f}B line, no voter authorization.")
+L.append("\nRead: the balloted local state is schools, water, roads, safety — the")
+L.append("non-chargeable civic core. The submerged state — hospitals, mortgages/housing,")
+L.append("campus buildings, electricity, airports — is the chargeable perimeter, financed")
+L.append("at scale with essentially no electoral moment.")
+open("analysis/M2_RESULTS.md","w").write("\n".join(L)+"\n")
+print("\n".join(L))
