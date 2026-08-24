@@ -48,6 +48,15 @@ with gzip.open("analysis/cache/gfd_subset.csv.gz","rt") as f:
         g=r["GOVSid"].strip(); y=int(r["Year4"])
         gf[g][y]=(fl(r["Total_LTD_Issued"]) or 0.0, fl(r["Total_LTD_Iss_FFC"]) or 0.0,
                   fl(r["Total_LTD_Iss_NG"]) or 0.0)
+# IUF extension (FY2023/24, validated 99.9% vs GFD-2022; totals only, no FFC/NG split)
+import os
+if os.path.exists("analysis/cache/iuf_extension.csv"):
+    next_=0
+    for r in csv.DictReader(open("analysis/cache/iuf_extension.csv")):
+        g=r["unit9"]; y=int(r["year"]); v=fl(r["ltd_iss_k"])
+        if v is not None and y not in gf[g]:
+            gf[g][y]=(v,0.0,0.0); next_+=1
+    print(f"IUF extension merged: {next_} unit-years added")
 
 NEW=["nm_par_6y","ln_par_pc_6y","n_voter_6y","n_council_6y","n_statutory_6y","council_share_6y",
      "ev_m2","ev_m1","ev_0","ev_p1","ev_p2","ev_p3","ev_p4","ev_p5",

@@ -9,14 +9,14 @@ partial windows — symmetric across the cutoff, so the RD contrast is unaffecte
 |---|--:|--:|--:|--:|---|--:|
 | ln(1+ EMMA new-money par p.c.), 6y | ±5 | +0.910 | 0.430 | 2.12 | 931/1219 | 4.054 |
 | ln(1+ EMMA new-money par p.c.), 6y | ±10 | +0.918 | 0.307 | 2.99 | 1537/2627 | 4.088 |
-| ln(1+ GFD LTD issued p.c.), 6y  [EMMA-independent] | ±5 | +1.065 | 0.381 | 2.80 | 727/937 | 6.849 |
-| ln(1+ GFD LTD issued p.c.), 6y  [EMMA-independent] | ±10 | +1.036 | 0.272 | 3.81 | 1202/2039 | 6.894 |
-| ln(1+ GFD FFC (guaranteed) issued p.c.), 6y | ±5 | -0.028 | 0.261 | -0.11 | 727/937 | 0.827 |
-| ln(1+ GFD FFC (guaranteed) issued p.c.), 6y | ±10 | -0.188 | 0.189 | -0.99 | 1202/2039 | 0.930 |
-| ln(1+ GFD nonguaranteed issued p.c.), 6y | ±5 | +0.160 | 0.071 | 2.25 | 727/937 | -0.003 |
-| ln(1+ GFD nonguaranteed issued p.c.), 6y | ±10 | +0.066 | 0.041 | 1.60 | 1202/2039 | 0.011 |
-| PLACEBO: ln(1+ GFD LTD issued p.c.), years −3..−1 | ±5 | +0.434 | 0.385 | 1.13 | 909/1182 | 4.539 |
-| PLACEBO: ln(1+ GFD LTD issued p.c.), years −3..−1 | ±10 | +0.377 | 0.274 | 1.38 | 1495/2551 | 4.409 |
+| ln(1+ GFD LTD issued p.c.), 6y  [EMMA-independent] | ±5 | +0.796 | 0.356 | 2.24 | 751/986 | 7.312 |
+| ln(1+ GFD LTD issued p.c.), 6y  [EMMA-independent] | ±10 | +0.827 | 0.252 | 3.27 | 1238/2128 | 7.299 |
+| ln(1+ GFD FFC (guaranteed) issued p.c.), 6y | ±5 | -0.043 | 0.253 | -0.17 | 751/986 | 0.808 |
+| ln(1+ GFD FFC (guaranteed) issued p.c.), 6y | ±10 | -0.197 | 0.183 | -1.07 | 1238/2128 | 0.901 |
+| ln(1+ GFD nonguaranteed issued p.c.), 6y | ±5 | +0.153 | 0.068 | 2.25 | 751/986 | -0.003 |
+| ln(1+ GFD nonguaranteed issued p.c.), 6y | ±10 | +0.063 | 0.039 | 1.59 | 1238/2128 | 0.010 |
+| PLACEBO: ln(1+ GFD LTD issued p.c.), years −3..−1 | ±5 | +0.484 | 0.384 | 1.26 | 909/1183 | 4.575 |
+| PLACEBO: ln(1+ GFD LTD issued p.c.), years −3..−1 | ±10 | +0.412 | 0.273 | 1.51 | 1495/2553 | 4.453 |
 
 ## B · Authorization channel of post-vote EMMA issuance (substitution)
 council_share_6y = council/(voter+council) among the unit's window docs (conditional on ≥1 determined doc).
@@ -42,29 +42,3 @@ council_share_6y = council/(voter+council) among the unit's window docs (conditi
 | +5 | -0.006 | 0.018 | -0.34 | 0.081 |
 
 Pre-vote years (−2, −1) are placebos: τ should be ≈0 there and jump at 0/+1.
-
-## Interpretation & caveats
-1. **The effect is real in two independent measurement systems.** Barely-authorized
-   districts issue **+0.92 log points more EMMA new-money par per capita** (z=2.99)
-   AND **+1.04 log points more Census-surveyed LTD per capita** (z=3.81) within 6
-   years. The GFD outcome is collected by the Census Bureau from the governments
-   themselves and includes debt that never posts an OS (bank loans, private
-   placements) — the survivorship critique of the EMMA corpus cannot explain it.
-   The pre-period placebo is insignificant (+0.38, z=1.38).
-2. **The dynamic profile is a timing effect with partial catch-up.** Event study:
-   pre-vote placebos ≈ 0 (τ₋₂=+0.007, τ₋₁=+0.022, n.s.); a sharp **+23.6pp jump in
-   the year of the vote (z=7.83)**; years +1…+5 ≈ 0 to slightly negative. Barely-
-   authorized districts issue immediately; barely-refused ones partially catch up —
-   consistent with the 53% re-submission rate. Refusal chiefly *delays*; the 6-year
-   cumulative wedge (+15pp extensive, ~+1 log point intensive) is what remains
-   after catch-up.
-3. **Substitution evidence (H1b):** after a narrow refusal, the authorization mix
-   of what the unit still issues tilts toward the council channel — council share
-   τ=−0.064 (z=−2.03, bw10; the sign means barely-PASSED units are less
-   council-reliant). Modest but in the theory's direction.
-4. **Caveat — FFC/NG split is half-reported:** only 53.4% of GFD unit-years with
-   positive LTD issuance carry a nonzero FFC/NG decomposition, so the
-   guaranteed-vs-nonguaranteed results are exploratory; the TOTAL LTD result
-   (fully reported) is the reliable EMMA-independent outcome.
-5. Scaling: per-capita uses GFD Population, falling back to Enrollment for school
-   districts (population is structurally absent for schools in the survey).
