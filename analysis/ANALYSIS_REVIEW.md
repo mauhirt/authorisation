@@ -190,6 +190,18 @@ TX HB 3 2019 = ballot-structure regulation. Owner verification before citation.
     unknown (10y+ pass pending).
 12. **R1 is secondary_unverified** — appendix only until owner verification.
 
+## 5b · Newly diagnosed (round 3): the finance-flag coverage gap
+Extraction wave `w2_3_v3.2` left `has_new_money` blank for a subset of states
+(NY, PA, IN, CO, WA, AL, GA, AZ, TN, VA, SC, NC among them) — their documents
+exist in the corpus (NY 25,974; PA 10,240; IN 7,780 …) but never enter
+new-money outcomes. Consequences now flagged at each use: consent map gated at
+≥50 flagged docs per state (34 states qualify; NY/PA no longer shown as false
+0%); N-suite corpus outcomes ride the flag-covered states (cluster counts
+reflect it); NC (an RD state) has near-empty corpus new-money outcomes — its
+RD cell is small and n.s. either way, and GFD outcomes carry it. KY's ≈0%
+voted share is REAL (3,245 flagged docs). FIX: the pending auth tier-2 corpus
+refresh — this diagnosis is its symptom list.
+
 ## 6 · Open before submission
 - Rules human pass-2 (21 cells) → C2/H2 + N1–N5 causal upgrades. (With owner.)
 - Township rule column in pass-2 (town-meeting states break the muni proxy).

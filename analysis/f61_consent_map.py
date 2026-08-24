@@ -13,16 +13,22 @@ def fl(x):
     try: return float(x)
     except: return None
 
-num=defaultdict(float); den=defaultdict(float)
+num=defaultdict(float); den=defaultdict(float); ndocs=defaultdict(int)
 numc=defaultdict(float); denc=defaultdict(float)
 with gzip.open("analysis/national_entity_panel.csv.gz","rt") as fh:
     for r in csv.DictReader(fh):
         v=fl(r["voted_sh_par"]); w=fl(r["determined_par"])
         if v is None or not w or w<=0 or not r["state"]: continue
         num[r["state"]]+=v*w; den[r["state"]]+=w
+        ndocs[r["state"]]+=int(fl(r["nm_docs"]) or 0)
         numc[(r["state"],r["entity_type"])]+=v*w; denc[(r["state"],r["entity_type"])]+=w
-share={s:num[s]/den[s] for s in den if den[s]>0}
-sharec={k:numc[k]/denc[k] for k in denc if denc[k]>0}
+# COVERAGE GATE: the w2_3_v3.2 extraction wave left has_new_money BLANK for a
+# subset of states (their thousands of docs never enter nm outcomes). A state
+# qualifies only with >=50 new-money docs; below that its value would ride on
+# stray flagged documents (NY and PA showed 0% on 2-3 docs) -> shown as missing.
+MIN_DOCS=50
+share={s:num[s]/den[s] for s in den if den[s]>0 and ndocs[s]>=MIN_DOCS}
+sharec={k:numc[k]/denc[k] for k in denc if denc[k]>0 and ndocs[k[0]]>=MIN_DOCS}
 
 POS={"AK":(0,0),"ME":(11,0),
 "WA":(1,1),"ID":(2,1),"MT":(3,1),"ND":(4,1),"MN":(5,1),"WI":(6,1),"MI":(8,1),"NY":(9,1),"VT":(10,1),"NH":(11,1),
@@ -82,10 +88,15 @@ open("analysis/fig_consent_map.svg","w").write("\n".join(S))
 
 missing=[st for st in POS if st not in share]
 M=["# F6.1 — consent map values (voted share of determined new-money $, 2005–25)\n",
-   f"COVERAGE NOTE: {len(missing)} states show no value ({', '.join(sorted(missing))}) — no",
-   "determined-mode new-money dollars in the panel for any local unit there. This is",
-   "an OS-extraction coverage fact (auth mode undetermined), NOT zero consent —",
-   "labelled '–' on the map, flagged here rather than imputed.\n",
+   f"COVERAGE NOTE (diagnosed): {len(missing)} states show no value "
+   f"({', '.join(sorted(missing))}). Cause: extraction wave w2_3_v3.2 left the",
+   "has_new_money finance flag BLANK for these states (their documents exist in",
+   "the corpus — NY 25,974, PA 10,240, IN 7,780, CO 4,407, WA 3,685, AL 4,067 —",
+   "but ~100% carry no flag, so they never enter new-money outcomes). States with",
+   f"<{50} flagged docs are shown missing rather than as misleading near-zeros",
+   "(NY/PA previously showed 0% on 2–3 stray docs). KY's ≈0% is REAL (3,245",
+   "flagged docs, board-authorised debt). Fix = the pending auth tier-2 corpus",
+   "refresh; NOT zero consent, and not imputed.\n",
    "| state | all classes | schools | municipal | county | special |","|---|--:|--:|--:|--:|--:|"]
 for st in sorted(share,key=lambda s:-share[s]):
     def g(e):
