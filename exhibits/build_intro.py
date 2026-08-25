@@ -26,10 +26,9 @@ with gzip.open("inputs/corpus/issue_canonical.csv.gz", "rt") as fh:
 tot = 0.0; n = 0; issuers = set(); conduit = 0.0
 mode = defaultdict(float); sec = defaultdict(float)
 yr = defaultdict(lambda: defaultdict(float))
+go_ref = 0.0; voted_ref = 0.0
 with gzip.open("inputs/corpus/auth_os.csv.gz", "rt") as fh:
     for r in csv.DictReader(fh):
-        if r["has_new_money"] != "True" or r["has_refunding"] == "True":
-            continue
         if r["issue_id"] and r["doc_id"] not in canon:
             continue
         cls = r["pol_accountable_type"]
@@ -40,6 +39,13 @@ with gzip.open("inputs/corpus/auth_os.csv.gz", "rt") as fh:
         except ValueError:
             par = 0.0
         if par <= 0:
+            continue
+        if r["has_refunding"] == "True" and cls in CLASSES:
+            if r["security_pledge_class"] == "GO":
+                go_ref += par
+            if r["auth_mode_final2"] == "voter":
+                voted_ref += par
+        if r["has_new_money"] != "True" or r["has_refunding"] == "True":
             continue
         if cls not in CLASSES:
             conduit += par; continue
@@ -66,6 +72,10 @@ write_csv("D0_aggregates", ["statistic", "value"], [
     ["GO share of $ (%)", round(sec["GO"]/tot*100, 1)],
     ["revenue share of $ (%)", round(sec["revenue"]/tot*100, 1)],
     ["lease share of $ (%)", round(sec["lease"]/tot*100, 1)],
+    ["voter-authorised new-money $ ($B)", round(mode["voter"]/1e9, 1)],
+    ["GO new-money $ ($B)", round(sec["GO"]/1e9, 1)],
+    ["GO refunding $ ($B)", round(go_ref/1e9, 1)],
+    ["voter-mode refunding $ ($B)", round(voted_ref/1e9, 1)],
 ])
 rows = []
 for y in range(2005, 2026):
