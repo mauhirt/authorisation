@@ -236,7 +236,7 @@ for lab,sel,ent in CLS:
         pre = f"{lab}, {olab}" if olab=="GO issuance" else f"\\quad {olab}"
         body+=rd_block(pre,row)
         csvr.append([lab,olab]+rd_csv_row("",row)[1:]+[ms,f"{rs:.3f}"])
-    body.append(f"\\quad menu: non-voted \\$ share {str(ms).replace('%',chr(92)+'%')}; failures re-submitting {rs:.3f} \\\\ \\addlinespace")
+    body.append(f"\\multicolumn{{6}}{{@{{}}l@{{}}}}{{\\quad menu: non-voted \\$ share {str(ms).replace('%',chr(92)+'%')}; failures re-submitting {rs:.3f}}} \\\\ \\addlinespace")
 write_csv("T7_fork_menu",csvr[0],csvr[1:])
 tex_table("T7_fork_menu",
  "Exits and the binding of refusal: the fork against the menu","tab:fork",
@@ -290,7 +290,7 @@ tex_table("A3_state_by_state",
 go_pairs=[(r["_m"],r["_go"]) for r in S]
 body=[]; csvr=[["row","value"]]
 def bat(lab,txt):
-    body.append(f"{lab} & \\multicolumn{{5}}{{l}}{{{txt}}} \\\\ \\addlinespace")
+    body.append(f"{lab} & \\multicolumn{{5}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{0.62\\linewidth}}@{{}}}}{{{txt}}} \\\\ \\addlinespace")
     csvr.append([lab,txt.replace("\\","")])
 for dn in (0.5,1.0,2.0):
     row=rdrow(go_pairs,10.0,dn)

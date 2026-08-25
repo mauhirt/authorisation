@@ -49,7 +49,7 @@ for r in S:
 W,H=560,360; x0,y0,pw,ph=60,55,470,240
 def sx(m): return x0+ (m+10)/20*pw
 def sy(v): return y0+ph-(v-0.3)/0.5*ph
-Sv=svg_open(W,H,"Figure 1. Issuance at the authorisation threshold",
+Sv=svg_open(W,H,"Issuance at the authorisation threshold",
             "Share with any issuance within six years; 0.5pp bins sized by n; local-linear fits")
 Sv+=axis(x0,y0,pw,ph,[(v,sx(v)) for v in (-10,-5,0,5,10)],
          [(v,sy(v)) for v in (0.3,0.4,0.5,0.6,0.7,0.8)],
@@ -80,7 +80,7 @@ W,H=560,340; x0,y0,pw,ph=60,55,470,220
 def sxk(k): return x0+(k+2.5)/8*pw
 lo=min(e[2] for e in ev); hi=max(e[3] for e in ev)
 def syv(v): return y0+ph-(v-lo)/(hi-lo)*ph
-Sv=svg_open(W,H,"Figure 2. Event study: issuance by year relative to the vote",
+Sv=svg_open(W,H,"Event study: issuance by year relative to the vote",
             "RBC coefficients with robust 95% CIs; outcome = any new-money issue in relative year k")
 Sv+=axis(x0,y0,pw,ph,[(k,sxk(k)) for k,_,_,_,_ in ev],
          [(round(v,2),syv(v)) for v in (0.0,0.1,0.2)],
@@ -123,7 +123,7 @@ write_csv("F3_wedge",["k","passed","failed"],[[k,f"{curves['passed'][i]:.4f}",f"
 W,H=560,340; x0,y0,pw,ph=60,55,470,220
 def sxw(k): return x0+(k+2)/8*pw
 def syw(v): return y0+ph-v/0.7*ph
-Sv=svg_open(W,H,"Figure 3. The cumulative wedge",
+Sv=svg_open(W,H,"The cumulative wedge",
             "Cumulative share with any new-money issue since k = −2, |margin| ≤ 5; shaded area = the wedge")
 Sv+=axis(x0,y0,pw,ph,[(k,sxw(k)) for k in KS],[(v,syw(v)) for v in (0.0,0.2,0.4,0.6)],
          "Years since the vote","cumulative share")
@@ -149,7 +149,7 @@ open(f"{OUT}/F4_consent_map.svg","w").write(src)
 
 # ---------- F5 running-variable density by state ----------
 W,H=560,430
-Sv=svg_open(W,H,"Figure 4/5. Density of the vote margin, by state",
+Sv=svg_open(W,H,"Density of the vote margin, by state",
             "0.5pp bins within ±10pp of the threshold; the Texas discreteness is visible at the smallest electorates")
 states=[("TX","Texas"),("CA","California"),("WI","Wisconsin"),("LA","Louisiana"),("NC","North Carolina")]
 pw,ph=150,110
@@ -172,8 +172,8 @@ Sv.append("</svg>")
 open(f"{OUT}/F5_density.svg","w").write("\n".join(Sv))
 
 # ---------- A1a / A1b small figures ----------
-for name,csvf,title,xl in [("A1a_horizons","A1_horizons","Figure A1a. Effect by horizon","horizon (years)"),
-                           ("A1b_bandwidth","A1_bandwidth_curve","Figure A1b. Bandwidth sensitivity","bandwidth h (pp)")]:
+for name,csvf,title,xl in [("A1a_horizons","A1_horizons","Effect by horizon","horizon (years)"),
+                           ("A1b_bandwidth","A1_bandwidth_curve","Bandwidth sensitivity","bandwidth h (pp)")]:
     rows=list(csv.DictReader(open(f"{OUT}/{csvf}.csv")))
     xs=[float(list(r.values())[0]) for r in rows]
     b=[float(r["rbc"]) for r in rows]; l=[float(r["ci_lo"]) for r in rows]; h_=[float(r["ci_hi"]) for r in rows]

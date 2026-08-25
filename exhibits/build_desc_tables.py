@@ -22,7 +22,16 @@ def md_exhibit(name,caption,label,src,key,notes,reading,max_rows=None,drop_cols=
         keep=[i for i in range(len(hdr)) if i not in drop_cols]
         hdr=[hdr[i] for i in keep]; rows=[[r[i] for i in keep if i<len(r)] for r in rows]
     write_csv(name,hdr,rows)
-    colspec="l"+"c"*(len(hdr)-1)
+    # switch to sized p-columns when natural widths would overflow the block
+    maxw=[max([len(str(hdr[i]))]+[len(str(r[i])) if i<len(r) else 0 for r in rows])
+          for i in range(len(hdr))]
+    if sum(maxw)>70:
+        tot=sum(min(w,45) for w in maxw)
+        colspec="".join(
+            (">{\\raggedright\\arraybackslash}" if i==0 else ">{\\centering\\arraybackslash}")
+            +f"p{{{max(0.06,min(w,45)/tot*0.9):.3f}\\linewidth}}" for i,w in enumerate(maxw))
+    else:
+        colspec="l"+"c"*(len(hdr)-1)
     header=" & ".join(esc(h) for h in hdr)+" \\\\"
     body=[" & ".join(esc(c) for c in r)+" \\\\" for r in rows]
     tex_table(name,caption,label,colspec,header,body,notes,reading)

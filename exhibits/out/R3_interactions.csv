@@ -1,0 +1,6 @@
+column,outcome,spec,beta_strict,beta_interaction,se,t,n,clusters
+1,Voted $ share,TEL interaction,0.205,-0.185,0.338,-0.55,396,34
+2,GO share,TEL interaction,-0.109,-1.227,0.821,-1.49,401,34
+3,NC share,TEL interaction,0.005,-0.638,0.494,-1.29,358,34
+4,Voted $ share,$\times$ homeownership,0.096,-0.047,0.395,-0.12,"13,928",48
+5,Voted $ share,$\times$ county Dem share,0.194,-0.651,0.326,-2.0,"13,928",48

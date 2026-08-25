@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Compile the full working-paper PDF from what exists now:
-paper/WHO_MUST_AGREE_EMPIRICS_FULL.md (text of record) + exhibits/out (journal
-exhibits, frozen v3). Markdown -> LaTeX conversion is deliberately narrow --
-it handles exactly the constructs used in the committed documents.
+"""Compile the full working-paper PDF: paper/MANUSCRIPT.md (rewritten text of
+record, with inline exhibit markers) + exhibits/out (journal exhibits, frozen
+v3) + Appendices H and V from paper/WHO_MUST_AGREE_EMPIRICS_FULL.md.
+
+Markers understood in the manuscript:
+  [[EX:stem]]           -> \\input{exhibits/out/stem.tex} at that point
+  [[FIG:stem|Caption.]] -> numbered figure with exhibits/out/stem.pdf
+
 Run from the repo root: python3 paper/build_paper.py
 Output: paper/WHO_MUST_AGREE_DRAFT.pdf
 """
 import datetime as dt, os, re, subprocess, sys
 
-SRC = "paper/WHO_MUST_AGREE_EMPIRICS_FULL.md"
+SRC = "paper/MANUSCRIPT.md"
+APPX_SRC = "paper/WHO_MUST_AGREE_EMPIRICS_FULL.md"
 BUILD = "paper/build"
 OUT_PDF = "paper/WHO_MUST_AGREE_DRAFT.pdf"
 os.makedirs(BUILD, exist_ok=True)
@@ -35,8 +40,12 @@ def esc(s):
     s = re.sub(r"`([^`]+)`", r"\\texttt{\1}", s)
     return s
 
+def figure_block(stem, caption):
+    return [r"\begin{figure}[!htbp]\centering",
+            f"\\includegraphics[width=0.92\\linewidth]{{exhibits/out/{stem}.pdf}}",
+            f"\\caption{{{esc(caption)}}}", r"\end{figure}"]
+
 def table_tex(rows, aligns):
-    """Longtable with p-columns sized by content when cells are wide."""
     ncol = len(rows[0])
     rows = [r + [""] * (ncol - len(r)) for r in rows]
     maxw = [max(len(r[i]) for r in rows) for i in range(ncol)]
@@ -58,28 +67,43 @@ def table_tex(rows, aligns):
     return L
 
 def convert(md_lines):
-    out, i, in_list = [], 0, False
-    skip_until_next_h2 = False
+    """Paragraph-based conversion so inline markup (**bold**) survives source
+    line wraps."""
+    out, i, in_list, para = [], 0, False, []
+
+    def flush():
+        if para:
+            out.append(esc(" ".join(para))); out.append("")
+            para.clear()
+
+    def end_list():
+        nonlocal in_list
+        if in_list:
+            out.append(r"\end{itemize}"); in_list = False
+
     while i < len(md_lines):
         ln = md_lines[i].rstrip()
-        if ln.startswith("### Exhibit inventory"):
-            # planning artefact superseded by the built exhibits
-            skip_until_next_h2 = True
+        m = re.match(r"\[\[EX:([\w.-]+)\]\]", ln.strip())
+        if m:
+            flush(); end_list()
+            out.append(f"\\input{{exhibits/out/{m.group(1)}.tex}}")
             i += 1; continue
-        if skip_until_next_h2:
-            if ln.startswith("# ") or ln.startswith("## "):
-                skip_until_next_h2 = False
-            else:
-                i += 1; continue
-        if in_list and not ln.startswith("- "):
-            out.append(r"\end{itemize}"); in_list = False
+        m = re.match(r"\[\[FIG:([\w.-]+)\|(.+)\]\]", ln.strip())
+        if m:
+            flush(); end_list()
+            out += figure_block(m.group(1), m.group(2))
+            i += 1; continue
         if not ln.strip():
-            out.append(""); i += 1; continue
+            flush(); end_list()
+            i += 1; continue
         if ln.strip() in ("---", "***"):
+            flush(); end_list()
             out.append(r"\medskip"); i += 1; continue
-        if ln.startswith("|"):
-            rows = []
-            while i < len(md_lines) and md_lines[i].strip().startswith("|"):
+        if ln.startswith("|") and ln.rstrip().endswith("|"):
+            flush(); end_list()
+            rows, aligns = [], None
+            while i < len(md_lines) and md_lines[i].strip().startswith("|") \
+                    and md_lines[i].rstrip().endswith("|"):
                 cells = [c.strip() for c in md_lines[i].strip().strip("|").split("|")]
                 if set("".join(cells)) <= set("-: "):
                     aligns = ["r" if c.endswith(":") and not c.startswith(":")
@@ -88,68 +112,75 @@ def convert(md_lines):
                 else:
                     rows.append(cells)
                 i += 1
-            if "aligns" not in dir():
-                aligns = ["l"] * len(rows[0])
-            out += table_tex(rows, aligns if 'aligns' in dir() else ["l"]*len(rows[0]))
+            out += table_tex(rows, aligns or ["l"] * len(rows[0]))
             continue
-        if ln.startswith("### "):
-            out.append(r"\subsection*{" + esc(ln[4:]) + "}")
-        elif ln.startswith("## "):
-            out.append(r"\section*{" + esc(ln[3:]) + "}")
-        elif ln.startswith("# "):
-            out.append(r"\clearpage\section*{" + esc(ln[2:]) + "}")
-        elif ln.startswith("> "):
-            # exhibit-callout blockquotes: render as small italic placement notes
+        if ln.startswith("> "):
+            flush(); end_list()
             buf = []
             while i < len(md_lines) and md_lines[i].startswith("> "):
                 buf.append(md_lines[i][2:].rstrip()); i += 1
             out.append(r"{\small\itshape " + esc(" ".join(buf)) + "}")
             continue
+        if ln.startswith("### "):
+            flush(); end_list()
+            out.append(r"\subsection*{" + esc(ln[4:]) + "}")
+        elif ln.startswith("## "):
+            flush(); end_list()
+            out.append(r"\section*{" + esc(ln[3:]) + "}")
+        elif ln.startswith("# "):
+            flush(); end_list()
+            out.append(r"\clearpage\section*{" + esc(ln[2:]) + "}")
         elif ln.startswith("- "):
+            flush()
             if not in_list:
                 out.append(r"\begin{itemize}\setlength{\itemsep}{1pt}")
                 in_list = True
-            out.append(r"\item " + esc(ln[2:]))
+            # pull continuation lines of this bullet into one item
+            item = [ln[2:]]
+            while (i + 1 < len(md_lines) and md_lines[i+1].strip()
+                   and not md_lines[i+1].startswith(("- ", "#", "|", "> ", "[["))
+                   and md_lines[i+1].strip() not in ("---", "***")):
+                i += 1; item.append(md_lines[i].strip())
+            out.append(r"\item " + esc(" ".join(item)))
         else:
-            out.append(esc(ln))
+            para.append(ln.strip())
         i += 1
-    if in_list:
-        out.append(r"\end{itemize}")
+    flush(); end_list()
     return out
 
-MAIN_TABLES = ["T1_sample", "T2_covariate_continuity", "T3_main_results",
-               "T4_first_stage", "T5_response", "T6_moderators", "T7_fork_menu"]
-MAIN_FIGS = [("F1_rd", "Figure 1. Issuance at the authorisation threshold"),
-             ("F2_event_study", "Figure 2. Event study: issuance by year relative to the vote"),
-             ("F3_wedge", "Figure 3. The cumulative wedge"),
-             ("F4_consent_map", "Figure 4. The consent map: voted share of local new-money dollars"),
-             ("F5_density", "Figure 5. Running-variable density by state")]
-APP_TABLES = ["A1_battery", "A2_placebo_thresholds", "A3_state_by_state",
-              "A4_agenda", "A5a_menu", "A5b_submerged", "A5c_coalitions",
-              "A5d_channel_sorting", "A5e_firststage_raw", "A6a_chain",
-              "A6c_ratecap", "A7_blocked", "A9_validation"]
-APP_FIGS = [("A1a_horizons", "Figure A1a. RD estimate by issuance horizon"),
-            ("A1b_bandwidth", "Figure A1b. Bandwidth sensitivity")]
-
-def figure_block(stem, caption):
-    return [r"\begin{figure}[!htbp]\centering",
-            f"\\includegraphics[width=0.92\\linewidth]{{exhibits/out/{stem}.pdf}}",
-            f"\\caption*{{{esc(caption)}}}", r"\end{figure}"]
+# Appendix exhibits, in citation order (numbers become A1, A2, ... in sequence).
+APPX_TABLES = [
+    ("A1_battery",            "A1: specification battery"),
+    ("A3_state_by_state",     "A2: state-by-state estimates"),
+    ("A2_placebo_thresholds", "A3: placebo thresholds"),
+    ("AC1_coverage",          "A4: classified-line coverage by regime"),
+    ("A5d_channel_sorting",   "A5: channel dollar sorting"),
+    ("A5e_firststage_raw",    "A6: raw voted shares by rule and class"),
+    ("R3_interactions",       "A7: institutional and demographic interactions"),
+    ("A6a_chain",             "A8: the near-miss chain"),
+    ("A6c_ratecap",           "A9: the rate-cap split"),
+    ("A7_blocked",            "A10: demography of blocked majorities"),
+    ("A9_validation",         "A11: validation of extracted fields"),
+    ("AP1_county_partisanship", "A12: county-grain partisanship (demoted)"),
+]
+APPX_FIGS = [("A1a_horizons", "Effect by issuance horizon: RBC estimate and robust CI for windows of one to six years."),
+             ("A1b_bandwidth", "Bandwidth sensitivity: RBC estimate (solid), conventional (dashed) and robust CI across bandwidths h of 3 to 15pp.")]
 
 def main():
     md = open(SRC).read().splitlines()
-    # split off the title header (first heading + preface up to the rule)
     body_start = next(j for j, l in enumerate(md) if l.strip() == "---")
     preface = [l for l in md[1:body_start] if l.strip()]
-    # split main text vs appendices at the first top-level appendix heading
-    app_start = next(j for j, l in enumerate(md) if l.startswith("# Appendix"))
-    main_tex = convert(md[body_start + 1:app_start])
-    app_tex = convert(md[app_start:])
+    main_tex = convert(md[body_start + 1:])
+
+    # Appendices H and V from the consolidated round-3/4 document.
+    appx = open(APPX_SRC).read().splitlines()
+    h_start = next(j for j, l in enumerate(appx) if l.startswith("# Appendix H"))
+    appx_tex = convert(appx[h_start:])
 
     L = [r"\documentclass[11pt]{article}",
          r"\usepackage[margin=1.05in]{geometry}",
          r"\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}",
-         r"\usepackage{booktabs,longtable,graphicx,amsmath,caption,textcomp}",
+         r"\usepackage{booktabs,longtable,graphicx,amsmath,caption,textcomp,array}",
          r"\usepackage[hidelinks]{hyperref}",
          r"\newcommand{\sig}[1]{${}^{#1}$}",
          r"\captionsetup{font=small,labelfont=bf}",
@@ -164,29 +195,20 @@ def main():
          r"\vspace{1.0cm}\begin{minipage}{0.82\linewidth}\small\emph{",
          esc(" ".join(l.strip("*") for l in preface).strip()),
          r"}\end{minipage}",
-         r"\vfill {\small Sections 1--3 (theory and institutional framework) are"
-         r" maintained separately and are not part of this compile. Reading"
-         r" paragraphs under each exhibit are drafting aids, marked strippable"
-         r" for submission.\par}",
+         r"\vfill {\small Reading paragraphs under exhibits are drafting aids,"
+         r" marked strippable for submission.\par}",
          r"\end{titlepage}"]
     L += main_tex
-    L += [r"\clearpage", r"\section*{Main tables}"]
-    for t in MAIN_TABLES:
-        L += [f"\\input{{exhibits/out/{t}.tex}}", r"\clearpage"]
-    L += [r"\section*{Main figures}"]
-    for stem, cap in MAIN_FIGS:
-        L += figure_block(stem, cap)
-    L += [r"\clearpage", r"\section*{Appendix exhibits (specification battery and landscape detail)}",
+    L += [r"\clearpage",
+          r"\section*{Appendix tables and figures}",
           r"\setcounter{table}{0}\renewcommand{\thetable}{A\arabic{table}}",
           r"\setcounter{figure}{0}\renewcommand{\thefigure}{A\arabic{figure}}"]
-    for t in APP_TABLES:
-        L += [f"\\input{{exhibits/out/{t}.tex}}"]
-        if t in ("A2_placebo_thresholds", "A5c_coalitions", "A6c_ratecap"):
-            L += [r"\clearpage"]
-    for stem, cap in APP_FIGS:
+    for stem, _ in APPX_TABLES:
+        L += [f"\\input{{exhibits/out/{stem}.tex}}", r"\clearpage"]
+    for stem, cap in APPX_FIGS:
         L += figure_block(stem, cap)
     L += [r"\clearpage"]
-    L += app_tex
+    L += appx_tex
     L += [r"\end{document}"]
 
     tex = os.path.join(BUILD, "main.tex")

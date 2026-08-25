@@ -56,6 +56,20 @@ Values that changed from the draft under final specifications are in
 | A-C1 Coverage check | `AC1_coverage.{csv,tex}`, `AC1b_count_sorting.csv` | `build_desc_tables.py` | `analysis/NC_COVERAGE_RESULTS.md` | §5 fn, App (round 4) |
 | A-P1 County partisanship (demoted) | `AP1_county_partisanship.{csv,tex}` | `build_desc_tables.py` | `analysis/D5_EXTERNAL_RESULTS.md` | App (round 4), §8 caveat |
 
+## Regression tables (standard format; added at manuscript revision)
+
+| Exhibit | Files | Script | Source results file(s) | Draft section |
+|---|---|---|---|---|
+| R1 First stage by class | `R1_firststage.{csv,tex}` | `build_reg_tables.py` | `analysis/N_RESULTS.md` (N1) | §5.3 (Table 5 in the compiled paper) |
+| R2 Substitution + extensive margin | `R2_substitution.{csv,tex}` | `build_reg_tables.py` | `analysis/N_RESULTS.md` (N2, N3), `analysis/NC_COVERAGE_RESULTS.md` (count-based row) | §5.4 (Table 6) |
+| R3 Interactions (appendix) | `R3_interactions.{csv,tex}` | `build_reg_tables.py` | `analysis/N_RESULTS.md` (N4, N5) | §5.4 fn (Appendix Table A7) |
+
+The compiled paper (`make paper`) now builds from `paper/MANUSCRIPT.md` (the
+rewritten text of record) with exhibits placed inline via `[[EX:...]]` and
+`[[FIG:...]]` markers; caption numbers are assigned in order of appearance and
+match the in-text references. R1/R2 replace the summary-format `T4_first_stage`
+in the compiled paper; T4 remains built for the manifest record.
+
 ## Instruction-vs-record conflicts (FLAGGED, not silently obeyed)
 
 1. **F4 "ten no-data states".** The instruction describes ten no-data states; under the

@@ -15,6 +15,7 @@ paper:
 exhibits:
 	$(PY) exhibits/build_rd_tables.py
 	$(PY) exhibits/build_desc_tables.py
+	$(PY) exhibits/build_reg_tables.py
 	$(PY) exhibits/build_figures.py
 	$(PY) exhibits/make_pdfs.py
 
