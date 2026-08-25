@@ -236,7 +236,7 @@ for lab,sel,ent in CLS:
         pre = f"{lab}, {olab}" if olab=="GO issuance" else f"\\quad {olab}"
         body+=rd_block(pre,row)
         csvr.append([lab,olab]+rd_csv_row("",row)[1:]+[ms,f"{rs:.3f}"])
-    body.append(f"\\quad menu: non-voted \\$ share {ms}; failures re-submitting {rs:.3f} \\\\ \\addlinespace")
+    body.append(f"\\quad menu: non-voted \\$ share {str(ms).replace('%',chr(92)+'%')}; failures re-submitting {rs:.3f} \\\\ \\addlinespace")
 write_csv("T7_fork_menu",csvr[0],csvr[1:])
 tex_table("T7_fork_menu",
  "Exits and the binding of refusal: the fork against the menu","tab:fork",

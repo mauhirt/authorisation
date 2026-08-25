@@ -8,7 +8,9 @@ from exlib import *
 
 def esc(s):
     return (s.replace("\\","").replace("&","\\&").replace("%","\\%").replace("#","\\#")
-             .replace("$","\\$").replace("−","-").replace("≤","$\\le$").replace("≥","$\\ge$")
+             .replace("$","\\$").replace("_","\\_").replace("−","-")
+             .replace("⊥̸","$\\not\\perp$").replace("⊥","$\\perp$").replace("—","--").replace("–","--")
+             .replace("≤","$\\le$").replace("≥","$\\ge$")
              .replace("×","$\\times$").replace("·","--").replace("→","$\\to$").replace("τ","$\\tau$")
              .replace("β","$\\beta$").replace("**","").replace("*",""))
 def md_exhibit(name,caption,label,src,key,notes,reading,max_rows=None,drop_cols=None):
@@ -69,7 +71,7 @@ for (st,t),G in sorted(cells.items()):
     ps=sum(1 for r in G if r["passed"]=="1")/len(G)
     am=sorted(a for a in (amt.get(r["referendum_row_id"]) for r in G) if a)
     el=sorted(c for c in (cnt.get(r["referendum_row_id"]) for r in G) if c)
-    am_s=("\\$"+format(int(am[len(am)//2]),",d")) if am else "--"
+    am_s=(f"\\${am[len(am)//2]/1e6:.1f}m") if am else "--"
     el_s=format(int(el[len(el)//2]),",d") if el else "--"
     rows.append(f"{st} ({t}" + "\\%) & " + f"{fn(len(G))} & {statistics.mean(ys):.3f} & {ps:.3f} & "
                 + am_s + " & " + el_s + " \\\\")
@@ -98,7 +100,7 @@ for lab,val in [("Documents",fn(nd)),("Issuers","43,030"),
                  f"{modes['voter']/det:.3f} / {modes['council_or_board']/det:.3f} / {modes['statutory']/det:.3f}"),
                 ("New-money par: schools / municipal / county / special / township (\\$B)",
                  " / ".join(f"{ent_par[e]/1e9:.0f}" for e in ("school_district","municipal","county","special_district","township")))]:
-    rows.append(f"\\quad {lab} & \\multicolumn{{5}}{{l}}{{{val}}} \\\\")
+    rows.append(f"\\multicolumn{{6}}{{@{{}}l}}{{\\quad {lab}: {val}}} \\\\")
     csvr.append([lab,val.replace("\\","")])
 write_csv("T1_sample",["cell/statistic","n","mean_yes","passed_share","median_amount","median_electorate"],csvr)
 tex_table("T1_sample","Sample and summary statistics","tab:sample","lccccc",
@@ -142,7 +144,7 @@ for lab,v in [("Re-approved by voters $\\le$4y","54.3"),("Returned, not yet conv
 rows.append("\\addlinespace \\multicolumn{2}{@{}l}{\\emph{First post-vote authoriser ($|m|\\le5$): barely-passed vs barely-failed}} \\\\")
 tm=parse_md_table("analysis/TRANSITION_FATE_RESULTS.md","vote outcome")
 for r in tm[1:]:
-    rows.append(f"\\quad {esc(r[0])}: voter {r[2]}, board {r[3]}, none {r[6]} & \\\\")
+    rows.append(f"\\quad {esc(r[0])}: voter {esc(r[2])}, board {esc(r[3])}, none {esc(r[6])} & \\\\")
     csvr.append(["A-matrix",r[0],f"voter {r[2]} board {r[3]} none {r[6]}"])
 rows.append("\\addlinespace \\multicolumn{2}{@{}l}{\\emph{Panel B: re-submission (2,680 failed GO measures)}} \\\\ \\addlinespace")
 for lab,v in [("Hazard, years 1/2/3/4 (\\%)","26.7 / 22.8 / 15.8 / 12.4"),

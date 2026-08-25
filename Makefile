@@ -5,7 +5,12 @@
 
 PY := python3
 
-.PHONY: exhibits caches clean-exhibits
+.PHONY: exhibits paper caches clean-exhibits
+
+# Full working-paper PDF (text of record + exhibits). Needs pdflatex
+# (texlive-latex-base/-recommended/-extra + lmodern) and current exhibits/out.
+paper:
+	$(PY) paper/build_paper.py
 
 exhibits:
 	$(PY) exhibits/build_rd_tables.py
