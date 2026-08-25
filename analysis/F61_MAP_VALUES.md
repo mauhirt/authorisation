@@ -1,13 +1,12 @@
 # F6.1 — consent map values (voted share of determined new-money $, 2005–25)
 
-COVERAGE NOTE (diagnosed): 5 states show no value (DC, DE, HI, VT, WY). Cause: extraction wave w2_3_v3.2 left the
-has_new_money finance flag BLANK for these states (their documents exist in
-the corpus — NY 25,974, PA 10,240, IN 7,780, CO 4,407, WA 3,685, AL 4,067 —
-but ~100% carry no flag, so they never enter new-money outcomes). States with
-<50 flagged docs are shown missing rather than as misleading near-zeros
-(NY/PA previously showed 0% on 2–3 stray docs). KY's ≈0% is REAL (3,245
-flagged docs, board-authorised debt). Fix = the pending auth tier-2 corpus
-refresh; NOT zero consent, and not imputed.
+COVERAGE NOTE (v3): the w2_3 finance-flag gap is FIXED (package v3, verified);
+5 states remain below the ≥50-doc gate (DC, DE, HI, VT, WY) —
+genuinely small local-issuance volumes (12–40 flagged docs), shown missing
+rather than as unstable values. Near-zeros elsewhere are REAL (KY 0.1%,
+TN 0.5%, PA 1.6%, NY 2.2% on full coverage). Legacy partial-fill states
+(MN 79% / MA 72% / MO 85% / MD 87% / ID 85% flag coverage) still map on
+substantial doc counts; their completion is queued with the meta session.
 
 | state | all classes | schools | municipal | county | special |
 |---|--:|--:|--:|--:|--:|

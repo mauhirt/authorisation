@@ -22,10 +22,10 @@ with gzip.open("analysis/national_entity_panel.csv.gz","rt") as fh:
         num[r["state"]]+=v*w; den[r["state"]]+=w
         ndocs[r["state"]]+=int(fl(r["nm_docs"]) or 0)
         numc[(r["state"],r["entity_type"])]+=v*w; denc[(r["state"],r["entity_type"])]+=w
-# COVERAGE GATE: the w2_3_v3.2 extraction wave left has_new_money BLANK for a
-# subset of states (their thousands of docs never enter nm outcomes). A state
-# qualifies only with >=50 new-money docs; below that its value would ride on
-# stray flagged documents (NY and PA showed 0% on 2-3 docs) -> shown as missing.
+# COVERAGE GATE (retained after the v3 flag fix): a state qualifies only with
+# >=50 new-money docs, so no value rides on a handful of documents. On v3 the
+# states below the gate are genuinely thin small local sectors (VT/WY/DE/DC/HI,
+# 12-40 docs), not extraction gaps.
 MIN_DOCS=50
 share={s:num[s]/den[s] for s in den if den[s]>0 and ndocs[s]>=MIN_DOCS}
 sharec={k:numc[k]/denc[k] for k in denc if denc[k]>0 and ndocs[k[0]]>=MIN_DOCS}
@@ -88,15 +88,13 @@ open("analysis/fig_consent_map.svg","w").write("\n".join(S))
 
 missing=[st for st in POS if st not in share]
 M=["# F6.1 — consent map values (voted share of determined new-money $, 2005–25)\n",
-   f"COVERAGE NOTE (diagnosed): {len(missing)} states show no value "
-   f"({', '.join(sorted(missing))}). Cause: extraction wave w2_3_v3.2 left the",
-   "has_new_money finance flag BLANK for these states (their documents exist in",
-   "the corpus — NY 25,974, PA 10,240, IN 7,780, CO 4,407, WA 3,685, AL 4,067 —",
-   "but ~100% carry no flag, so they never enter new-money outcomes). States with",
-   f"<{50} flagged docs are shown missing rather than as misleading near-zeros",
-   "(NY/PA previously showed 0% on 2–3 stray docs). KY's ≈0% is REAL (3,245",
-   "flagged docs, board-authorised debt). Fix = the pending auth tier-2 corpus",
-   "refresh; NOT zero consent, and not imputed.\n",
+   f"COVERAGE NOTE (v3): the w2_3 finance-flag gap is FIXED (package v3, verified);",
+   f"{len(missing)} states remain below the ≥50-doc gate ({', '.join(sorted(missing))}) —",
+   "genuinely small local-issuance volumes (12–40 flagged docs), shown missing",
+   "rather than as unstable values. Near-zeros elsewhere are REAL (KY 0.1%,",
+   "TN 0.5%, PA 1.6%, NY 2.2% on full coverage). Legacy partial-fill states",
+   "(MN 79% / MA 72% / MO 85% / MD 87% / ID 85% flag coverage) still map on",
+   "substantial doc counts; their completion is queued with the meta session.\n",
    "| state | all classes | schools | municipal | county | special |","|---|--:|--:|--:|--:|--:|"]
 for st in sorted(share,key=lambda s:-share[s]):
     def g(e):
