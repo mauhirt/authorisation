@@ -1,0 +1,9 @@
+outcome,rbc,ci_lo,ci_hi,p_robust,conventional,h,n_left,n_right
+Any GO issuance $\le$6y,0.1102,0.0162,0.2042,0.0216,0.1463,10.0,1596,2743
+Any issuance $\le$6y,0.1160,0.0232,0.2089,0.0143,0.1437,10.0,1596,2743
+ln(1+new-money par p.c.),0.9373,0.0570,1.8176,0.0369,0.9184,10.0,1537,2627
+"ln(1+LTD issued p.c.), Census survey",0.8781,0.1458,1.6103,0.0188,0.8268,10.0,1238,2128
+Same-purpose continuation $\le$6y,0.0524,-0.0471,0.1520,0.3017,0.0729,10.0,1398,2456
+Voter-mode first issuance $\le$6y,0.1839,0.0894,0.2784,0.0001,0.1990,10.0,1596,2743
+No issuance $\le$6y,-0.1160,-0.2089,-0.0232,0.0143,-0.1437,10.0,1596,2743
+"Capital outlay p.c.\ (pay-go bound; schools, post$-$pre)",0.4635,0.0904,0.8366,0.0149,0.3770,10.0,996,1621

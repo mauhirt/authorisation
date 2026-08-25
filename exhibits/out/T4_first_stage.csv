@@ -1,0 +1,8 @@
+spec,beta,se,t,n,clusters
+"Pooled (four classes, entity dummies)",+0.0988,0.1165,0.85,"13,928",48
+School districts,+0.6902,0.1540,4.48,"6,857",41
+Municipalities,+0.2040,0.0353,5.77,"3,176",37
+Counties,+0.1078,0.0918,1.17,"1,456",43
+Special districts,+0.1756,0.0509,3.45,"2,439",37
+GO security share ($),-0.2767,0.0703,-3.93,"4,766",46
+nc line share (count basis),-0.0470,0.0209,-2.25,"4,600",46

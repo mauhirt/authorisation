@@ -1,0 +1,49 @@
+section,variable,definition,level,source,coverage
+§4 · Data,`unit_id` / GID,9-char Census government ID (state2+type1+county3+unit3),unit,crosswalk,"40,924/47,235 referenda (86.6%)"
+§4 · Data,`pct_yes`,yes share of the vote,referendum,9 state registries,75% of panel; **100% of RD frame**
+§4 · Data,`threshold_centered_margin`,pct_yes − applicable threshold,referendum,derived; CA threshold per measure from CDIAC,75% / **100%**
+§4 · Data,`rd_sample`,at a genuine mandatory-ballot statutory cutoff,referendum,"rules coding of the 9 states (direct, not the national panel)","23,577 flagged"
+§4 · Data,`purpose_class`,bond_go / bond_other / tax etc.,referendum,per-state purpose mapping,100%
+§4 · Data,`auth_mode_final2`,OS-evidenced authorisation mode (voter / council_or_board / statutory),document,corpus extraction,93.7% of docs determined (v3)
+§4 · Data,"`op_referendum_strict` (+ ordinal, threshold_num)","coded rule, state × entity × purpose × year",state×entity×year,rules panel,89% of panel rows; muni cell codable in 37 states
+§5 · Landscape and fifty-state first stage,"`nm_docs`, `nm_par`","new-money issues and par, 2005–25, canonical per issue",unit,corpus v3,"78,672 typed nm issues; 46 states ≥50 docs"
+§5 · Landscape and fifty-state first stage,`sec_go_sh` … `sec_sptax_sh`,par shares by security pledge class,unit,corpus,where nm_par>0
+§5 · Landscape and fifty-state first stage,"`voted_sh_par`, `council_sh_par`, `statutory_sh_par`",mode shares of determined nm $,unit,corpus,"13,875 units with a determined split"
+§5 · Landscape and fifty-state first stage,`nc_share_project`,non-chargeable share of classified project $,unit,"B3 doc flags (118-label map, 0 unmapped)",~18% of units
+§5 · Landscape and fifty-state first stage,ballot purposes (M2 panel A),normalised keyword categories,referendum,9 registries,"19,600 bond measures"
+§5 · Landscape and fifty-state first stage,votes cast / yes-needed (M3),counts and threshold×total,referendum,TX/WI/LA/NC registries,"7,473 GO measures"
+§5 · Landscape and fifty-state first stage,GFD characteristics,"pop or enrolment, revenue, own-source, property tax, LTD out","unit, latest yr ≥2012",national GFD,100% of entity panel
+§5 · Landscape and fifty-state first stage,ACS covariates,"homeownership, 65+, fractionalisation, median income",place (munis) / county (rest),ACS5-2019 national pulls,~100%
+§5 · Landscape and fifty-state first stage,`county_dem2p_2020`,county Dem two-party share,county,MEDSL,99–100%
+§5 · Landscape and fifty-state first stage,FOG institutions,"form of gov, initiative, referendum, partisan, districts",city,FOG panel,~570 big cities
+§5 · Landscape and fifty-state first stage,TEL stringency; ACS-2022; city Dem; mayor party,big-city extras,city,municipal-analysis panels,~570 cities each
+§5 · Landscape and fifty-state first stage,rule (per class),strict for the unit's entity class,state×entity,rules panel,county 94% · schools 93% · specials 79% · munis 68% · townships 50% (proxy)
+§6 · The RD core,`issued_6y`,any issuance ≤6y,referendum,corpus link,**100%**
+§6 · The RD core,GO issuance ≤6y,issued_6y ∧ go_share>0,referendum,corpus,"100% (go_share observed for 64%, else 0-issue)"
+§6 · The RD core,"`nm_par_6y`, `ln_par_pc_6y`",new-money par; ln(1+par p.c.),referendum,corpus + GFD denominator,100% / 86%
+§6 · The RD core,`ln_gfd_ltd_pc_6y`,survey LTD issued p.c. (EMMA-independent row),referendum,GFD + IUF FY23/24,73%
+§6 · The RD core,capital outlay p.c. (pay-go bound row),GFD Total_Capital_Outlays p.c.,referendum,GFD,"83% with a 6y window (8,489/10,244 with denominator)"
+§6 · The RD core,`ev_m2…ev_p5`,any nm issue in relative year k,referendum×year,corpus,100%
+§6 · The RD core,balance covariates,"pre-vote GFD pop, revenue p.c., debt p.c., taxes, enrolment, prior failure",referendum,GFD,94–98%
+§6 · The RD core,McCrary/density inputs,binned margin counts,bin,derived,full frame
+§7 · The response margin,"`resubmitted_4y`, hazard, KM",same-unit+class return ≤4y,failed measure,panel sequences,"2,680 failed GO measures (the denominator)"
+§7 · The response margin,return pass / amount ratio,outcome of the return,return,registries,"1,418 returns; 1,354 with amounts"
+§7 · The response margin,fate table categories,converted / returned / issued-anyway / extinguished,failed measure,corpus + sequences,"1,233 (2005–19 full windows); 422 close"
+§7 · The response margin,first-issue authoriser,mode of first post-vote nm issue,referendum,corpus,"close window n=2,234"
+§7 · The response margin,continuation (B5),window doc sharing the ballot's purpose category,measure×doc,FN2CAT bridge,"3,854 close categorisable measures"
+§7 · The response margin,bundle recomposition,categories kept/dropped on return,failure→return pair,bridge,"1,129 pairs"
+§7 · The response margin,P3 chain,pass→first-issue timing; 8y issuance,conversion,corpus,132 CA conversions (118 capped / 14 uncapped)
+§8 · Heterogeneity,`acs_homeown/share65/frac/medinc`,proper-grain moderators,"**place 2,103 · SD 4,152 · county 5,329**",ACS5 2010/2019 (pre-vote vintage rule),97% attached
+§8 · Heterogeneity,`sd_childpov_rate`,district child poverty (income proxy),school district,SAIPE name-bridge,"35% of frame (4,153 schools)"
+§8 · Heterogeneity,county moderators,"65+, frac, income (first-pass proxy)",county,CC-EST + SAIPE,97.4%
+§8 · Heterogeneity,`county_dem2p` (pre-vote),partisanship,county,MEDSL,85.7%
+§8 · Heterogeneity,"city Dem share, mayor party",large-city partisanship,city (precinct-built),municipal-analysis,"1,932 municipal measures in 577-city panel; 178 within ±10"
+§8 · Heterogeneity,Gini (D6),B19083,place/SD/county,new CA pull (2010+2019),CA cells (blocked-majority analysis)
+§8 · Heterogeneity,election timing,on-cycle = Nov of even year,referendum,dates,100%
+§8 · Heterogeneity,entity class (fork),census_type,unit,crosswalk,100%
+§9 · Agenda margin and politics,proposals /100 districts/yr; median ask; on-cycle share,E4 regime comparison,state×year,registries + GFD district counts,CA/TX/WI (MN = classification gap)
+§9 · Agenda margin and politics,pass rates by regime,E3,regime,registries,"11,888 with margins"
+§9 · Agenda margin and politics,props/election; multi-prop share,TX-2019 unbundling,district×election,TX BRB,2014–25
+§9 · Agenda margin and politics,W1/W2 wedge cells,issuance by support band × regime,band×state group,panel,50–55 band: CA 187 / TX+WI 653
+§9 · Agenda margin and politics,reform events,attempts/outcomes since 1990,state×event,web compilation,11 rows
+§9 · Agenda margin and politics,Prop 39 / M56 DiD outcomes,ln per-pupil (per-capita) LTD issued,state×year cells,national GFD 1997–2013,"schools ≥20 districts/cell, 39–48 states"

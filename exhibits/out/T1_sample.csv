@@ -1,0 +1,16 @@
+cell/statistic,n,mean_yes,passed_share,median_amount,median_electorate
+CA (55%),1715,62.423,0.809,44000000,
+CA (66.7%),466,66.442,0.509,20000000,
+LA (50%),361,59.796,0.770,,1357
+NC (50%),278,65.843,0.914,,30568
+TX (50%),8062,68.849,0.792,15000000,1397
+WI (50%),999,54.070,0.661,12400000,2988
+All compiled referenda,"47,235",,,,
+Matched to a Census government,"40,924",,,,
+At a genuine mandatory-ballot requirement,"23,577",,,,
+GO regression-discontinuity frame,"11,889",,,,
+Documents,"258,762"
+Issuers,"43,030"
+Determination rate,0.937
+Mode shares (docs): voter / board / statutory,0.195 / 0.666 / 0.063
+New-money par: schools / municipal / county / special / township (\$B),524 / 606 / 220 / 139 / 35

@@ -1,0 +1,5 @@
+outcome,rbc,ci_lo,ci_hi,p_robust,conventional,h,n_left,n_right
+"50\%-regime states, pseudo-cutoff 45 (both sides fail)",0.1426,-0.0044,0.2895,0.0573,0.0115,10.0,786,687
+"50\%-regime states, pseudo-cutoff 60 (both sides pass)",-0.0448,-0.1288,0.0393,0.2962,-0.0137,10.0,1874,1852
+"CA 66.7\% regime, pseudo-cutoff 60 (both sides fail)",-0.0675,-0.3941,0.2590,0.6853,-0.0066,10.0,69,126
+"CA 55\% regime, pseudo-cutoff 60 (both sides pass)",-0.0388,-0.2641,0.1865,0.7358,0.0519,10.0,280,764

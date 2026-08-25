@@ -1,0 +1,7 @@
+class,outcome,rbc,ci_lo,ci_hi,p,conv,h,nL,nR,menu_nonvoted_share,resubmit_share
+Schools,GO issuance,0.1231,0.0181,0.2282,0.0216,0.1470,10.0,1289,2144,36.6%,0.592
+Schools,Any issuance,0.1315,0.0275,0.2356,0.0132,0.1499,10.0,1289,2144,36.6%,0.592
+General-purpose,GO issuance,-0.0238,-0.2508,0.2032,0.8375,0.0730,10.0,252,498,86.1%,0.253
+General-purpose,Any issuance,-0.0285,-0.2488,0.1919,0.8001,0.0445,10.0,252,498,86.1%,0.253
+Utilities (special districts),GO issuance,0.5003,-0.0152,1.0158,0.0572,0.4631,10.0,55,101,73.8%,0.426
+Utilities (special districts),Any issuance,0.3595,-0.1691,0.8880,0.1825,0.3618,10.0,55,101,73.8%,0.426

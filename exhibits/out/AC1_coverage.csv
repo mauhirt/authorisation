@@ -1,0 +1,10 @@
+sample,regime,units,unit coverage,$ coverage
+all classes,strict,"12,838",63.5%,82.7%
+all classes,non-strict,"2,040",77.6%,83.9%
+all classes,not codable,"3,450",48.3%,80.1%
+general-purpose (muni+county),strict,"3,776",68.7%,90.3%
+general-purpose (muni+county),non-strict,"1,006",75.1%,84.9%
+general-purpose (muni+county),not codable,"1,926",60.9%,92.5%
+schools,strict,"6,763",66.7%,80.7%
+schools,non-strict,263,90.9%,96.1%
+schools,not codable,604,3.8%,7.7%

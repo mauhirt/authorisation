@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="270" viewBox="0 0 430 270" font-family="Helvetica,Arial,sans-serif">
+<rect width="430" height="270" fill="#ffffff"/>
+<text x="18" y="24" font-size="14" font-weight="bold" fill="#111111">Figure A1a. Effect by horizon</text>
+<text x="18" y="41" font-size="10.5" fill="#777777">RBC (solid, with robust CI band) and conventional (dashed)</text>
+<line x1="55" y1="225" x2="405" y2="225" stroke="#111111" stroke-width="1"/>
+<line x1="55" y1="45" x2="55" y2="225" stroke="#111111" stroke-width="1"/>
+<line x1="55.0" y1="225" x2="55.0" y2="229" stroke="#111111"/>
+<text x="55.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">1</text>
+<line x1="125.0" y1="225" x2="125.0" y2="229" stroke="#111111"/>
+<text x="125.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">2</text>
+<line x1="195.0" y1="225" x2="195.0" y2="229" stroke="#111111"/>
+<text x="195.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">3</text>
+<line x1="265.0" y1="225" x2="265.0" y2="229" stroke="#111111"/>
+<text x="265.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">4</text>
+<line x1="335.0" y1="225" x2="335.0" y2="229" stroke="#111111"/>
+<text x="335.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">5</text>
+<line x1="405.0" y1="225" x2="405.0" y2="229" stroke="#111111"/>
+<text x="405.0" y="241" font-size="9.5" fill="#111111" text-anchor="middle">6</text>
+<line x1="51" y1="229.8" x2="55" y2="229.8" stroke="#111111"/>
+<text x="48" y="232.8" font-size="9.5" fill="#111111" text-anchor="end">0.00</text>
+<line x1="55" y1="229.8" x2="405" y2="229.8" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="51" y1="179.8" x2="55" y2="179.8" stroke="#111111"/>
+<text x="48" y="182.8" font-size="9.5" fill="#111111" text-anchor="end">0.10</text>
+<line x1="55" y1="179.8" x2="405" y2="179.8" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="51" y1="129.9" x2="55" y2="129.9" stroke="#111111"/>
+<text x="48" y="132.9" font-size="9.5" fill="#111111" text-anchor="end">0.20</text>
+<line x1="55" y1="129.9" x2="405" y2="129.9" stroke="#cccccc" stroke-width="0.6"/>
+<text x="230.0" y="257" font-size="10.5" fill="#111111" text-anchor="middle">horizon (years)</text>
+<text x="61" y="57" font-size="9.5" fill="#777777">coefficient</text>
+<polygon points="55.0,136.5 125.0,195.2 195.0,214.1 265.0,219.8 335.0,225.0 405.0,217.9 405.0,125.0 335.0,131.4 265.0,125.1 195.0,118.7 125.0,99.9 55.0,45.0" fill="#e8e8e8"/>
+<line x1="55" y1="229.8" x2="405" y2="229.8" stroke="#111111" stroke-width="0.8"/>
+<polyline points="55.0,90.8 125.0,147.5 195.0,166.4 265.0,172.5 335.0,178.2 405.0,171.5" fill="none" stroke="#111111" stroke-width="2"/>
+<polyline points="55.0,90.7 125.0,133.9 195.0,148.8 265.0,155.1 335.0,162.5 405.0,158.4" fill="none" stroke="#111111" stroke-width="1.4" stroke-dasharray="6,4"/>
+</svg>

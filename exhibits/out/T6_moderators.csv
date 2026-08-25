@@ -1,0 +1,16 @@
+outcome,rbc,ci_lo,ci_hi,p_robust,conventional,h,n_left,n_right
+Homeownership below,-0.0645,-0.2324,0.1033,0.4511,0.0558,10.0,432,863
+Homeownership above,0.1961,0.0441,0.3480,0.0114,0.1819,10.0,575,861
+Homeownership difference,0.2606,,,0.0241,,,,
+Share 65+ below,0.0432,-0.1286,0.2150,0.6223,0.0357,10.0,408,781
+Share 65+ above,0.0970,-0.0547,0.2486,0.2101,0.1943,10.0,599,943
+Share 65+ difference,0.0538,,,0.6455,,,,
+Racial-ethnic homogeneity (1$-$frac.) below,-0.0921,-0.2701,0.0860,0.3108,-0.0180,10.0,415,818
+Racial-ethnic homogeneity (1$-$frac.) above,0.2033,0.0587,0.3479,0.0059,0.2322,10.0,592,906
+Racial-ethnic homogeneity (1$-$frac.) difference,0.2953,,,0.0116,,,,
+Median household income below,0.0297,-0.1274,0.1868,0.7113,0.1292,10.0,482,802
+Median household income above,0.1235,-0.0414,0.2883,0.1422,0.1215,10.0,525,922
+Median household income difference,0.0938,,,0.4195,,,,
+On-cycle,0.1924,0.0237,0.3611,0.0254,0.2518,10.0,476,1005
+Off-cycle,0.0715,-0.0392,0.1822,0.2054,0.0987,10.0,1120,1738
+Timing difference,0.1209,,,0.2403,,,,

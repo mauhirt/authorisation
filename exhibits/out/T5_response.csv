@@ -1,0 +1,14 @@
+panel,row,value
+A,Re-approved by voters $le$4y,54.3
+A,"Returned, not yet converted",13.3
+A,Issued via board or statutory channel,5.2
+A,Issued on pre-existing voter authority,9.0
+A,Extinguished within horizon,18.2
+A-matrix,barely-PASSED,voter 48.4% board 7.9% none 43.1%
+A-matrix,barely-FAILED,voter 36.7% board 8.6% none 54.2%
+B,"Hazard, years 1/2/3/4 (%)",26.7 / 22.8 / 15.8 / 12.4
+B,Cumulative return within 4y (%),58.2
+B,Median time to return (years),1.02
+B,Returns that pass (%),61.9
+B,"Median amount ratio, return/original",1.000
+B,Purpose categories retained on return (%),78.2

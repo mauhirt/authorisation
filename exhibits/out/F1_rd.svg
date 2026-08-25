@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" font-family="Helvetica,Arial,sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="18" y="24" font-size="14" font-weight="bold" fill="#111111">Figure 1. Issuance at the authorisation threshold</text>
+<text x="18" y="41" font-size="10.5" fill="#777777">Share with any issuance within six years; 0.5pp bins sized by n; local-linear fits</text>
+<line x1="60" y1="295" x2="530" y2="295" stroke="#111111" stroke-width="1"/>
+<line x1="60" y1="55" x2="60" y2="295" stroke="#111111" stroke-width="1"/>
+<line x1="60.0" y1="295" x2="60.0" y2="299" stroke="#111111"/>
+<text x="60.0" y="311" font-size="9.5" fill="#111111" text-anchor="middle">-10</text>
+<line x1="177.5" y1="295" x2="177.5" y2="299" stroke="#111111"/>
+<text x="177.5" y="311" font-size="9.5" fill="#111111" text-anchor="middle">-5</text>
+<line x1="295.0" y1="295" x2="295.0" y2="299" stroke="#111111"/>
+<text x="295.0" y="311" font-size="9.5" fill="#111111" text-anchor="middle">0</text>
+<line x1="412.5" y1="295" x2="412.5" y2="299" stroke="#111111"/>
+<text x="412.5" y="311" font-size="9.5" fill="#111111" text-anchor="middle">5</text>
+<line x1="530.0" y1="295" x2="530.0" y2="299" stroke="#111111"/>
+<text x="530.0" y="311" font-size="9.5" fill="#111111" text-anchor="middle">10</text>
+<line x1="56" y1="295.0" x2="60" y2="295.0" stroke="#111111"/>
+<text x="53" y="298.0" font-size="9.5" fill="#111111" text-anchor="end">0.30</text>
+<line x1="60" y1="295.0" x2="530" y2="295.0" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="56" y1="247.0" x2="60" y2="247.0" stroke="#111111"/>
+<text x="53" y="250.0" font-size="9.5" fill="#111111" text-anchor="end">0.40</text>
+<line x1="60" y1="247.0" x2="530" y2="247.0" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="56" y1="199.0" x2="60" y2="199.0" stroke="#111111"/>
+<text x="53" y="202.0" font-size="9.5" fill="#111111" text-anchor="end">0.50</text>
+<line x1="60" y1="199.0" x2="530" y2="199.0" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="56" y1="151.0" x2="60" y2="151.0" stroke="#111111"/>
+<text x="53" y="154.0" font-size="9.5" fill="#111111" text-anchor="end">0.60</text>
+<line x1="60" y1="151.0" x2="530" y2="151.0" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="56" y1="103.0" x2="60" y2="103.0" stroke="#111111"/>
+<text x="53" y="106.0" font-size="9.5" fill="#111111" text-anchor="end">0.70</text>
+<line x1="60" y1="103.0" x2="530" y2="103.0" stroke="#cccccc" stroke-width="0.6"/>
+<line x1="56" y1="55.0" x2="60" y2="55.0" stroke="#111111"/>
+<text x="53" y="58.0" font-size="9.5" fill="#111111" text-anchor="end">0.80</text>
+<line x1="60" y1="55.0" x2="530" y2="55.0" stroke="#cccccc" stroke-width="0.6"/>
+<text x="295.0" y="327" font-size="10.5" fill="#111111" text-anchor="middle">Vote share minus threshold (pp)</text>
+<text x="66" y="67" font-size="9.5" fill="#777777">share issuing</text>
+<line x1="295.0" y1="55" x2="295.0" y2="295" stroke="#111111" stroke-width="1" stroke-dasharray="4,3"/>
+<circle cx="65.9" cy="216.1" r="4.3" fill="#777777" fill-opacity="0.75"/>
+<circle cx="77.6" cy="126.0" r="4.1" fill="#777777" fill-opacity="0.75"/>
+<circle cx="89.4" cy="189.8" r="4.2" fill="#777777" fill-opacity="0.75"/>
+<circle cx="101.1" cy="191.7" r="4.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="112.9" cy="138.1" r="4.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="124.6" cy="127.0" r="4.4" fill="#777777" fill-opacity="0.75"/>
+<circle cx="136.4" cy="182.1" r="4.6" fill="#777777" fill-opacity="0.75"/>
+<circle cx="148.1" cy="149.6" r="4.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="159.9" cy="191.9" r="4.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="171.6" cy="189.4" r="4.7" fill="#777777" fill-opacity="0.75"/>
+<circle cx="183.4" cy="172.9" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="195.1" cy="110.0" r="4.9" fill="#777777" fill-opacity="0.75"/>
+<circle cx="206.9" cy="186.6" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="218.6" cy="188.8" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="230.4" cy="215.0" r="5.2" fill="#777777" fill-opacity="0.75"/>
+<circle cx="242.1" cy="191.3" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="253.9" cy="163.4" r="5.1" fill="#777777" fill-opacity="0.75"/>
+<circle cx="265.6" cy="183.6" r="5.2" fill="#777777" fill-opacity="0.75"/>
+<circle cx="277.4" cy="191.3" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="289.1" cy="142.8" r="5.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="300.9" cy="132.4" r="5.4" fill="#777777" fill-opacity="0.75"/>
+<circle cx="312.6" cy="87.8" r="5.4" fill="#777777" fill-opacity="0.75"/>
+<circle cx="324.4" cy="83.3" r="5.6" fill="#777777" fill-opacity="0.75"/>
+<circle cx="336.1" cy="109.5" r="5.3" fill="#777777" fill-opacity="0.75"/>
+<circle cx="347.9" cy="110.0" r="5.7" fill="#777777" fill-opacity="0.75"/>
+<circle cx="359.6" cy="143.3" r="5.6" fill="#777777" fill-opacity="0.75"/>
+<circle cx="371.4" cy="142.8" r="5.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="383.1" cy="117.7" r="5.4" fill="#777777" fill-opacity="0.75"/>
+<circle cx="394.9" cy="71.7" r="5.3" fill="#777777" fill-opacity="0.75"/>
+<circle cx="406.6" cy="109.0" r="5.3" fill="#777777" fill-opacity="0.75"/>
+<circle cx="418.4" cy="119.0" r="5.6" fill="#777777" fill-opacity="0.75"/>
+<circle cx="430.1" cy="113.6" r="5.8" fill="#777777" fill-opacity="0.75"/>
+<circle cx="441.9" cy="81.4" r="5.8" fill="#777777" fill-opacity="0.75"/>
+<circle cx="453.6" cy="123.7" r="6.0" fill="#777777" fill-opacity="0.75"/>
+<circle cx="465.4" cy="136.2" r="5.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="477.1" cy="114.1" r="5.5" fill="#777777" fill-opacity="0.75"/>
+<circle cx="488.9" cy="107.2" r="5.8" fill="#777777" fill-opacity="0.75"/>
+<circle cx="500.6" cy="126.7" r="5.7" fill="#777777" fill-opacity="0.75"/>
+<circle cx="512.4" cy="113.9" r="5.9" fill="#777777" fill-opacity="0.75"/>
+<circle cx="524.1" cy="101.1" r="5.8" fill="#777777" fill-opacity="0.75"/>
+<circle cx="535.9" cy="164.7" r="3.2" fill="#777777" fill-opacity="0.75"/>
+<line x1="60.0" y1="169.5" x2="294.765" y2="177.3" stroke="#111111" stroke-width="2"/>
+<line x1="295.235" y1="108.3" x2="530.0" y2="118.5" stroke="#111111" stroke-width="2"/>
+<text x="303.0" y="71" font-size="11" fill="#111111">RBC τ = +0.116 [+0.023, +0.209]</text>
+</svg>
