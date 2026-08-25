@@ -56,6 +56,22 @@ Values that changed from the draft under final specifications are in
 | A-C1 Coverage check | `AC1_coverage.{csv,tex}`, `AC1b_count_sorting.csv` | `build_desc_tables.py` | `analysis/NC_COVERAGE_RESULTS.md` | §5 fn, App (round 4) |
 | A-P1 County partisanship (demoted) | `AP1_county_partisanship.{csv,tex}` | `build_desc_tables.py` | `analysis/D5_EXTERNAL_RESULTS.md` | App (round 4), §8 caveat |
 
+## Front-loaded descriptive exhibits (added at manuscript revision 2)
+
+| Exhibit | Files | Script | Source | Draft section |
+|---|---|---|---|---|
+| D1 How borrowing is authorised, by type | `D1_how_authorised.{csv,tex}` | `build_desc2.py` | computed from v3 `auth_os` + `issue_canonical` (canonical new-money, local issuers) | S5.1 (Table 2) |
+| D2 What each type borrows for | `D2_what_for.{csv,tex}` | `build_desc2.py` | same pass, primary major function | S5.1 (Table 3) |
+| D3 Which public goods are voted on | `D3_function_voted.{csv,tex}` | `build_desc2.py` | same pass, voted share of determined $ by function | S5.2 (Table 4) |
+
+D3 replaces the 9-state ballot-composition panel as the paper's "what faces
+voters" evidence: the registry-based composition (38.2% K-12 of balloted
+measures) was vulnerable to registry scope (Wisconsin's registry is
+schools-only) and is no longer cited in the text; the registry panel remains
+in `M2_RESULTS.md` and the corpus-side submerged detail is Appendix Table A6.
+Reform-event material (Prop 39 DiD) was struck from Section 5 per owner
+review; its honesty note lives in Section 9 and Appendix H.
+
 ## Regression tables (standard format; added at manuscript revision)
 
 | Exhibit | Files | Script | Source results file(s) | Draft section |

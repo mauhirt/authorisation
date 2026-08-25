@@ -150,18 +150,20 @@ def convert(md_lines):
 
 # Appendix exhibits, in citation order (numbers become A1, A2, ... in sequence).
 APPX_TABLES = [
-    ("A1_battery",            "A1: specification battery"),
-    ("A3_state_by_state",     "A2: state-by-state estimates"),
-    ("A2_placebo_thresholds", "A3: placebo thresholds"),
-    ("AC1_coverage",          "A4: classified-line coverage by regime"),
-    ("A5d_channel_sorting",   "A5: channel dollar sorting"),
-    ("A5e_firststage_raw",    "A6: raw voted shares by rule and class"),
-    ("R3_interactions",       "A7: institutional and demographic interactions"),
-    ("A6a_chain",             "A8: the near-miss chain"),
-    ("A6c_ratecap",           "A9: the rate-cap split"),
-    ("A7_blocked",            "A10: demography of blocked majorities"),
-    ("A9_validation",         "A11: validation of extracted fields"),
-    ("AP1_county_partisanship", "A12: county-grain partisanship (demoted)"),
+    ("A1_battery",            "A1"),
+    ("A3_state_by_state",     "A2"),
+    ("A2_placebo_thresholds", "A3"),
+    ("AC1_coverage",          "A4"),
+    ("A5a_menu",              "A5"),
+    ("A5b_submerged",         "A6"),
+    ("A5d_channel_sorting",   "A7"),
+    ("A5e_firststage_raw",    "A8"),
+    ("R3_interactions",       "A9"),
+    ("A6a_chain",             "A10"),
+    ("A6c_ratecap",           "A11"),
+    ("A7_blocked",            "A12"),
+    ("A9_validation",         "A13"),
+    ("AP1_county_partisanship", "A14"),
 ]
 APPX_FIGS = [("A1a_horizons", "Effect by issuance horizon: RBC estimate and robust CI for windows of one to six years."),
              ("A1b_bandwidth", "Bandwidth sensitivity: RBC estimate (solid), conventional (dashed) and robust CI across bandwidths h of 3 to 15pp.")]

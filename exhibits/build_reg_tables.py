@@ -108,7 +108,7 @@ reg_table(
     "(GO) security; (3) share of classified project dollars in non-chargeable functions "
     "(services that cannot be billed to users); (4) the same composition measured in "
     "classified use-of-proceeds line counts, the basis robust to the coverage imbalance "
-    "documented in Appendix Table A-C1 and therefore the estimate the text cites; "
+    "documented in Appendix Table A4 and therefore the estimate the text cites; "
     "(5) Any issue = linear probability of any corpus new-money issue 2005--25; (6) ln issued = log survey "
     "long-term debt issued per capita 2005--23 (Government Finance Database). "
     "GP = general-purpose governments (municipalities and counties); schools are near-degenerate for the "

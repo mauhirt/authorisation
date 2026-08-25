@@ -36,3 +36,11 @@ numbers.
 5. **T2/T3 headline rows.** For the record, the leads did **not** move: any-GO ≤6y RBC
    +0.110 [+0.016, +0.204] and pay-go RBC +0.464 / conventional +0.377 match the
    draft's citations exactly (the draft already used RBC for these after round 3).
+
+6. **Removed claim (manuscript revision 2).** The draft's "38.2% of everything
+   put before voters is K-12" (9-state registry composition) is removed from
+   the paper rather than restated: registry scope differs by state (Wisconsin
+   compiles school referenda only), so the composition of balloted measures is
+   not comparable across states. The replacement evidence is corpus-based
+   (Table D3: voted share of dollars by function, national), which is immune
+   to registry scope. No other number changed.
