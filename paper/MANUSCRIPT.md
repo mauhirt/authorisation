@@ -44,12 +44,15 @@ and a bound on debt-free construction) and are introduced where used.
 dissects. Accountable local governments issued $1.57 trillion of new-money
 debt over 2005 to 2025 (74,395 issues by 13,235 governments, roughly $75
 billion a year), with a further $617 billion flowing through conduit vehicles
-that answer to no electorate. Of every determined dollar, 32 cents was
-authorised by voters, 54 cents by a governing board and 14 cents directly by
-statute; general-obligation debt, the instrument the referendum rules govern,
-carries 54 cents. The voted layer is the smaller one throughout, but it is
-where the growth has been: voter-authorised volume has roughly trebled since
-its post-2011 trough.
+that answer to no electorate. Of every determined dollar, 35 cents was
+authorised by voters, 51 cents by a governing board alone and 13 cents
+directly by statute; general-obligation debt, the instrument the referendum
+rules govern, carries 54 cents. Most voter authorisation is joint (the
+referendum authorises, the board resolution implements), so the both-case,
+27 cents of every determined dollar, is the normal way a voted bond is issued
+and is counted here as voter authorisation. The voted layer is the smaller
+one throughout, but it is where the growth has been: voter-authorised volume
+has roughly trebled since its post-2011 trough.
 
 [[FIG:F0_volume|Local borrowing and who authorised it, 2005--2025. Annual new-money issuance by accountable local governments, in billions of dollars, stacked by the authorisation mode evidenced in the offering documents. Undetermined modes (6.3% of documents) omitted from the stacks. Source: official-statement corpus.]]
 
@@ -111,8 +114,11 @@ the money was for.
 
 Read together, the two tables say something the institutional literature
 tends to miss. **School districts are the voted sector of the local state.**
-Nearly two-thirds of their dollars are voter-authorised, four-fifths are
-GO debt, and essentially everything they borrow for is education. At the
+Just over two-thirds of their dollars carry voter authorisation, four-fifths
+are GO debt, and essentially everything they borrow for is education. Most of
+that authorisation is joint: for schools the referendum and the board
+resolution together account for the majority of borrowing, which is simply
+how a voted GO bond is issued. At the
 other pole, **municipalities are the unvoted sector**: barely a tenth of
 their dollars pass through an electorate, and the majority are revenue
 bonds backed by charges rather than taxes. Counties and special districts

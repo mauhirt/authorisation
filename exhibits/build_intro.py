@@ -16,7 +16,21 @@ import sys; sys.path.insert(0, "exhibits")
 from exlib import OUT, write_csv
 
 CLASSES = {"school_district", "municipal", "county", "township", "special_district"}
-MODES = ["voter", "council_or_board", "statutory"]
+
+# Authorisation from auth_mode_detailed: a voted GO bond is normally jointly
+# authorised (referendum authorises, board resolution implements), so the
+# partition of determined dollars is voter-any / board-only / statute, with
+# voter-any = voter_only + voter_and_council. The single-valued collapse
+# (auth_mode_final2) buries the joint case under the board and understates the
+# voter share; it is carried as a lower bound.
+def auth_bucket(detailed):
+    if detailed in ("voter_only", "voter_and_council"):
+        return "voter"
+    if detailed == "council_only":
+        return "board"
+    if detailed == "statutory":
+        return "statute"
+    return None
 
 canon = set()
 with gzip.open("inputs/corpus/issue_canonical.csv.gz", "rt") as fh:
@@ -25,6 +39,7 @@ with gzip.open("inputs/corpus/issue_canonical.csv.gz", "rt") as fh:
 
 tot = 0.0; n = 0; issuers = set(); conduit = 0.0
 mode = defaultdict(float); sec = defaultdict(float)
+joint = 0.0; collapsed_voter = 0.0
 yr = defaultdict(lambda: defaultdict(float))
 go_ref = 0.0; voted_ref = 0.0
 with gzip.open("inputs/corpus/auth_os.csv.gz", "rt") as fh:
@@ -43,22 +58,27 @@ with gzip.open("inputs/corpus/auth_os.csv.gz", "rt") as fh:
         if r["has_refunding"] == "True" and cls in CLASSES:
             if r["security_pledge_class"] == "GO":
                 go_ref += par
-            if r["auth_mode_final2"] == "voter":
+            if auth_bucket(r["auth_mode_detailed"]) == "voter":
                 voted_ref += par
         if r["has_new_money"] != "True" or r["has_refunding"] == "True":
             continue
         if cls not in CLASSES:
             conduit += par; continue
         tot += par; n += 1; issuers.add(r["issuer_id"])
-        m = r["auth_mode_final2"]
-        if m in MODES:
-            mode[m] += par
+        b = auth_bucket(r["auth_mode_detailed"])
+        if b:
+            mode[b] += par
+        if r["auth_mode_detailed"] == "voter_and_council":
+            joint += par
+        if r["auth_mode_final2"] == "voter":
+            collapsed_voter += par
         s = r["security_pledge_class"] or "?"
         sec[s if s in ("GO", "revenue", "lease") else "other"] += par
         y = r["year"]
         if y and y.isdigit() and 2005 <= int(y) <= 2025:
-            yr[int(y)][m if m in MODES else "undetermined"] += par
+            yr[int(y)][b if b else "undetermined"] += par
 
+MODES = ["voter", "board", "statute"]
 det = sum(mode.values())
 write_csv("D0_aggregates", ["statistic", "value"], [
     ["local new-money issues 2005-25", n],
@@ -66,16 +86,19 @@ write_csv("D0_aggregates", ["statistic", "value"], [
     ["total local new-money par ($B)", round(tot/1e9, 1)],
     ["average per year ($B)", round(tot/21/1e9, 1)],
     ["conduit/unassigned additional par ($B)", round(conduit/1e9, 1)],
-    ["voter share of determined $ (%)", round(mode["voter"]/det*100, 1)],
-    ["board share of determined $ (%)", round(mode["council_or_board"]/det*100, 1)],
-    ["statutory share of determined $ (%)", round(mode["statutory"]/det*100, 1)],
+    ["voter (any) share of determined $ (%)", round(mode["voter"]/det*100, 1)],
+    ["board-only share of determined $ (%)", round(mode["board"]/det*100, 1)],
+    ["statutory share of determined $ (%)", round(mode["statute"]/det*100, 1)],
+    ["joint voter+board share of determined $ (%)", round(joint/det*100, 1)],
+    ["collapsed voter share, lower bound (%)", round(collapsed_voter/det*100, 1)],
     ["GO share of $ (%)", round(sec["GO"]/tot*100, 1)],
     ["revenue share of $ (%)", round(sec["revenue"]/tot*100, 1)],
     ["lease share of $ (%)", round(sec["lease"]/tot*100, 1)],
-    ["voter-authorised new-money $ ($B)", round(mode["voter"]/1e9, 1)],
+    ["voter-authorised (any) new-money $ ($B)", round(mode["voter"]/1e9, 1)],
+    ["of which jointly authorised $ ($B)", round(joint/1e9, 1)],
     ["GO new-money $ ($B)", round(sec["GO"]/1e9, 1)],
     ["GO refunding $ ($B)", round(go_ref/1e9, 1)],
-    ["voter-mode refunding $ ($B)", round(voted_ref/1e9, 1)],
+    ["voter (any) refunding $ ($B)", round(voted_ref/1e9, 1)],
 ])
 rows = []
 for y in range(2005, 2026):
@@ -94,7 +117,7 @@ bw = pw/len(years) - 6
 S = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="Helvetica,Arial,sans-serif">',
      f'<rect width="{W}" height="{H}" fill="white"/>',
      f'<text x="24" y="26" font-size="15" font-weight="bold" fill="{INK}">Local borrowing and who authorised it, 2005–2025</text>',
-     f'<text x="24" y="42" font-size="10.5" fill="{GREY}">New-money issues by accountable local governments, $ billions; stacked by authorisation mode</text>']
+     f'<text x="24" y="42" font-size="10.5" fill="{GREY}">New-money issues by accountable local governments, $ billions; stacked by authorisation (voter includes jointly voter-and-board)</text>']
 for gy in range(0, 151, 50):
     yy = y0 + ph - gy/ymax*ph
     S.append(f'<line x1="{x0}" y1="{yy:.1f}" x2="{x0+pw}" y2="{yy:.1f}" stroke="#eeeeee" stroke-width="1"/>')
@@ -112,7 +135,7 @@ for i, y in enumerate(years):
     if y % 5 == 0:
         S.append(f'<text x="{x+bw/2:.1f}" y="{y0+ph+16}" font-size="9.5" fill="{GREY}" text-anchor="middle">{y}</text>')
 lx = x0 + 8
-for lab, col in [("Voter-authorised", INK), ("Board", MID), ("Statute", LIGHT)]:
+for lab, col in [("Voter-authorised", INK), ("Board only", MID), ("Statute", LIGHT)]:
     S.append(f'<rect x="{lx}" y="{y0+2}" width="10" height="10" fill="{col}" stroke="#bbbbbb" stroke-width="0.5"/>')
     S.append(f'<text x="{lx+15}" y="{y0+11}" font-size="10" fill="{INK}">{lab}</text>')
     lx += 15 + 8*len(lab) + 18

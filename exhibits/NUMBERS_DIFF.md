@@ -44,3 +44,23 @@ numbers.
    not comparable across states. The replacement evidence is corpus-based
    (Table D3: voted share of dollars by function, national), which is immune
    to registry scope. No other number changed.
+
+7. **Voted share re-based on the boolean measure (owner decision, this round).**
+   The descriptive exhibits and the intro/abstract now measure voter
+   authorisation from `auth_mode_detailed` (voter_only + voter_and_council),
+   not the single-valued `auth_mode_final2`, because a voted GO bond is
+   normally *jointly* authorised (the referendum authorises, the board
+   resolution implements) and the collapse buries the joint case under the
+   board. Effect on the headline: voter share of determined local new-money
+   dollars 32.1% -> 35.1% (schools 63.4 -> 68.3; municipalities 11.3 -> 13.2);
+   board share is now board-only (51.5%). Joint authorisation is 26.5% of all
+   determined dollars and 53% of school dollars. The collapsed figure (32.2%)
+   is retained as an explicit lower bound in the D1 note and D0. D1 gains an
+   "of which joint" sub-column. NOT yet re-based on the boolean (separate
+   committed pipelines; direction noted): the national first stage R1 (its
+   voted_share dependent variable is built on the collapse, so the true
+   coefficient is slightly LARGER than reported, since masking is concentrated
+   in the school/strict cells), the T3 voter-mode-first-issuance row, and the
+   T5 response transition matrix. These are flagged for a boolean rerun before
+   journal submission; the RD issuance and dollar outcomes do not use the mode
+   variable and are unaffected.

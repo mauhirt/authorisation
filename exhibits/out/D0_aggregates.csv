@@ -4,13 +4,16 @@ accountable local issuers,13235
 total local new-money par ($B),1566.0
 average per year ($B),74.6
 conduit/unassigned additional par ($B),616.8
-voter share of determined $ (%),32.1
-board share of determined $ (%),54.4
-statutory share of determined $ (%),13.5
+voter (any) share of determined $ (%),35.1
+board-only share of determined $ (%),51.5
+statutory share of determined $ (%),13.3
+joint voter+board share of determined $ (%),26.5
+"collapsed voter share, lower bound (%)",32.2
 GO share of $ (%),54.3
 revenue share of $ (%),38.6
 lease share of $ (%),4.2
-voter-authorised new-money $ ($B),480.8
+voter-authorised (any) new-money $ ($B),525.0
+of which jointly authorised $ ($B),395.9
 GO new-money $ ($B),850.0
 GO refunding $ ($B),1037.8
-voter-mode refunding $ ($B),293.6
+voter (any) refunding $ ($B),294.0
