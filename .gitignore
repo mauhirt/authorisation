@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 paper/build/
+paper/overleaf/main.pdf
+paper/overleaf/*.aux
+paper/overleaf/*.log
+paper/overleaf/*.out

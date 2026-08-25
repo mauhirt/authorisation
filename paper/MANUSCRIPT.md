@@ -40,6 +40,19 @@ Appendix Table A13 and behave exactly as registry coverage predicts. Census
 survey data play two narrow supporting roles later on (a survivorship check
 and a bound on debt-free construction) and are introduced where used.
 
+**Scale and context.** Figure [[VOLREF]] shows the landscape the rest of the paper
+dissects. Accountable local governments issued $1.57 trillion of new-money
+debt over 2005 to 2025 (74,395 issues by 13,235 governments, roughly $75
+billion a year), with a further $617 billion flowing through conduit vehicles
+that answer to no electorate. Of every determined dollar, 32 cents was
+authorised by voters, 54 cents by a governing board and 14 cents directly by
+statute; general-obligation debt, the instrument the referendum rules govern,
+carries 54 cents. The voted layer is the smaller one throughout, but it is
+where the growth has been: voter-authorised volume has roughly trebled since
+its post-2011 trough.
+
+[[FIG:F0_volume|Local borrowing and who authorised it, 2005--2025. Annual new-money issuance by accountable local governments, in billions of dollars, stacked by the authorisation mode evidenced in the offering documents. Undetermined modes (6.3% of documents) omitted from the stacks. Source: official-statement corpus.]]
+
 **Second, the rules.** Which governments must ask? A fifty-state panel codes,
 for every state and type of government, whether the default path to GO debt
 runs through a mandatory ballot, and at what threshold. The coding follows
@@ -197,7 +210,7 @@ moving from a non-strict to a strict state raises the voted share of
 borrowing by 69 percentage points, roughly the difference between borrowing
 like a Texas district (most dollars voted) and an Ohio one (almost none).
 In raw shares, 68% of school dollars are voted under strict rules against
-7% under non-strict ones (the full grid is Appendix Table A8). For
+7% under non-strict ones. For
 municipalities the coefficient is a fifth the size, and for counties it is
 indistinguishable from zero, not because cities ignore the law but because
 so little of what they finance runs through the GO instrument the law
@@ -241,8 +254,7 @@ redirects borrowing across instruments and purposes; it does not stop
 borrowing. That is the cross-sectional face of the causal finding in the
 next section, that refusal delays provision rather than preventing it.
 Institutional and demographic interactions (tax-and-expenditure limits,
-homeownership, partisanship) are uniformly weak and sit in Appendix
-Table A9.
+homeownership, partisanship) are uniformly weak (reported in the replication exhibits).
 
 ---
 
@@ -366,8 +378,8 @@ passes, and their issuance deficit widens rather than closes between years
 six and eight (Appendix Table A10). Where the bar is a supermajority, even
 re-assembled consent does not become borrowing on the study horizon. A
 candidate mechanism, statutory tax-rate caps metering the drawdown, could
-be neither supported nor excluded on the available cells (Appendix Table
-A11); the fact stands documented and unexplained.
+be neither supported nor excluded on the available cells; the fact stands
+documented and unexplained.
 
 ---
 
@@ -410,7 +422,7 @@ years of drawdown. This reading was adopted after seeing the pattern and
 is flagged as such. The incidence is regressive in one documented sense:
 in California, the measures that win majorities but die under
 supermajority thresholds come disproportionately from poorer,
-mid-composition districts (Appendix Table A12).
+mid-composition districts.
 
 [[EX:T6_moderators]]
 
@@ -453,8 +465,9 @@ do not, the rule is worth fighting over, which is precisely Fact 1 read as
 politics. (The reform record is compiled from secondary sources, marked
 secondary-unverified pending primary checks, and cited as evidence on
 reform politics only. The cleanest reform event, Proposition 39 itself,
-does not yet yield a credible state-level causal estimate, for data
-reasons documented in the appendix honesty record; the causal weight of
+does not yet yield a credible state-level causal estimate, because the
+survey's pre-2005 security split is degenerate for schools and California's
+state matching-bond waves confound the totals margin; the causal weight of
 the paper rests on the within-state designs of Section 6.)
 
 ---

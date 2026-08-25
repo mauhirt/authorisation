@@ -5,17 +5,22 @@
 
 PY := python3
 
-.PHONY: exhibits paper caches clean-exhibits
+.PHONY: exhibits paper overleaf caches clean-exhibits
 
 # Full working-paper PDF (text of record + exhibits). Needs pdflatex
 # (texlive-latex-base/-recommended/-extra + lmodern) and current exhibits/out.
 paper:
 	$(PY) paper/build_paper.py
 
+# Overleaf package + zip (full paper: owner sections 1-3 + empirics 4-9)
+overleaf:
+	$(PY) paper/build_overleaf.py
+
 exhibits:
 	$(PY) exhibits/build_rd_tables.py
 	$(PY) exhibits/build_desc_tables.py
 	$(PY) exhibits/build_desc2.py
+	$(PY) exhibits/build_intro.py
 	$(PY) exhibits/build_reg_tables.py
 	$(PY) exhibits/build_figures.py
 	$(PY) exhibits/make_pdfs.py

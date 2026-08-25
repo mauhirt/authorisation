@@ -1,0 +1,29 @@
+\section{What authorisation causes: evidence from close elections}
+\textbf{Whose elections are these?} The 11,889 GO measures at statutory thresholds are dominated by the menu-poor sector: 65\% school districts, 18\% municipalities, 13\% special districts and 4\% counties, across Texas and Wisconsin (50\% threshold), California (55\% for schools, 66.7\% otherwise), Louisiana and North Carolina. The average effects below are therefore mostly school-district effects, and Section 8 splits every result by type; the split is not a robustness exercise but, per Fact 1, the theory's central prediction.
+
+\textbf{The design, in plain terms.} A district that wins its bond election with 50.4\% and one that loses with 49.6\% are the same kind of place on the same day; the only difference is which side of the statutory line the count landed. Comparing many near-winners with near-losers therefore isolates what authorisation itself causes. Table~\ref{tab:continuity} verifies the premise: none of seven pre-vote characteristics (prior borrowing, size, income, homeownership, age structure, prior failed measures) differs across the cutoff. The one wrinkle, visible in Figure~\ref{fig:density}, is that slightly more measures sit just above the line than just below it, concentrated in Texas: governments time proposals they expect to win, a fact documented since Cellini, Ferreira and Rothstein (2010) that is itself evidence for the agenda story of Section 9. Estimates that discard the contested sliver around the cutoff are, if anything, larger (Table~\ref{tab:battery}).
+
+\input{tables/T2_covariate_continuity.tex}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F5_density.pdf}
+\caption{Density of the vote margin by state. Histograms of the running variable within $\pm$10pp; the discreteness of small Texas electorates is visible. McCrary log-density discontinuity: pooled +0.24 (z 4.6) at h = 5pp, +0.14 (z 2.6) over this full $\pm$10pp window; Texas +0.21 (z 2.7); all other states approximately zero.}\label{fig:density}
+\end{figure}
+\textbf{Authorisation raises issuance by about eleven percentage points.} Passed measures are followed by borrowing far more often than failed ones (36\% against 15\% within six years), but most of that gap is selection: popular projects both pass and proceed. At the cutoff, where selection is removed, authorisation raises the probability of GO issuance by 11 percentage points (Table~\ref{tab:main}, Figure~\ref{fig:rd}). The estimate replicates in every adequately powered state, across three different thresholds, at very similar magnitudes (Table~\ref{tab:bystate}); placebo thresholds show nothing (Appendix Table A3). Borrowed amounts roughly double at the cutoff, and, decisively for the worry that refused governments simply borrow in unrecorded ways, the same doubling appears in Census survey data, which capture the bank loans and private placements no official statement records.
+
+\input{tables/T3_main_results.tex}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F1_rd.pdf}
+\caption{Issuance at the authorisation threshold. Share of measures followed by any issuance within six years, in 0.5pp bins of the running variable sized by cell count, with local-linear fits and the RBC estimate annotated.}\label{fig:rd}
+\end{figure}
+\textbf{Why a six-year window?} Passed authorisations are drawn down in series: the median barely-passed issuer reaches the market within four months of the vote, but districts routinely issue against an authorisation for years (Texas districts draw on decade-old ones). A six-year window is long enough to capture the drawdown and, more importantly, to give the refused side time to catch up through re-votes, which Section 7 shows is the main thing they do; a shorter window would overstate the effect by counting delay as denial. The choice is not load-bearing: the effect is visible at every horizon from one to six years (Figure~\ref{fig:horizons}), and the event study in Figure~\ref{fig:event} shows it arrives immediately, in the vote year itself, with no differences before the vote and a persistent level shift after.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F2_event_study.pdf}
+\caption{Event study. Coefficient on issuance in each year relative to the vote, with robust confidence intervals.}\label{fig:event}
+\end{figure}
+\textbf{Delay, and a wedge that does not close.} Figure~\ref{fig:wedge} accumulates issuance on both sides of the cutoff. The refused side starts a year late (median first issue 1.15 years against 0.33) and, despite six years of re-votes and catch-up, never reaches the authorised side's level: by year six, half of barely-refused governments have still issued nothing, against 40\% of barely-authorised ones. That ten-point wedge is the durable cost of refusal. The full battery of robustness checks (donuts, clustering variants, bounds for crosswalk selection, randomisation inference, bandwidths) is Table~\ref{tab:battery}; one final row there deserves mention in text, the \textbf{pay-go bound}: rerunning the whole design with Census capital spending as the outcome shows construction falling with borrowing at a ratio near one. Refused districts do not quietly build anyway out of savings; refusal delays the building itself.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F3_wedge.pdf}
+\caption{The cumulative wedge. Cumulative any-issuance for barely-passed (solid) and barely-failed (dashed) measures; the shaded area is the wedge; median market-entry times annotated.}\label{fig:wedge}
+\end{figure}
