@@ -5,9 +5,9 @@
 claims held on a named data pass. The honesty record (nulls, pending items,
 data limits) now lives in the online appendix
 (`paper/ONLINE_APPENDIX_HONESTY.md`). House style applied throughout:
-impersonal constructions, no em dashes, British spelling. Corpus package v3
-(the finance-flag fix) is folded into every national exhibit below; the
-nine-state referendum panel reruns once on v4.*
+impersonal constructions, no em dashes, British spelling. **The conference
+draft is FROZEN on corpus package v3** (the finance-flag fix, verified);
+package v4 and the B5 rerun land post-APSA only.*
 
 ---
 
@@ -53,7 +53,9 @@ public-use continuation) serve one purpose, a survivorship robustness check on
 the disclosure corpus; and the survey capital-outlay items serve one purpose,
 a bound on the channel the corpus cannot see by construction, capital spending
 without debt (the pay-go bound, Section 6). Neither survey use displaces the
-corpus as the outcome of record.
+corpus as the outcome of record. The conference draft is pinned to corpus
+package v3 (verified 2026-08-24); later package versions enter only in the
+journal revision.
 
 **Validation.** Because the authorisation mode is extracted rather than
 administrative, it is validated against the election record before use
@@ -119,7 +121,9 @@ San Francisco's multifamily housing revenue programme, Energy Northwest's
 generation debt: none faced a ballot; Los Angeles Unified's $9.0B ask in 2024
 did. The nationwide sorting is stark at the channel level: the voted channel
 carries **11.3%** chargeable dollars, the board channel 60.0%, the statutory
-channel 72.5%. What the consent requirement governs, overwhelmingly, is the
+channel 72.5%; measured in classified line counts, which are robust to the
+regime imbalance in line-level dollar coverage (appendix Table A-C1), the
+gradient is 17.9%, 34.5% and 54.0%. Composition exhibits report both bases. What the consent requirement governs, overwhelmingly, is the
 class of goods that cannot be charged to users, precisely the goods H2 says it
 should.
 
@@ -173,9 +177,11 @@ that the coding needs a township class; it is flagged rather than absorbed.
 **Cities under strict rules substitute away from the voted instrument.** At
 the unit grain with full controls, general-purpose governments in strict
 states carry a GO security share **27.7 points lower** (t = −3.9) than their
-counterparts in lax states; the non-chargeable project gap attenuates to
-−8.7 points (t = −1.6) under the fuller v3 coverage, direction preserved
-(Table 5.5). This is the fifty-state
+counterparts in lax states; the non-chargeable project gap is −8.7 points
+(t = −1.6) in dollars and **−4.7 points (t = −2.3)** in classified line
+counts, the count basis being robust to the regime imbalance in classified
+dollar coverage documented in appendix Table A-C1 (Table 5.5 reports both;
+the text cites the count-based coefficient). This is the fifty-state
 generalisation of the sorting in Fact 2: where the GO instrument requires a
 coalition, governments that can finance through chargeable, unvoted
 instruments do. The state-level fixed-effects version of the same test gives
@@ -267,7 +273,8 @@ governments do not detectably replace lost borrowing with pay-go building
 (caveats: outlay spreads over construction years, so six-year windows
 understate long-project differences; the positive pre-period outlay RD from
 endogenous timing is netted by the differenced specification; total outlay
-only). Nothing in the battery is hidden; the table shows all of it.
+only; full-window cohort = votes through roughly 2017–18, outlay ending at
+fiscal 2023). Nothing in the battery is hidden; the table shows all of it.
 
 **It is a timing effect, and the wedge is measurable.** The event study loads
 the entire effect on the vote year (τ₀ = +0.236, z = 7.8; every pre- and
@@ -300,9 +307,12 @@ original amount** (n = 1,354; only 45.9% downsize).
 
 **The fate of the marginal refusal.** For the 2005–19 cohort with full
 observation windows, per 100 barely-refused measures (Table 7.1): **54 are
-re-approved by voters within four years; 13 more return and wait; 14 borrow
-anyway on other authority** (5 via board or statutory channels, 9 on older
-voter authorisations); **18 are extinguished** within the horizon. The
+re-approved by voters within four years; 13 more return and wait; 5.2 borrow
+through the board or statutory channel; 9.0 issue on pre-existing voter
+authority; 18 are extinguished** within the horizon. The 9.0 issuing on
+pre-existing voter authority draw on authorisations banked before the refused
+measure and are not evidence of evading it; the substitution reading attaches
+only to the 5.2 board-or-statutory cell. The
 transition matrix behind it shows what the cutoff actually moves: voter-mode
 first issuance (48.4% against 36.7%) against no issuance (43.1% against
 54.2%), while board-mode first issuance is roughly 8% on both sides. The
@@ -386,13 +396,14 @@ whose refusals stay refused and whose approvals licence long-horizon
 drawdown. Homeownership above the frame median gives τ = **+0.182 (z 3.5)**
 against +0.056 (n.s.) below; the 65-plus share gives +0.194 against +0.036;
 and the effect is stronger on-cycle (+0.252 against +0.099 off-cycle), when
-the broad durable electorate is the one consulted. It is ownership, not
-affluence (the income split is flat: +0.129 against +0.122), and
-institutional, not partisan: county presidential partisanship yields a flat
-split (+0.121 against +0.111, terciles non-monotone), replicated with
-precinct-level city partisanship and mayoral party in the 577-city panel
-(all n.s.), and the national first stage shows at most a weaker channel
-association in Democratic counties (interaction −0.75, t −2.2, descriptive).
+the broad durable electorate is the one consulted. All moderation tables run
+on the 6,255 proper-grain measures (place grain for cities, district grain
+for schools); special districts are excluded pending sub-county demographics
+(TWDB interpolation), as each table notes. It is ownership, not affluence
+(the income split is flat: +0.129 against +0.122), and institutional, not
+partisan: precinct-built city partisanship and mayoral party in the 577-city
+panel show no moderation (all n.s.). The coarser county-grain partisanship
+splits (2020 vintage, county grain) agree and sit in the appendix.
 The reframing is stated as it is: an account adopted after seeing the
 homogeneity sign, offered with its transmission story, and flagged as
 post hoc rather than pre-registered.

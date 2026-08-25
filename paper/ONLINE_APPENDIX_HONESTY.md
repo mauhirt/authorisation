@@ -34,6 +34,32 @@ that the paper carries.*
   verification.
 - IL and IN vote margins (harvest scoped and paused).
 
+## Appendix tables added in round 4
+- **Table A-C1 (nc_share selection check):** classified-amount-line coverage
+  by state and regime, unit- and dollar-weighted (`NC_COVERAGE_RESULTS.md`).
+  Coverage is regime-UNBALANCED on the unit margin (schools 24.1pp,
+  general-purpose 6.4pp), so every composition exhibit reports a count-based
+  version beside the dollar-based one; the text cites the count-based
+  general-purpose coefficient (−0.047, t −2.25) and both channel-sorting
+  gradients (dollars 11.3/60.0/72.5; counts 17.9/34.5/54.0).
+- **Table A-P1 (county partisanship, demoted from the text):** county
+  presidential two-party splits of the authorisation effect (+0.121 against
+  +0.111; terciles +0.163/+0.072/+0.120, non-monotone) and the national
+  first-stage interaction (−0.65, t −2.0). Caveat: 2020 vintage only, county
+  grain (a coarse proxy for district electorates). The text's partisanship
+  null cites the precinct-built 577-city panel only.
+- **Moderation-table note (all D5/H3 tables):** estimates run on the 6,255
+  proper-grain measures (place for cities, SAIPE/ACS district grain for
+  schools); special districts excluded pending sub-county demographics (TWDB
+  interpolation).
+- **Fate-table labels:** "issued anyway" is split into board/statutory
+  channel (5.2) and pre-existing voter authority (9.0); the latter is not
+  evidence of evasion of the refused measure.
+- **Version pin:** the conference draft is frozen on corpus package v3;
+  package v4 and the B5 rerun are journal-revision items.
+- **Pay-go bound cohort:** the outlay row's full-window cohort is votes
+  through roughly 2017–18 with outlay ending at fiscal 2023.
+
 ## Known data limits, stated where used
 - Louisiana parish-fold grain (outcome mixes measures within a parish).
 - Minnesota school-purpose classification gap (empty E4 cell is a
