@@ -507,7 +507,7 @@ Weighted coverage weights units by nm_par. Regime = op_referendum_strict
 | schools | non-strict | 263 | 90.9% | 96.1% |
 | schools | not codable | 604 | 3.8% | 7.7% |
 
-Regime gaps (unit, $): all classes: 14.1%/1.1%; general-purpose (muni+county): 6.4%/5.4%; schools: 24.1%/15.4% → **UNBALANCED (>5pp) — count-based versions produced below**.
+Regime gaps (unit, $): all classes: 14.1%/1.1%; general-purpose (muni+county): 6.4%/5.4%; schools: 24.1%/15.4% → **UNBALANCED (>5pp) (count-based versions produced below)**.
 
 ## By state (≥20 corpus-active units)
 | state | units | unit cov | $ cov |
