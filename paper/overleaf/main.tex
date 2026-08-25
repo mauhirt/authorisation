@@ -1,4 +1,4 @@
-% Who Must Agree -- Overleaf package (auto-assembled; see README.md)
+% Who Must Agree -- single-file Overleaf source (auto-assembled; see README.md)
 \documentclass[12pt]{article}
 \usepackage[margin=1.1in]{geometry}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
@@ -17,15 +17,966 @@
 \noindent American local governments must often ask their voters before borrowing, under rules written into nineteenth-century constitutions. Using a new corpus of 258,762 bond offering documents that states the legal authority behind every issue, this paper measures, for the first time in all fifty states, who actually authorises local debt: voters approve 32 cents of every borrowed dollar, governing boards 54, statutes the rest, with the voted share concentrated almost entirely in school districts. At the statutory thresholds, 11,889 close bond elections identify what consent causes: authorisation raises issuance immediately and durably, doubles borrowing, and moves construction nearly one-for-one. Refusal, followed forward, is a queue rather than a wall: most refused measures return within a year at the same amount and pass, and fewer than one in five blocked projects die. The requirement binds only where governments lack exits into unvoted debt, and hardest where the electorate is propertied, old and homogeneous. The oldest consent institution in American fiscal law survives by leaking: whoever can leave its jurisdiction does, and what remains under it is the unchargeable core of the local state.
 \end{abstract}
 
-\input{sections/01_introduction}
-\input{sections/02_argument}
-\input{sections/03_history}
-\input{sections/04_data}
-\input{sections/05_landscape}
-\input{sections/06_threshold}
-\input{sections/07_response}
-\input{sections/08_binds}
-\input{sections/09_agenda}
-\input{sections/references}
-\input{sections/appendix}
+\section{Introduction}
+Every year, American communities hold thousands of elections on one question: may the local government borrow. These bond referenda are, by simple count, among the most numerous policy elections in the United States, and the rules that govern them are old. California has required a supermajority for local general obligation debt since 1879. Kentucky wrote its consent requirement into Section 157 of the 1891 constitution. The machinery is so familiar that it is rarely studied as machinery. This paper asks what it does: how the rules that make voters consent to debt shape what communities ask, what they build, and who pays.
+
+Start with what such a rule is. A requirement that debt be approved by a majority, or by fifty-five per cent, or by two thirds of those voting, is not just a hurdle. It defines a public: whose agreement counts, and how much of it must be gathered, before a community may pledge its taxing power. That definition has never been neutral. For much of the twentieth century, several states limited the bond franchise to property owners in constitutional text; the Supreme Court struck the freeholder qualification around 1970 [V]. Its demography did not fall with it. Bond elections are commonly held at times when those who turn out are older and more propertied than the community they decide for, so the public the law once defined survives in practice (Anzia 2014 [V]; Hajnal, Kogan and Markarian 2022 [V]). And beside this consenting public stands a second public the rules create by leaving it out: the ratepayers, tenants and users who repay the forms of debt that need no one's consent, and who hold a veto over none of it. The same Texas majority rule that made Harris County assemble 511,375 yes votes lets a developer's utility district borrow on two.
+
+The paper's argument is short. An authorisation rule makes two choices. It sets scope: which debt must be voted on at all. And it sets height: how much of which electorate must agree. Governments respond at two points. Before any vote, they choose the channel, and they shape what reaches the ballot: how much to ask, how many purposes to bundle, when to schedule. After a refusal, they wait and ask again, or they route the money through forms that need no public. Because only goods that can bill their users can take that second route, the rules do not fall evenly. Water can leave the ballot; schools cannot. What escapes the voters accumulates out of their sight, financed by flat fees rather than taxes.
+
+Three bodies of evidence carry the argument. First, the authorisation system is measured, for the first time, from the documents it produces. Nearly every bond offering document states the authority behind the issue, so the voted share of borrowing can be observed directly, in all fifty states, rather than guessed from statutes: 93.7 per cent of documents yield a determination, and where the documents cite elections, the citations match independent election records almost exactly where the records are complete. Second, the causes are identified at the thresholds themselves. Across 11,889 bond measures in five states, a measure that barely clears its statutory bar behaves very differently from one that barely misses: 24 points more likely to issue in the vote year itself, twice the borrowing, and, in Census spending data, construction falling nearly one-for-one with the refused debt. Third, every refusal is followed forward: who returns, who reroutes, who gives up.
+
+What the evidence shows can be said in three sentences. The vote is real: authorisation moves borrowing and building, not paperwork. It is a queue and a sorter, not a wall: refused governments return at the next election with the same request and usually win, fewer than one in five blocked projects die, and the requirement's main work is deciding when things are built, through which instrument, and at whose expense. And it consults a particular public: the effect is three times larger where homeowners dominate, absent where the community is diverse, unrelated to income or party, and the majorities blocked by supermajority bars sit in poorer school districts. The rules of 1879 still answer to the electorate of 1879.
+
+The paper's relations to existing research are developed inside the argument (Section 2); stated briefly: studies of direct democracy have concentrated on the votes themselves, and the findings here locate the institution's work before any vote and after any refusal; research on fiscal limits has treated substitution as leakage, and here it is the institution's equilibrium and the reason it survives; and the study of American political development gains a persistence mechanism, selective escape, and a measured answer to who the oldest consent institution in American fiscal law still serves.
+
+\section{The Argument: Consent as a Sorting Institution}
+\subsection{The institution and its two publics}
+American local governments finance capital with borrowed money, and borrowing requires authorisation. The rules of authorisation, written into state constitutions and statutes, make two separable choices. The first is scope: which debt must be put to the voters at all. Every state draws this line through the forms of finance, placing general obligation debt, backed by the taxing power, inside the requirement, and leaving revenue obligations, leases, and the debt of statutory districts and authorities outside it. The second is height: for debt inside the line, how much of which electorate must agree, a simple majority, fifty-five per cent, or two thirds. Scope decides whether a gate exists; height decides how heavy it is.
+
+A rule of this kind creates two publics, and the difference between them is the institution's distributive core. Inside the line stands a consenting public: the electorate whose refusal stops the act. The law fixes only the share of this public that must agree. Because governments choose election dates, and timing changes who votes (Berry and Gersen 2010; Anzia 2014), the coalition actually required, the threshold multiplied by turnout, is partly constructed by the governments the rule constrains. Off-cycle timing's largest compositional effect is age, with the elderly most overrepresented in low-turnout special elections (Kogan, Lavertu and Peskowitz 2018), city elections systematically overrepresent what one study calls high-propensity voters like older, white homeowners (Hajnal, Kogan and Markarian 2022), and participation venues reliably select the same public (Hajnal, Lewis and Louch 2002; Einstein, Glick and Palmer 2019). Outside the line stands a paying public the rule creates by omission: the ratepayers, tenants and users who repay the exempt forms of debt and hold a right of refusal over none of them. The contrast is not rhetorical. The same Texas majority rule that required Harris County to assemble half a million affirmative votes authorised a developer's utility district on two, and the difference is legal architecture rather than accident. After the Supreme Court struck property qualifications in general bond elections (Cipriano v. City of Houma 1969; City of Phoenix v. Kolodziejski 1970), it upheld property-weighted and even acreage-weighted voting in specialised districts (Salyer Land Co. v. Tulare Lake Basin Water Storage District 1973; Ball v. James 1981). The freeholder franchise the general channel lost survives, lawfully, in the exit.
+
+Three features of the requirement organise the analysis. First, it is external and frozen by comparison. The rules descend from the settlements that followed the default waves of nineteenth-century development finance, when states and localities that had borrowed for canals and railroads repudiated, restructured, and then constitutionalised restraint (Grinath, Wallis and Sylla 1997; Wallis 2005; Hillhouse 1936; Dove 2014; Sbragia 1996). The governments they bind cannot amend them, and between the only two national compilations of local debt restrictions, in 1961 and 1986, roughly a tenth of comparable entries show substantive change, over decades in which the state constitutions around these articles were amended freely (Dinan 2006; Tarr 1998). Where communities impose fiscal limits on themselves, the limits are locally adopted and locally repealable; these rules persist on nobody's continuing consent. Second, the requirement prices the form of an action, not its merit. Nothing in the rules asks whether a project is worthwhile; they ask how the money will be claimed, and the scope line tracks a single economic property, chargeability, the capacity to identify, exclude and bill a good's beneficiaries. Water, power and parking can leave the line; schools and parks cannot. Third, the price of consent is paid in a currency whose value varies across communities. Which feature of an electorate gives the requirement its force is a question with two established answers, developed below, and the evidence adjudicates between them.
+
+\subsection{The institution in operation}
+What the requirement does cannot be read from referendum returns, because most of its operation occurs before any ballot is printed and after any refusal is recorded. Research on direct democracy reached the corresponding insight for initiatives a generation ago: ballot institutions work through agendas, anticipation and strategic response, not only through votes cast (Gerber 1996; Lupia and Matsusaka 2004; Matsusaka 2004; Gerber, Lupia, McCubbins and Kiewiet 2004). The account here extends that insight to the oldest fiscal referendum in American law, tracing the requirement's operation through four decisions that every borrowing government makes in sequence.
+
+The first decision is the channel. A government with a project asks whether it can be financed outside the voted channel at all, and the answer depends on the project's chargeability and on the menu its legal form provides. The menu is radically unequal: a school district's exits are thin, largely lease and certificate structures (Rivera 2016), a city holds many, and an authority is itself an exit. Nor is the menu given from outside; American governments multiply by design, and the creation of districts and authorities has long translated private purposes into public form (Burns 1994), with fiscal consequences that a fragmented local commons makes systematic (Berry 2009; Bunch 1991). Contemporaries saw the function early: legal commentary was describing building authorities as a costly subversion of constitutional debt limits by 1962 (Yale Law Journal 1962), and the entrepreneurial city of the postwar decades was built substantially through such devices (Sbragia 1996; Hackworth 2007). When a government takes an exit, no election occurs, and the paying public repays the project.
+
+The second decision, where the voted channel is chosen or unavoidable, is the shape of the ask. Governments propose against a reversion, and the power to decide what reaches the ballot, how large, how bundled, and when, converts even a binding referendum into an instrument its subject partly controls. This is the agenda-setting insight of Romer and Rosenthal (1978), whose school-budget evidence showed proposers exploiting exactly this power (Romer and Rosenthal 1982), and it is why the ballot's own construction moves approval (Bechard, Lang and Pearson-Merkowitz 2024). The third decision belongs to the voters, but its record is systematically selected: because governments know their communities, they mostly submit what will pass, so high passage rates signal anticipation rather than weak constraint, and the excess of narrow victories over narrow defeats is a documented signature of fiscal elections (Cellini, Ferreira and Rothstein 2010). Anticipation is imperfect, however, and some measures fail by fractions of a point. These near-misses, accidents relative to what officials intended, are what the causal design exploits.
+
+The fourth decision follows refusal, and it has three branches: return to the voters, reroute through an exit, or abandon. Returning is cheap, the next election is rarely a year away, and the electorate that refused is not necessarily the electorate that will answer next. Rerouting is available exactly where chargeability permits. Abandonment is the residual, rational only where a project cannot carry the cost of another campaign. The claim that organises Sections 6 and 7 is that the requirement's price is paid mainly in time and in form: refusal delays, reassigns costs from taxpayers to ratepayers, and only rarely kills.
+
+Seen whole, the sequence adds a third discipline to the two around which the study of American local government has been organised. Residents discipline governments from below by sorting across jurisdictions (Tiebout 1956); markets and interlocal competition discipline them from above through mobile capital and the tax base (Peterson 1981; Logan and Molotch 1987; Stone 1989). Here the obligation itself moves: sideways, out of the consent requirement, across instruments and jurisdictional boundaries, without any resident or firm leaving. Which projects hold that option is set by chargeability, and it determines where a century-old requirement still binds. The nearest contemporary study shows the pattern at the city level: classifying the states into five referendum regimes, from seven with no requirement to those voting on every general obligation pledge, it finds that cities under the requirements remain active issuers but shift toward revenue and limited-tax instruments, carrying aggregate yield spreads roughly 25 to 30 basis points higher (Huang, Munevar and Samuels 2026). The vote's bite inside the regulated channel is priced by the market as well: barely approved school authorisations raise the yields of a district's existing bonds within a year, an effect absent for the cities and counties that hold the exits (Yu, Chen and Robbins 2022). What that finding leaves open, the incidence across governments, purposes and publics, and the historical construction of the requirement itself, is this paper's subject.
+
+\subsection{Four hypotheses}
+Four hypotheses follow from the account, each with a stated failure condition. H1a, the agenda: where rules are heavier, the voted share of capital should be lower, and proposals should be fewer, larger, more bundled and better timed; the hypothesis is idle if the voted share does not move with the rules. Anticipation should also have a ceiling. A bar of fifty or fifty-five per cent can be absorbed by selective proposing, so passage rates should barely differ across those regimes; at two thirds, the required coalition outruns what design can assemble for many worthwhile projects, and the requirement should begin to ration rather than shape. H1b, the response: narrow refusal should produce delay, re-submission and substitution rather than abandonment, with substitution concentrated where exits exist; the hypothesis is refuted if narrowly refused governments simply stop building. H2, composition: where requirements are heavier, capital formation should tilt away from non-chargeable purposes. This prediction turns a standing result inside out. The fiscal-institutions literature, from state budget rules (Poterba 1994; Alt and Lowry 1994; Bohn and Inman 1996; Primo 2007) to debt restrictions and their evasions (Kiewiet and Szakaly 1996; Mullins and Wallin 2004; Carr 2018), has documented substitution around limits and named it circumvention, leakage, or creative compliance (Milesi-Ferretti 2004). Treated instead as the institution's normal operation, the substitution is the mechanism of its distributive work, and, Section 2.4 argues, of its survival.
+
+H3 concerns the electorate, and two established accounts disagree in a way the data can settle. On an assembly-cost reading, the requirement should bind hardest where communities are divided, because social heterogeneity raises the price of every coalition; the canonical finding that ethnically fragmented places provide fewer shared public goods supplies the premise (Alesina, Baqir and Easterly 1999; Alesina, Glaeser and Sacerdote 2001). On a transmission reading, a vote binds only where the electorate is durable enough that today's answer is also tomorrow's, so the requirement should be most consequential where the public convened is stable, propertied and homogeneous: where refusals stay refused and approvals license years of borrowing. The premise here is the homevoter, the owner-occupier whose undiversified asset makes local fiscal choices personal and whose attention makes them enforceable (Fischel 2001; Oliver 2001). The two readings disagree about the sign on social heterogeneity, which is what makes the adjudication informative, and neither originates with this paper.
+
+\subsection{Why the rules persist}
+If the requirement binds anyone, why has almost no one amended it in a century? The literature on institutional durability explains persistence through increasing returns and sequencing (Pierson 2004) and change through its quieter modes: displacement, layering, drift, conversion (Streeck and Thelen 2005; Hacker 2004; Mahoney and Thelen 2010; Orren and Skowronek 2004). The public-authority statutes are layering; the judicial narrowing of ``debt'' is conversion; the unadjusted nominal limits are drift. The mechanism proposed here supplies what those categories describe but do not explain: the feedback that protects the core rule while everything moves around it. Amending a constitution requires a statewide coalition, and the natural members are the interests the gate blocks. But any blocked interest whose purpose is chargeable can exit for the price of a bond resolution, and each exit removes a member from the reform coalition. The rule persists through selective escape: it leaks exactly enough to drain the pressure that would amend it, while the population still exposed to it becomes, over time, the set of purposes and places with no alternative. The prediction is sharp, and Section 9 reads the modern record of threshold politics against it: campaigns to change a bar should arise from, and succeed only in, the sector the scope line offers no exit. The mechanism also carries a general amendment to the theory of veto points: formally identical vetoes are not equivalent institutions, because a veto's force is set by the outside options that surround it (cf. Tsebelis 2002).
+
+\subsection{The stakes}
+The distributive stakes follow from the structure. Because scope tracks chargeability and exit capacity is chargeability's twin, the weight of the regime falls on the unpriced goods of the local state, education first among them, goods whose blocked investment is worth more than it costs, since marginal homebuyers value each dollar of narrowly approved school spending at 1.50 dollars or more (Cellini, Ferreira and Rothstein 2010), while priced goods, including services for poor users delivered in enterprise form, are supplied without consent and financed by flat charges. The perimeter this creates is the local instance of a state built out of sight (Balogh 2009; Mettler 2011), and its financing has never been distributively innocent: municipal debt has carried the geography of American racial inequality in its prices and its access (Jenkins 2021), property-tax constitutionalism carries older exclusions still (Einhorn 2006), and several of the fiscal constitutions studied here were written in conventions whose disenfranchising purposes were explicit [V: Kousser; Alabama 1901]. The supermajority variants sharpen the question. In the constitutional tradition, higher thresholds trade decision costs for protection against the external costs majorities impose (Buchanan and Tullock 1962); critics answer that supermajority rules entrench whatever the status quo distributes and can hand minorities government by inaction (McGann 2004; Schwartzberg 2014). That dispute is usually conducted normatively. Here it becomes a measurement: Section 8 identifies the minority the bar in fact protects, propertied, older, homogeneous electorates, with officeholder partisanship null here as in municipal capital composition generally (Hirt 2026), and finds the blocked majorities in poorer districts, communities whose local institutions have long been instruments of composition rather than mirrors of it (Trounstine 2018). And the collision runs through the constitutions themselves: the documents that command educational provision, enforceably so in the school-finance cases (Zackin 2013; Rose v. Council for Better Education 1989 [V]), are the same documents that gate the capital the command requires, administered through the most numerous democracies in America (Berkman and Plutzer 2005).
+
+Three simplifications are deliberate, and the evidence licenses each. The account contains no bargaining between governments and voters over project design after refusal, because returning measures ask for the original amount and keep their purposes. It contains no mechanism by which refusal reveals information that kills projects, because refused projects are financed anyway a third of the time and extinguished less than a fifth. And it offers no welfare judgment: the aim is to establish what the institution does, for whom, and why it has lasted, not whether it should. The empirical sections follow the sequence of operation: the landscape and the channel (Section 5), the vote's effect at the threshold (Section 6), the response to refusal (Section 7), the adjudication between the two readings of H3 (Section 8), and the shaping of agendas and of the rules themselves (Section 9).
+
+\section{Where the Rules Came From}
+The argument requires three things of history, and this section establishes each from the paper's own evidence: the rules were written by nameable coalitions; they have barely moved since; and they leaked from birth. Table~\ref{tab:genealogy} summarises the genealogy for five focal states.
+
+Written by nameable coalitions. These rules do not have anonymous origins. Florida's constitution once stated who the consenting public was in so many words: freeholders, property owners, the only electors permitted to vote on bonds [V: article and date]. California's two-thirds requirement and debt limit entered together in the 1879 constitution, the work of a convention dominated by taxpayer and anti-corporate coalitions; Kentucky's tax-rate limits and voter-assent requirement are Sections 157 and 158 of the 1891 constitution, a taxpayer convention's settlement. The wave itself was a response to identifiable events: eleven states replaced their constitutions between 1842 and 1852 after the state debt crisis, rewriting debt procedure and corporate chartering together (Wallis 2005), and the municipal defaults after 1873 pushed the same settlement one tier down (Dove 2014; Hillhouse 1936). The referendum itself entered this history as a promoter's tool before it became a taxpayer's shield: mid-century county votes were the instrument by which communities granted railroad aid, and when the aid soured, the federal courts forced payment over state objection (Gelpcke v. Dubuque 1863) and the constitutional response converted the enabling device into a barrier (Cole 2023 [V]). In several Southern states the authoring conventions' disenfranchising purposes were explicit, and the fiscal articles carried them [V: Kousser; Alabama 1901]. The coalitions, in short, are in the record: taxpayers, creditors made cautious, and property holders whose names some texts preserved.
+
+Frozen by comparison. The claim that the rules have not moved is measured, not asserted. Between the only two national compilations of local debt restrictions ever produced, in 1961 and 1986, 117 comparable entries yield twelve substantive legal changes; the rest of the flagged differences are definitional (source-diff table, replication files). Over the same decades the state constitutions surrounding these articles were amended freely (Dinan 2006), so the fiscal articles are frozen relative to their own documents, not merely old. The one modern movement of a threshold proves the point by its shape: Proposition 39 (2000) cut California's school bond requirement from two thirds to fifty-five per cent, a purpose-specific amendment won by the single sector the exits never reached, and the state's own analyst later quantified what the old bar had been doing: at the two-thirds requirement, a further third of school bond measures, nine billion dollars' worth between 1986 and 2000, had majority support and failed; after the change, approval rates rose from 55 to 80 per cent (California Legislative Analyst's Office 2009). The bar was binding, and everyone who could measure it knew.
+
+Leaking from birth. The exits are not modern corrosion; they are nearly as old as the gates. Within decades of the 1879 settlement, California courts had constructed the special fund doctrine, under which obligations payable solely from project revenues are not ``debt'' within the constitutional meaning, and the lease exceptions followed [V: Offner-Dean line]. Florida's first judicial exit opened within a few years of the freeholder clause itself [V: State v. City of Miami]. By 1958 a signed Yale Law Journal article could describe public building authorities, matter-of-factly, as ``the costly subversion of state constitutions'' (Morris 1958). Legislatures wrote the leak into the statutes directly: Iowa's code authorises ``essential corporate purpose'' borrowing with no election while requiring sixty per cent approval for ``general corporate purposes,'' the scope line drawn in purpose language inside a single chapter (Iowa Code \S\S384.24 to 384.26). Kentucky ran the whole sequence in one state: the 1891 gates, a century of doctrinal exits through holding companies and revenue devices, formal amendment ratifying what practice had built, and a measurable endpoint, for in the modern corpus Kentucky's voters authorise essentially none of the state's local borrowing, the lowest value on the consent map (Figure~\ref{fig:map}). The oldest strong gate and the emptiest modern ballot are the same case. That is this section's thesis in one state, and it is why the persistence mechanism of Section 2.4 is historical before it is contemporary: the rules never accumulated the reform pressure that would have moved them, because from nearly the beginning, everyone who could leave, left.
+
+% owner-supplied genealogy (Section 3); [V] cells to resolve against the origins file
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The genealogy of the focal states' rules}\label{tab:genealogy}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.09\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}@{}}
+\toprule
+State & Rule (current) & Origin & Authoring coalition & Veto-holder as written & First major exit \\
+\midrule
+California & 66.7\% GO; 55\% school (2000) & Const.\ 1879, art.\ [V] & Taxpayer / anti-corporate convention & Two-thirds of electors & Special fund doctrine [V: date] \\ \addlinespace
+Kentucky & Voter assent above \S 157 limits & Const.\ 1891, \S\S 157--158 & Taxpayer convention & Two-thirds of voters [V: confirm share] & Holding-company / revenue devices [V] \\ \addlinespace
+Texas & Simple majority (GO, by class) & Const.\ 1876, art.\ XI [V] & Post-Reconstruction retrenchment convention [V] & Majority of qualified voters & Statutory districts; landowner-franchise districts (upheld, \emph{Ball v.\ James} 1981) \\ \addlinespace
+Wisconsin & Majority; ch.\ 67 referenda & Stat.\ ch.\ 67 [V: origin date] & [V] & Majority of electors & Petition and exemption classes [V] \\ \addlinespace
+Louisiana & Majority; bond commission & Const.\ [V: date] & [V] & Majority of electors voting & State commission channel [V] \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Rows complete to the paper's archived statutory texts; [V] cells resolve against the origins file before circulation. The table's point survives its pending cells: each rule has a date, a coalition, and a named public.
+\end{minipage}
+\end{table}
+
+One correction to prior measurement closes the section. The standard cross-state codings treat these rules as a binary, referendum or not, coded from statute at the state level. The exercise above shows why that fails: a ceiling with a vote to exceed it is not a mandatory referendum; a petition right is not an election requirement; a town meeting is a voter gate wearing a council's clothes; and Iowa's purpose-split statute is both regimes at once. The historical coding that treated permission as equivalent to obligation (Dove 2014, addressed in the appendix) conflated the two things this section has distinguished, which is the difference the paper's observed-authorisation measure exists to respect.
+
+\section{Data: seeing consent from statute to bond}
+The story this paper tells is simple. American local governments build schools, water systems and roads with borrowed money. In some states, for some kinds of government, the law says the voters must agree first. The empirical sections ask three questions in turn: how borrowing is actually authorised, and by whom (Section 5); what winning or losing that vote causes (Section 6); and what happens after a refusal (Section 7). Sections 8 and 9 ask where the requirement bites hardest and how it shapes what is proposed in the first place. Answering these questions takes three datasets, described here in the order the argument uses them.
+
+\textbf{First, the borrowing: the official-statement corpus.} When a local government sells bonds, it publishes an official statement, a disclosure document describing the issue. The corpus assembled for this paper contains 258,762 such documents, covering 2005 to 2025, all fifty states and 43,030 issuers. Three things are read out of each document. The first is what was borrowed: the amount, and the security behind it, from \textbf{general-obligation (GO) debt}, backed by the government's power to tax, to revenue bonds and leases, which are backed by user charges or appropriations and typically need no election. The second is what the money is for, with each project line classified into 118 functional activities. The third is the variable the paper turns on: \textbf{on whose authority the debt was issued}. An official statement must state the legal authority for the issue, so nearly every issue (93.7\% of documents) can be coded as authorised by the voters, by the governing board, or directly by statute. Where voters authorised the issue, the document usually cites the election date, which allows the coding to be checked against actual election records; the checks are summarised in Table~\ref{tab:validation} and behave exactly as registry coverage predicts. Census survey data play two narrow supporting roles later on (a survivorship check and a bound on debt-free construction) and are introduced where used.
+
+\textbf{Scale and context.} Figure~\ref{fig:volume} shows the landscape the rest of the paper dissects. Accountable local governments issued \$1.57 trillion of new-money debt over 2005 to 2025 (74,395 issues by 13,235 governments, roughly \$75 billion a year), with a further \$617 billion flowing through conduit vehicles that answer to no electorate. Of every determined dollar, 32 cents was authorised by voters, 54 cents by a governing board and 14 cents directly by statute; general-obligation debt, the instrument the referendum rules govern, carries 54 cents. The voted layer is the smaller one throughout, but it is where the growth has been: voter-authorised volume has roughly trebled since its post-2011 trough.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F0_volume.pdf}
+\caption{Local borrowing and who authorised it, 2005--2025. Annual new-money issuance by accountable local governments, in billions of dollars, stacked by the authorisation mode evidenced in the offering documents. Undetermined modes (6.3\% of documents) omitted from the stacks. Source: official-statement corpus.}\label{fig:volume}
+\end{figure}
+\textbf{Second, the rules.} Which governments must ask? A fifty-state panel codes, for every state and type of government, whether the default path to GO debt runs through a mandatory ballot, and at what threshold. The coding follows one definition throughout: a rule is \textbf{strict} when a government that wants to issue GO debt must, by default, put the question to an election at the polls. Rules that require only a town-meeting vote (New England), a referendum only if citizens petition for one (Mississippi, Tennessee, Wisconsin cities), or a vote only above a debt limit or for certain purposes, are coded non-strict: under all of them a government can normally borrow without facing an electorate. \textbf{[PENDING]} The panel is a first-pass machine coding, cross-validated against an independent hand coding, with a human verification pass in progress on the disputed cells; until it lands, every rule coefficient is read as an association, not a causal estimate, and each table note repeats this.
+
+\textbf{Third, the elections.} Nine states publish administrative registries of local bond and tax elections (California, Texas, Wisconsin, Louisiana, North Carolina, Massachusetts, Minnesota, Illinois, Indiana). Compiled, these give 47,235 ballot measures, of which 40,924 are matched to their government in the Census of Governments, so that a vote can be joined to the same government's later borrowing in the corpus. The causal design of Section 6 uses the subset where a statute, not a local choice, sets the pass threshold: \textbf{11,889 GO bond measures}, each with its yes share and its statutory threshold, so that a single \textbf{running variable}, the yes share minus the threshold, puts every measure on a common scale where zero is the pass/fail line. Table~\ref{tab:sample} summarises the frame and its restriction cascade. One registry caution matters for interpretation and is flagged where relevant: the registries differ in scope (Wisconsin's covers school referenda only), so cross-state comparisons of what appears on ballots are never based on the registries alone.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Sample and summary statistics}\label{tab:sample}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+State (threshold) & N & Mean yes & Passed & Median amount & Median electorate \\
+\midrule
+CA (55\%) & 1,715 & 62.423 & 0.809 & \$44.0m & -- \\
+CA (66.7\%) & 466 & 66.442 & 0.509 & \$20.0m & -- \\
+LA (50\%) & 361 & 59.796 & 0.770 & -- & 1,357 \\
+NC (50\%) & 278 & 65.843 & 0.914 & -- & 30,568 \\
+TX (50\%) & 8,062 & 68.849 & 0.792 & \$15.0m & 1,397 \\
+WI (50\%) & 999 & 54.070 & 0.661 & \$12.4m & 2,988 \\
+\addlinespace
+\quad All compiled referenda & 47,235 & & & & \\
+\quad Matched to a Census government & 40,924 & & & & \\
+\quad At a genuine mandatory-ballot requirement & 23,577 & & & & \\
+\quad GO regression-discontinuity frame & 11,889 & & & & \\
+\addlinespace \multicolumn{6}{@{}l}{\emph{Panel B: the official-statement corpus (package v3)}} \\ \addlinespace
+\multicolumn{6}{@{}l}{\quad Documents: 258,762} \\
+\multicolumn{6}{@{}l}{\quad Issuers: 43,030} \\
+\multicolumn{6}{@{}l}{\quad Determination rate: 0.937} \\
+\multicolumn{6}{@{}l}{\quad Mode shares (docs): voter / board / statutory: 0.195 / 0.666 / 0.063} \\
+\multicolumn{6}{@{}l}{\quad New-money par: schools / municipal / county / special / township (\$B): 524 / 606 / 220 / 139 / 35} \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Panel A: the referendum frame by state and threshold (cells $\ge$30 measures); amounts where registries print them (CA/TX/WI); electorate = votes cast where counts exist (TX/WI/LA/NC; counts-unknown placeholder rows excluded). Restriction cascade beneath. Panel B: corpus package v3.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} The frame spans three statutory thresholds; the corpus supplies the authorisation mode for 93.7 per cent of a quarter-million documents.
+\end{minipage}
+% END READING
+\end{table}
+
+\section{Who must agree, and for what}
+This section establishes the descriptive foundation of the paper: who authorises local borrowing in practice, which public goods ever face a ballot, and whether the written rules actually govern behaviour. The central observation, developed as Fact 1 below, is that ``who must agree'' is not one institution. The same constitutional sentence lands on governments with utterly different escape routes, and that variation, not the text of the rule, is what organises everything the later sections find.
+
+\subsection{How borrowing is authorised: the menu, by type of government}
+Table~\ref{tab:d1} is the paper's descriptive anchor. For every type of local government, it shows who authorised the borrowed dollars (voters, the board, or statute) and what security stood behind them; Table~\ref{tab:d2} shows what the money was for.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{How local borrowing is authorised, by type of government}\label{tab:d1}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+  & & & \multicolumn{3}{c}{Authorised by (\% of \$)} & \multicolumn{3}{c}{Security (\% of \$)} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+Government type & Issues & \$B & Voters & Board & Statute & GO & Revenue & Lease \\
+\midrule
+School districts & 30,486 & 525 & 63.4 & 34.5 & 2.1 & 82.3 & 10.0 & 6.3 \\
+Municipalities & 24,246 & 606 & 11.3 & 60.3 & 28.4 & 33.7 & 59.0 & 3.1 \\
+Counties & 6,928 & 219 & 16.9 & 78.0 & 5.1 & 59.6 & 32.4 & 5.0 \\
+Townships & 3,587 & 35 & 38.0 & 60.3 & 1.6 & 93.2 & 3.8 & 0.6 \\
+Special districts & 9,148 & 180 & 26.2 & 64.0 & 9.8 & 27.9 & 67.4 & 2.0 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Canonical new-money issues, official-statement corpus 2005--25 (package v3), local governments only; dollar-weighted by effective par. Authorisation-mode shares are of determined dollars (93.7\% of documents); security shares are of all dollars ('other' and unclassified omitted). Conduit issues without an accountable local government (11,750 documents, largely authority-class vehicles) are excluded here and appear in the menu matrix (Table A5).
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Voter authorisation is the school-district norm and the exception everywhere else; the security mix mirrors it, with GO dominant for schools and revenue debt dominant for general-purpose and special-purpose governments.
+\end{minipage}
+% END READING
+\end{table}
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{What each type of government borrows for}\label{tab:d2}
+\begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{0.55\linewidth}@{}}
+\toprule
+Government type & Project \$B & Largest purposes (share of the type's project dollars) \\
+\midrule
+School districts & 356 & education 98\%; general government 1\%; parks / recreation / culture 0\% \\
+Municipalities & 386 & general government 36\%; water / sewer / environment 17\%; education 12\% \\
+Counties & 120 & education 25\%; transportation 18\%; public safety / justice 16\% \\
+Townships & 31 & education 30\%; water / sewer / environment 27\%; general government 15\% \\
+Special districts & 85 & water / sewer / environment 33\%; transportation 19\%; utilities 19\% \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Same universe as Table \ref{tab:d1}; project dollars by the document's primary major function, excluding pure financing mechanics. Shares are of the type's own classified project dollars.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Each type of government is a different bundle of services, which is why the consent requirement cannot be one institution: the goods behind the ballot differ by who is asking.
+\end{minipage}
+% END READING
+\end{table}
+
+Read together, the two tables say something the institutional literature tends to miss. \textbf{School districts are the voted sector of the local state.} Nearly two-thirds of their dollars are voter-authorised, four-fifths are GO debt, and essentially everything they borrow for is education. At the other pole, \textbf{municipalities are the unvoted sector}: barely a tenth of their dollars pass through an electorate, and the majority are revenue bonds backed by charges rather than taxes. Counties and special districts sit between, and townships look like small schools (mostly GO, substantially voted), a point Section 5.4 returns to.
+
+\textbf{Fact 1: the consent requirement lands on different menus.} Why do the types differ so sharply? Not mainly because their statutes differ, but because their \emph{services} differ. A school district builds classrooms: goods that cannot be charged to users, financeable only by taxes, hence by GO debt, which is precisely the instrument the law makes voters approve. A city runs water systems, car parks and utilities: chargeable services that support revenue bonds, leases and conduit borrowing, none of which faces an electorate. The referendum requirement is therefore not a single institution applied uniformly; it is a constraint whose bite depends on the \textbf{menu of exits} each government's service mix provides. Where the menu is empty, the rule is the gatekeeper of provision. Where the menu is rich, the rule guards one instrument among many. This single observation generates the paper's main predictions: the causal effect of authorisation should be large for menu-poor governments and absent for menu-rich ones (Section 8 confirms exactly this ordering), and political fights over the rule should concentrate on the menu-poor class (Section 9 shows they do). The full matrix of security by authorisation mode, per type and rule regime, is Table~\ref{tab:menu}.
+
+\subsection{Which public goods face voters}
+Table~\ref{tab:d3} turns from who borrows to what the public is asked about, measured in the national corpus rather than in any state's election registry, so the composition of a registry cannot skew it.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Which public goods are voted on}\label{tab:d3}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Purpose (major function) & \$B & Voted share of \$ (\%) & Issues \\
+\midrule
+education & 434 & 62.7 & 21,593 \\
+general government & 161 & 4.6 & 3,114 \\
+water / sewer / environment & 115 & 22.3 & 8,096 \\
+transportation & 79 & 26.5 & 5,026 \\
+parks / recreation / culture & 53 & 44.9 & 2,780 \\
+public safety / justice & 37 & 30.2 & 2,767 \\
+economic development & 36 & 21.0 & 2,072 \\
+utilities & 27 & 1.8 & 589 \\
+housing / community dev. & 26 & 7.3 & 776 \\
+health / hospitals & 9 & 45.8 & 275 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Same universe as Table \ref{tab:d1}: canonical new-money issues by local governments, by the document's primary major function; voted share is of determined dollars within the function. Measured in the national corpus, so it is not affected by the composition of any state's election registry. The finer 118-activity grain, including the near-zero-voted functions (hospitals, multifamily housing, power generation), is Appendix Table A6.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Voters are consulted about schools and civic infrastructure; the chargeable perimeter of the local state is financed without them.
+\end{minipage}
+% END READING
+\end{table}
+
+The gradient is steep and it runs along chargeability. Education dollars are voted on nearly two-thirds of the time. The civic middle (parks, public safety, roads, water) is voted on a quarter to a half of the time. The chargeable perimeter is essentially never voted: utilities, housing and general-government office debt run at single digits. And the table understates the pattern, because it covers governments with an identifiable electorate; the conduit authorities that finance hospitals, multifamily housing and power projects have none, and at the fine activity grain those functions are voted on around 2\% of the time (Table~\ref{tab:submerged} lists them: \$197.7B of hospital projects, \$70.0B of multifamily housing, \$67.1B of power generation, essentially none of it balloted). What the consent requirement governs, in practice, is the class of goods that cannot be charged to users. That is worth stating plainly: the referendum is not how America governs local borrowing; it is how America governs the non-chargeable core of local borrowing, which is why school districts, whose output is entirely non-chargeable, live under it almost alone.
+
+\subsection{The coalitions the same rule convenes}
+The written rule names a threshold, but a threshold is not a coalition. What a ``50\% requirement'' demands depends entirely on who turns out, and turnout is a function of what kind of government is asking and when. Table~\ref{tab:coalitions} makes this concrete with the four states whose registries print vote counts.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Absolute coalition sizes}\label{tab:coalitions}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.197\linewidth}>{\centering\arraybackslash}p{0.062\linewidth}>{\centering\arraybackslash}p{0.060\linewidth}>{\centering\arraybackslash}p{0.296\linewidth}>{\centering\arraybackslash}p{0.296\linewidth}@{}}
+\toprule
+entity & cycle & n & votes cast p10/p50/p90 & yes-needed p10/p50/p90 \\
+\midrule
+school\_district & on & 829 & 704 / 4,731 / 38,817 & 353 / 2,366 / 19,409 \\
+school\_district & off & 4006 & 270 / 1,293 / 7,133 & 136 / 647 / 3,567 \\
+municipal & on & 431 & 1,101 / 15,217 / 181,750 & 551 / 7,609 / 90,876 \\
+municipal & off & 1196 & 379 / 2,357 / 17,287 & 190 / 1,179 / 8,644 \\
+special\_district & on & 106 & 2 / 161 / 2,247 & 2 / 81 / 1,124 \\
+special\_district & off & 442 & 2 / 62 / 547 & 2 / 32 / 274 \\
+county & on & 173 & 2,702 / 63,000 / 289,834 & 1,352 / 31,501 / 144,918 \\
+county & off & 290 & 228 / 4,498 / 94,017 & 115 / 2,250 / 47,009 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} TX/WI/LA/NC counts; CDIAC reports percentages only; placeholder rows excluded.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} The same statutory sentence convenes half a million voters in Harris County and two in a developer district.
+\end{minipage}
+% END READING
+\end{table}
+
+The same Texas sentence that made Harris County assemble half a million yes-votes for its road programme authorised a developer's municipal utility district on \textbf{two votes of two cast}. This is not an anomaly; it is the institutional design. Special districts are drawn around handfuls of initial residents, often the developer's own employees, and their elections occur before anyone else lives there. School bonds, held off-cycle, are decided by hundreds of voters; city measures timed to presidential elections are decided by hundreds of thousands. The law's language is constant while the consenting public varies by five orders of magnitude. Two implications follow. Empirically, election timing and electorate composition are candidate moderators of the authorisation effect, which Section 8 tests. Substantively, a threshold rule delegates the size of the required coalition to whoever controls the timing and the boundaries of the electorate, an agenda power taken up in Section 9. (Registry rows with placeholder vote counts are excluded and documented; no estimate in the paper depends on them.)
+
+\subsection{Does the written rule govern behaviour?}
+Everything so far describes behaviour. This subsection connects it to the coded rules: comparing governments of the same type across state lines, is more of their borrowing voter-authorised where the statute makes the ballot mandatory? The test is a regression of the voted share of each government's borrowed dollars on the strict-rule indicator, within type, across the 90,604 local governments of the national panel, with the usual demographic and fiscal controls, region fixed effects, and standard errors clustered by state (Table~\ref{tab:r1}). Because the question is ``does the rule move behaviour within a class'', the informative columns are the class-by-class ones; the pooled column mixes classes with completely different baselines and is shown only for completeness.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The fifty-state first stage: strict rules and the voted share of borrowing}\label{tab:r1}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+ & Pooled & Schools & Municipalities & Counties & Special districts \\
+\midrule
+Strict referendum rule & +0.099 & +0.690\sig{***} & +0.204\sig{***} & +0.108 & +0.176\sig{***} \\
+ & (0.117) & (0.154) & (0.035) & (0.092) & (0.051) \\ \addlinespace
+\midrule
+Controls & Yes & Yes & Yes & Yes & Yes \\
+Region fixed effects & Yes & Yes & Yes & Yes & Yes \\
+Entity-class dummies & Yes & -- & -- & -- & -- \\
+Observations & 13,928 & 6,857 & 3,176 & 1,456 & 2,439 \\
+State clusters & 48 & 41 & 37 & 43 & 37 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Dependent variable: the voted share of the government's determined new-money dollars, 2005--25, measured from the official-statement corpus (package v3). Columns (2)--(5) estimate the class-specific coefficient on its own subsample. Townships are excluded (they carry a proxy municipal rule; adding them leaves the pooled coefficient at +0.090, $t$ 0.74). Entity panel (90,604 local governments; estimation samples below are the corpus-active units for each outcome). Weighted least squares; Census-region fixed effects; controls: ln population (ln total revenue for special districts), homeownership, share 65+, racial fractionalisation, ln median household income, county Democratic presidential share 2020. Standard errors clustered by state in parentheses. The strict-rule indicator is the PRELIMINARY pass-1 coding (verification pass in progress), so coefficients read as first-stage associations, not causal estimates. \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$.
+\end{minipage}
+\end{table}
+
+The rule shows up exactly where Fact 1 says it must. For school districts, moving from a non-strict to a strict state raises the voted share of borrowing by 69 percentage points, roughly the difference between borrowing like a Texas district (most dollars voted) and an Ohio one (almost none). In raw shares, 68\% of school dollars are voted under strict rules against 7\% under non-strict ones. For municipalities the coefficient is a fifth the size, and for counties it is indistinguishable from zero, not because cities ignore the law but because so little of what they finance runs through the GO instrument the law regulates. Figure~\ref{fig:map} maps the result: the voted share of local borrowing ranges from roughly 80\% in Oklahoma to under 3\% in New York, Pennsylvania, Tennessee and Kentucky, the states whose statutes require no local ballot.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F4_consent_map.pdf}
+\caption{The geography of consent. Voted share of local new-money dollars by state, official-statement corpus 2005--25. States below the coverage gate (DC, DE, HI, VT, WY) are shown as no-data.}\label{fig:map}
+\end{figure}
+One reversal is instructive rather than embarrassing. Townships show the opposite gradient (more voted borrowing under nominally non-strict rules), because the panel assigns them their state's municipal rule, and New England towns in fact borrow by town-meeting vote in states coded non-strict for cities. The anomaly is the coding's, not the world's; a township-specific rule column is on the verification worklist. \textbf{[PENDING: rules pass-2.]}
+
+\subsection{Where the rule binds, governments change instruments}
+If a strict rule makes the GO instrument costly to use, a government with alternatives should shift towards them, and a government without alternatives should simply ask more often. Table~\ref{tab:r2} tests the first half on the menu-rich class, general-purpose governments, in three steps: does the rule change \emph{what security} they issue (columns 1 and 2), does it change \emph{what kind of projects} their borrowing finances (columns 3 and 4), and does it change \emph{how much they borrow at all} (columns 5 and 6)?
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Substitution away from the voted instrument, and the quiet extensive margin}\label{tab:r2}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+ & GO & GO & NC \$ & NC lines & Any issue & ln issued \\
+ & Pooled & GP & GP & GP & All & All \\
+\midrule
+Strict referendum rule & -0.155\sig{*} & -0.277\sig{***} & -0.087 & -0.047\sig{**} & +0.015 & -0.232 \\
+ & (0.086) & (0.070) & (0.054) & (0.021) & (0.029) & (0.217) \\ \addlinespace
+\midrule
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Region fixed effects & Yes & Yes & Yes & Yes & Yes & Yes \\
+Observations & 14,273 & 4,766 & 3,340 & 4,600 & 56,541 & 56,541 \\
+State clusters & 48 & 46 & 46 & 46 & 48 & 48 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Dependent variables: (1)--(2) GO = share of new-money dollars issued as general-obligation (GO) security; (3) share of classified project dollars in non-chargeable functions (services that cannot be billed to users); (4) the same composition measured in classified use-of-proceeds line counts, the basis robust to the coverage imbalance documented in Appendix Table A4 and therefore the estimate the text cites; (5) Any issue = linear probability of any corpus new-money issue 2005--25; (6) ln issued = log survey long-term debt issued per capita 2005--23 (Government Finance Database). GP = general-purpose governments (municipalities and counties); schools are near-degenerate for the non-chargeable outcome and dilute the pooled composition rows. Entity panel (90,604 local governments; estimation samples below are the corpus-active units for each outcome). Weighted least squares; Census-region fixed effects; controls: ln population (ln total revenue for special districts), homeownership, share 65+, racial fractionalisation, ln median household income, county Democratic presidential share 2020. Standard errors clustered by state in parentheses. The strict-rule indicator is the PRELIMINARY pass-1 coding (verification pass in progress), so coefficients read as first-stage associations, not causal estimates. \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$.
+\end{minipage}
+\end{table}
+
+The answers are: yes, yes, and no. Cities and counties under strict rules carry a GO share of borrowing 28 percentage points lower than their counterparts in non-strict states; their borrowing also tilts away from non-chargeable projects (the schools-roads-parks class that only GO can finance) and towards chargeable ones, a shift of about 5 percentage points on the robust count basis (column 4; columns 3 and 4 measure the same outcome in dollars and in project-line counts, and the count basis is the one robust to a documented coverage imbalance, Table~\ref{tab:ac1}). But the extensive margin is quiet: whether a government borrows at all, and how much it raises in total, is unrelated to the rule. The requirement redirects borrowing across instruments and purposes; it does not stop borrowing. That is the cross-sectional face of the causal finding in the next section, that refusal delays provision rather than preventing it. Institutional and demographic interactions (tax-and-expenditure limits, homeownership, partisanship) are uniformly weak (reported in the replication exhibits).
+
+\section{What authorisation causes: evidence from close elections}
+\textbf{Whose elections are these?} The 11,889 GO measures at statutory thresholds are dominated by the menu-poor sector: 65\% school districts, 18\% municipalities, 13\% special districts and 4\% counties, across Texas and Wisconsin (50\% threshold), California (55\% for schools, 66.7\% otherwise), Louisiana and North Carolina. The average effects below are therefore mostly school-district effects, and Section 8 splits every result by type; the split is not a robustness exercise but, per Fact 1, the theory's central prediction.
+
+\textbf{The design, in plain terms.} A district that wins its bond election with 50.4\% and one that loses with 49.6\% are the same kind of place on the same day; the only difference is which side of the statutory line the count landed. Comparing many near-winners with near-losers therefore isolates what authorisation itself causes. Table~\ref{tab:continuity} verifies the premise: none of seven pre-vote characteristics (prior borrowing, size, income, homeownership, age structure, prior failed measures) differs across the cutoff. The one wrinkle, visible in Figure~\ref{fig:density}, is that slightly more measures sit just above the line than just below it, concentrated in Texas: governments time proposals they expect to win, a fact documented since Cellini, Ferreira and Rothstein (2010) that is itself evidence for the agenda story of Section 9. Estimates that discard the contested sliver around the cutoff are, if anything, larger (Table~\ref{tab:battery}).
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Covariate continuity at the authorisation threshold}\label{tab:continuity}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+Any new-money issue, year $t{-}2$ & +0.030 & 0.314 & +0.007 & $\pm$10 & 1,596/2,743 \\
+ & [-0.028, +0.089] & & & & \\ \addlinespace
+Any new-money issue, year $t{-}1$ & +0.021 & 0.468 & +0.022 & $\pm$10 & 1,596/2,743 \\
+ & [-0.036, +0.079] & & & & \\ \addlinespace
+ln(1+LTD issued p.c., $t{-}3..t{-}1$) & +0.530 & 0.186 & +0.412 & $\pm$10 & 1,495/2,553 \\
+ & [-0.256, +1.315] & & & & \\ \addlinespace
+ln population & +0.320 & 0.456 & +0.142 & $\pm$10 & 252/497 \\
+ & [-0.521, +1.160] & & & & \\ \addlinespace
+ln enrolment (schools) & -0.035 & 0.822 & -0.001 & $\pm$10 & 1,285/2,130 \\
+ & [-0.343, +0.272] & & & & \\ \addlinespace
+Homeownership share & -0.005 & 0.641 & +0.001 & $\pm$10 & 1,596/2,742 \\
+ & [-0.028, +0.017] & & & & \\ \addlinespace
+ln median household income & +0.065\sig{**} & 0.038 & +0.040 & $\pm$10 & 1,596/2,742 \\
+ & [+0.004, +0.126] & & & & \\ \addlinespace
+Share aged 65+ & -0.004 & 0.370 & -0.002 & $\pm$10 & 1,596/2,742 \\
+ & [-0.014, +0.005] & & & & \\ \addlinespace
+Prior failed measure $\le$4y & -0.018 & 0.689 & -0.016 & $\pm$10 & 1,596/2,743 \\
+ & [-0.104, +0.069] & & & & \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Pre-vote covariates; ACS at place grain for municipalities, district grain for schools, county otherwise.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} No pre-vote covariate jumps at the cutoff; the two lagged-issuance indicators and lagged borrowing are smooth, so barely-passed and barely-failed governments were on the same path before the vote.
+\end{minipage}
+% END READING
+\end{table}
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F5_density.pdf}
+\caption{Density of the vote margin by state. Histograms of the running variable within $\pm$10pp; the discreteness of small Texas electorates is visible. McCrary log-density discontinuity: pooled +0.24 (z 4.6) at h = 5pp, +0.14 (z 2.6) over this full $\pm$10pp window; Texas +0.21 (z 2.7); all other states approximately zero.}\label{fig:density}
+\end{figure}
+\textbf{Authorisation raises issuance by about eleven percentage points.} Passed measures are followed by borrowing far more often than failed ones (36\% against 15\% within six years), but most of that gap is selection: popular projects both pass and proceed. At the cutoff, where selection is removed, authorisation raises the probability of GO issuance by 11 percentage points (Table~\ref{tab:main}, Figure~\ref{fig:rd}). The estimate replicates in every adequately powered state, across three different thresholds, at very similar magnitudes (Table~\ref{tab:bystate}); placebo thresholds show nothing (Appendix Table A3). Borrowed amounts roughly double at the cutoff, and, decisively for the worry that refused governments simply borrow in unrecorded ways, the same doubling appears in Census survey data, which capture the bank loans and private placements no official statement records.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The effect of authorisation on borrowing and building}\label{tab:main}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+Any GO issuance $\le$6y & +0.110\sig{**} & 0.022 & +0.146 & $\pm$10 & 1,596/2,743 \\
+ & [+0.016, +0.204] & & & & \\ \addlinespace
+Any issuance $\le$6y & +0.116\sig{**} & 0.014 & +0.144 & $\pm$10 & 1,596/2,743 \\
+ & [+0.023, +0.209] & & & & \\ \addlinespace
+ln(1+new-money par p.c.) & +0.937\sig{**} & 0.037 & +0.918 & $\pm$10 & 1,537/2,627 \\
+ & [+0.057, +1.818] & & & & \\ \addlinespace
+ln(1+LTD issued p.c.), Census survey & +0.878\sig{**} & 0.019 & +0.827 & $\pm$10 & 1,238/2,128 \\
+ & [+0.146, +1.610] & & & & \\ \addlinespace
+Same-purpose continuation $\le$6y & +0.052 & 0.302 & +0.073 & $\pm$10 & 1,398/2,456 \\
+ & [-0.047, +0.152] & & & & \\ \addlinespace
+Voter-mode first issuance $\le$6y & +0.184\sig{***} & $<$0.001 & +0.199 & $\pm$10 & 1,596/2,743 \\
+ & [+0.089, +0.278] & & & & \\ \addlinespace
+No issuance $\le$6y & -0.116\sig{**} & 0.014 & -0.144 & $\pm$10 & 1,596/2,743 \\
+ & [-0.209, -0.023] & & & & \\ \addlinespace
+Capital outlay p.c.\ (pay-go bound; schools, post$-$pre) & +0.464\sig{**} & 0.015 & +0.377 & $\pm$10 & 996/1,621 \\
+ & [+0.090, +0.837] & & & & \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Survey row: GFD/IUF, EMMA-independent (survivorship check). Continuation: ballot purpose matched to use-of-proceeds functions; bridge precision 80.0\% (blind audit). Pay-go row: full-window cohort (votes to $\sim$2017--18, outlay to FY2023).
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} A narrow authorisation raises six-year GO issuance by eleven points (robust), roughly doubles per-capita borrowing in disclosure and survey data alike, raises same-purpose project delivery, and moves building nearly one-for-one with borrowing: refusal is not offset by pay-go construction.
+\end{minipage}
+% END READING
+\end{table}
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F1_rd.pdf}
+\caption{Issuance at the authorisation threshold. Share of measures followed by any issuance within six years, in 0.5pp bins of the running variable sized by cell count, with local-linear fits and the RBC estimate annotated.}\label{fig:rd}
+\end{figure}
+\textbf{Why a six-year window?} Passed authorisations are drawn down in series: the median barely-passed issuer reaches the market within four months of the vote, but districts routinely issue against an authorisation for years (Texas districts draw on decade-old ones). A six-year window is long enough to capture the drawdown and, more importantly, to give the refused side time to catch up through re-votes, which Section 7 shows is the main thing they do; a shorter window would overstate the effect by counting delay as denial. The choice is not load-bearing: the effect is visible at every horizon from one to six years (Figure~\ref{fig:horizons}), and the event study in Figure~\ref{fig:event} shows it arrives immediately, in the vote year itself, with no differences before the vote and a persistent level shift after.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F2_event_study.pdf}
+\caption{Event study. Coefficient on issuance in each year relative to the vote, with robust confidence intervals.}\label{fig:event}
+\end{figure}
+\textbf{Delay, and a wedge that does not close.} Figure~\ref{fig:wedge} accumulates issuance on both sides of the cutoff. The refused side starts a year late (median first issue 1.15 years against 0.33) and, despite six years of re-votes and catch-up, never reaches the authorised side's level: by year six, half of barely-refused governments have still issued nothing, against 40\% of barely-authorised ones. That ten-point wedge is the durable cost of refusal. The full battery of robustness checks (donuts, clustering variants, bounds for crosswalk selection, randomisation inference, bandwidths) is Table~\ref{tab:battery}; one final row there deserves mention in text, the \textbf{pay-go bound}: rerunning the whole design with Census capital spending as the outcome shows construction falling with borrowing at a ratio near one. Refused districts do not quietly build anyway out of savings; refusal delays the building itself.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/F3_wedge.pdf}
+\caption{The cumulative wedge. Cumulative any-issuance for barely-passed (solid) and barely-failed (dashed) measures; the shaded area is the wedge; median market-entry times annotated.}\label{fig:wedge}
+\end{figure}
+\section{What happens when a measure fails}
+The theory's distinctive claim is that a coalition requirement prices delay, not denial. This section follows every refused measure forward. Table~\ref{tab:response} collects the accounting; the text walks through it.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The response margin: what refusal buys}\label{tab:response}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\toprule
+Quantity & Value \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Panel A: the fate of 100 marginal refusals (2005--19 cohort, $|m|\le 5$, n=422)}} \\ \addlinespace
+\quad Re-approved by voters $\le$4y & 54.3 \\
+\quad Returned, not yet converted & 13.3 \\
+\quad Issued via board or statutory channel & 5.2 \\
+\quad Issued on pre-existing voter authority & 9.0 \\
+\quad Extinguished within horizon & 18.2 \\
+\addlinespace \multicolumn{2}{@{}l}{\emph{First post-vote authoriser ($|m|\le5$): barely-passed vs barely-failed}} \\
+\quad barely-PASSED: voter 48.4\%, board 7.9\%, none 43.1\% & \\
+\quad barely-FAILED: voter 36.7\%, board 8.6\%, none 54.2\% & \\
+\addlinespace \multicolumn{2}{@{}l}{\emph{Panel B: re-submission (2,680 failed GO measures)}} \\ \addlinespace
+\quad Hazard, years 1/2/3/4 (\%) & 26.7 / 22.8 / 15.8 / 12.4 \\
+\quad Cumulative return within 4y (\%) & 58.2 \\
+\quad Median time to return (years) & 1.02 \\
+\quad Returns that pass (\%) & 61.9 \\
+\quad Median amount ratio, return/original & 1.000 \\
+\quad Purpose categories retained on return (\%) & 78.2 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Fates are mutually exclusive per 100 barely-refused measures; issuance on pre-existing voter authority draws on authorisations banked before the refused measure and is not evidence of evading it. Panel B: full failed sample; amounts where registries print them (n=1,354). Retention from the audited purpose bridge (precision 80.0\%).
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Refusal is a pause: most marginal refusals are re-approved at the next election at the same ask, fewer than one in five extinguish, and the board channel is a floor rather than the treatment margin.
+\end{minipage}
+% END READING
+\end{table}
+
+\textbf{Refusal is a pause, not a verdict.} Of 2,680 failed GO measures, well over half return to the ballot within four years, most at the very next election, and when they return they usually win. Districts do not come back chastened: the median returning measure asks for exactly the original amount, and four-fifths of the original purposes survive into the re-submission. Adding up the fates of 100 barely-refused measures: 54 are re-approved by voters within four years, 13 more have returned and await a verdict, 9 issue on authorisations their voters had approved earlier (banked authority, not evasion), only 5 borrow through a board or statutory channel, and 18 are extinguished within the horizon. The transition matrix beneath Table~\ref{tab:response} makes the same point from the other side: what the cutoff moves is voter-authorised issuance against no issuance at all, while board-channel issuance sits near 8\% on both sides of the line. For the menu-poor sector, the board channel is a floor, not an escape route.
+
+\textbf{The project itself usually survives.} Matching each measure's stated purpose to the classified purposes of the government's subsequent bonds, a third of narrowly refused projects are financed within six years anyway, against 45\% of narrowly passed ones, arriving over a year later. Refusal costs time and forces a second campaign; it only rarely kills the school extension. And the pay-go bound of Section 6 closes the remaining loophole: the gap is not being filled by debt-free construction.
+
+\textbf{One exception: supermajority near-misses bank consent that stalls.} Within California, measures that won a majority but missed the supermajority threshold behave differently. They re-submit far more often than decisive failures and convert to passage at four times the rate, yet the authorisations they eventually win sit undrawn: median time from re-vote to first issue is over six years, against under three for ordinary passes, and their issuance deficit widens rather than closes between years six and eight (Table~\ref{tab:chain}). Where the bar is a supermajority, even re-assembled consent does not become borrowing on the study horizon. A candidate mechanism, statutory tax-rate caps metering the drawdown, could be neither supported nor excluded on the available cells; the fact stands documented and unexplained.
+
+\section{Where the requirement binds: exits and electorates}
+Everything above averages over the frame. The theory says the average is the wrong object: the effect should live where the menu is empty and die where it is rich, and it should depend on who the convened electorate is. Both predictions hold, and they are the paper's core results as much as the average is.
+
+\textbf{By type of government: the fork.} Table~\ref{tab:fork} re-estimates the design within each class and sets the estimates against each class's national menu from Section 5. School districts, the menu-poor class, show the binding effect and the highest re-submission rate: for them, the ballot is the gate. General-purpose governments, the menu-rich class, show no discontinuity at all and rarely re-submit: for them, refusal is nearly costless, because the same project can usually be financed through an instrument that needs no election. Special districts sit between, and their GO-specific jump shrinks once all instruments are counted, direct evidence of the rerouting that Table~\ref{tab:r2} showed in cross-section. The ordering across the three classes, binding, intermediate, absent, is exactly the menu ordering of Table~\ref{tab:d1}, estimated from entirely different data.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Exits and the binding of refusal: the fork against the menu}\label{tab:fork}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+Schools, GO issuance & +0.123\sig{**} & 0.022 & +0.147 & $\pm$10 & 1,289/2,144 \\
+ & [+0.018, +0.228] & & & & \\ \addlinespace
+\quad Any issuance & +0.132\sig{**} & 0.013 & +0.150 & $\pm$10 & 1,289/2,144 \\
+ & [+0.027, +0.236] & & & & \\ \addlinespace
+\multicolumn{6}{@{}l@{}}{\quad menu: non-voted \$ share 36.6\%; failures re-submitting 0.592} \\ \addlinespace
+General-purpose, GO issuance & -0.024 & 0.837 & +0.073 & $\pm$10 & 252/498 \\
+ & [-0.251, +0.203] & & & & \\ \addlinespace
+\quad Any issuance & -0.028 & 0.800 & +0.045 & $\pm$10 & 252/498 \\
+ & [-0.249, +0.192] & & & & \\ \addlinespace
+\multicolumn{6}{@{}l@{}}{\quad menu: non-voted \$ share 86.1\%; failures re-submitting 0.253} \\ \addlinespace
+Utilities (special districts), GO issuance & +0.500\sig{*} & 0.057 & +0.463 & $\pm$10 & 55/101 \\
+ & [-0.015, +1.016] & & & & \\ \addlinespace
+\quad Any issuance & +0.359 & 0.182 & +0.362 & $\pm$10 & 55/101 \\
+ & [-0.169, +0.888] & & & & \\ \addlinespace
+\multicolumn{6}{@{}l@{}}{\quad menu: non-voted \$ share 73.8\%; failures re-submitting 0.426} \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Menu shares from the national corpus (independent of the RD frame). Utilities cells are small; the ordering, not the magnitude, is the cited object.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Refusal binds exactly where the exit menu is poorest: schools show the discontinuity and the highest re-submission; general-purpose governments, with the richest menu, show none.
+\end{minipage}
+% END READING
+\end{table}
+
+\textbf{By electorate: the stable propertied public.} Splitting the frame at its median on electorate characteristics (Table~\ref{tab:binds}), the effect is carried by places with high homeownership, older populations, and on-cycle elections, and it is absent in renter-heavy, diverse, off-cycle places. It is ownership, not affluence: the income split is flat. And it is institutional, not partisan: neither city partisanship nor mayoral party moderates anything. A natural first guess, that heterogeneity makes coalitions harder to assemble and so weakens the effect, fails on its own sign; the profile instead favours a \textbf{stable propertied public} account, in which authorisation binds where the consenting public is durable enough for its refusals to stay refused and its approvals to licence years of drawdown. This reading was adopted after seeing the pattern and is flagged as such. The incidence is regressive in one documented sense: in California, the measures that win majorities but die under supermajority thresholds come disproportionately from poorer, mid-composition districts.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Where the requirement binds: splits at within-frame medians}\label{tab:binds}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+Homeownership: below median & -0.065 & 0.451 & +0.056 & $\pm$10 & 432/863 \\
+ & [-0.232, +0.103] & & & & \\ \addlinespace
+Homeownership: above median & +0.196\sig{**} & 0.011 & +0.182 & $\pm$10 & 575/861 \\
+ & [+0.044, +0.348] & & & & \\ \addlinespace
+\quad difference (above$-$below) & +0.261\sig{**} & 0.024 & & & \\ \addlinespace\addlinespace
+Share 65+: below median & +0.043 & 0.622 & +0.036 & $\pm$10 & 408/781 \\
+ & [-0.129, +0.215] & & & & \\ \addlinespace
+Share 65+: above median & +0.097 & 0.210 & +0.194 & $\pm$10 & 599/943 \\
+ & [-0.055, +0.249] & & & & \\ \addlinespace
+\quad difference (above$-$below) & +0.054 & 0.646 & & & \\ \addlinespace\addlinespace
+Racial-ethnic homogeneity (1$-$frac.): below median & -0.092 & 0.311 & -0.018 & $\pm$10 & 415/818 \\
+ & [-0.270, +0.086] & & & & \\ \addlinespace
+Racial-ethnic homogeneity (1$-$frac.): above median & +0.203\sig{***} & 0.006 & +0.232 & $\pm$10 & 592/906 \\
+ & [+0.059, +0.348] & & & & \\ \addlinespace
+\quad difference (above$-$below) & +0.295\sig{**} & 0.012 & & & \\ \addlinespace\addlinespace
+Median household income: below median & +0.030 & 0.711 & +0.129 & $\pm$10 & 482/802 \\
+ & [-0.127, +0.187] & & & & \\ \addlinespace
+Median household income: above median & +0.123 & 0.142 & +0.122 & $\pm$10 & 525/922 \\
+ & [-0.041, +0.288] & & & & \\ \addlinespace
+\quad difference (above$-$below) & +0.094 & 0.420 & & & \\ \addlinespace\addlinespace
+On-cycle (November, even year) & +0.192\sig{**} & 0.025 & +0.252 & $\pm$10 & 476/1,005 \\
+ & [+0.024, +0.361] & & & & \\ \addlinespace
+Off-cycle & +0.072 & 0.205 & +0.099 & $\pm$10 & 1,120/1,738 \\
+ & [-0.039, +0.182] & & & & \\ \addlinespace
+\quad difference (on$-$off) & +0.121 & 0.240 & & & \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Demographic splits run on the 6,255 proper-grain measures (place grain for municipalities, district grain for schools); special districts excluded pending sub-county demographics. Partisanship (precinct-built 577-city panel, all subgroups n.s.) in Appendix Table A-P1.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} The effect concentrates where the consenting public is propertied, older, homogeneous and consulted on-cycle; it is ownership, not income, and institutional, not partisan.
+\end{minipage}
+% END READING
+\end{table}
+
+\section{The agenda margin and the politics of the rule}
+\textbf{Rules discipline what is asked before any vote is cast.} Under California's 55\% bar, school districts bring far fewer, larger, better timed proposals than under Texas's 50\% bar (Table~\ref{tab:agenda}): 9 against 20 proposals per hundred districts per year, at median asks of \$39M against \$15M, mostly on-cycle against mostly off-cycle. Pass rates barely differ between the 50\% and 55\% regimes and collapse only at two-thirds: a moderate bar is absorbed by the agenda, an extreme bar defeats even what careful selection permits. Texas's 2019 unbundling reform closes the loop within one state: when stadiums and performing-arts facilities had to be separate propositions, proposition counts jumped within two cycles. Bundling, timing and ask size are choices the rule shapes, and the excess of near-winners at the cutoff (Section 6) is the same behaviour seen from below.
+
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The agenda margin by regime}\label{tab:agenda}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.124\linewidth}>{\centering\arraybackslash}p{0.113\linewidth}>{\centering\arraybackslash}p{0.135\linewidth}>{\centering\arraybackslash}p{0.225\linewidth}>{\centering\arraybackslash}p{0.146\linewidth}>{\centering\arraybackslash}p{0.158\linewidth}@{}}
+\toprule
+state (thr) & \#districts & proposals/yr & per 100 districts/yr & median amount & on-cycle share \\
+\midrule
+CA (55) & 1065 & 93.5 & 8.78 & \$39,000,000 & 62.7\% \\
+TX (50) & 1093 & 219.2 & 20.05 & \$15,000,000 & 14.1\% \\
+WI (50) & 440 & 48.4 & 11.00 & \$12,600,000 & 30.5\% \\
+MN (50) & 392 & 0 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} School GO proposal behaviour 2005--25; MN empty by classification (a data fact). Passage-rate and TX-2019 unbundling panels in the CSV companion (A4b, A4c).
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Under the higher bar districts propose half as often, at 2.6 times the size, four times more on-cycle; pass rates barely move until two-thirds.
+\end{minipage}
+% END READING
+\end{table}
+
+\textbf{At fixed voter support, the rule alone moves outcomes.} In the band between 50\% and 55\%, the identical election result authorises a Texan or Wisconsin district and refuses a Californian one. Comparing issuance across that band yields an estimate of the rule's effect at fixed support, +11.5 points (SE 4.8), indistinguishable from the RD estimate obtained from an entirely different comparison. This out-of-design agreement is the strongest single check in the paper.
+
+\textbf{The polity fights over the rule exactly where the menu is empty.} Since 1990, nearly every attempt to lower a local borrowing threshold has targeted schools: California's Propositions 170, 26 and 39 (the last passing 53 to 47, schools only, behind a \$30M campaign), Washington's stalled school-bond bills, Idaho's dozen failed attempts. The one recent non-school attempt, California's Proposition 5 (2024), failed. Where exits exist, nobody spends thirty million dollars to lower the bar; where they do not, the rule is worth fighting over, which is precisely Fact 1 read as politics. (The reform record is compiled from secondary sources, marked secondary-unverified pending primary checks, and cited as evidence on reform politics only. The cleanest reform event, Proposition 39 itself, does not yet yield a credible state-level causal estimate, because the survey's pre-2005 security split is degenerate for schools and California's state matching-bond waves confound the totals margin; the causal weight of the paper rests on the within-state designs of Section 6.)
+
+% References -- AUTO-DRAFTED best-effort entries generated from the in-text
+% citations. VERIFY EVERY ENTRY before circulation; entries the drafting
+% assistant could not confirm carry [details to verify]. Cases and statutes
+% follow the references.
+\section*{References}
+\begingroup
+\setlength{\parindent}{-0.28in}\setlength{\leftskip}{0.28in}\small
+
+Alesina, Alberto, Reza Baqir and William Easterly. 1999. ``Public Goods and Ethnic Divisions.'' \emph{Quarterly Journal of Economics} 114(4): 1243--1284.
+
+Alesina, Alberto, Edward Glaeser and Bruce Sacerdote. 2001. ``Why Doesn't the United States Have a European-Style Welfare State?'' \emph{Brookings Papers on Economic Activity} 2001(2): 187--254.
+
+Alt, James E.\ and Robert C.\ Lowry. 1994. ``Divided Government, Fiscal Institutions, and Budget Deficits: Evidence from the States.'' \emph{American Political Science Review} 88(4): 811--828.
+
+Anzia, Sarah F. 2014. \emph{Timing and Turnout: How Off-Cycle Elections Favor Organized Groups}. Chicago: University of Chicago Press.
+
+Balogh, Brian. 2009. \emph{A Government Out of Sight: The Mystery of National Authority in Nineteenth-Century America}. Cambridge: Cambridge University Press.
+
+Bechard, Allison, Corey Lang and Shanna Pearson-Merkowitz. 2024. [details to verify: ballot design and bond approval.]
+
+Berkman, Michael B.\ and Eric Plutzer. 2005. \emph{Ten Thousand Democracies: Politics and Public Opinion in America's School Districts}. Washington, DC: Georgetown University Press.
+
+Berry, Christopher R. 2009. \emph{Imperfect Union: Representation and Taxation in Multilevel Governments}. Cambridge: Cambridge University Press.
+
+Berry, Christopher R.\ and Jacob E.\ Gersen. 2010. ``The Timing of Elections.'' \emph{University of Chicago Law Review} 77(1): 37--64.
+
+Bohn, Henning and Robert P.\ Inman. 1996. ``Balanced-Budget Rules and Public Deficits: Evidence from the U.S.\ States.'' \emph{Carnegie-Rochester Conference Series on Public Policy} 45: 13--76.
+
+Buchanan, James M.\ and Gordon Tullock. 1962. \emph{The Calculus of Consent}. Ann Arbor: University of Michigan Press.
+
+Bunch, Beverly S. 1991. ``The Effect of Constitutional Debt Limits on State Governments' Use of Public Authorities.'' \emph{Public Choice} 68(1--3): 57--69.
+
+Burns, Nancy. 1994. \emph{The Formation of American Local Governments: Private Values in Public Institutions}. New York: Oxford University Press.
+
+California Legislative Analyst's Office. 2009. [details to verify: report quantifying majority-support school bond failures under the two-thirds requirement and approval rates after Proposition 39.]
+
+Carr, Jered B. 2018. [details to verify: local debt restrictions and evasion.]
+
+Cellini, Stephanie Riegg, Fernando Ferreira and Jesse Rothstein. 2010. ``The Value of School Facility Investments: Evidence from a Dynamic Regression Discontinuity Design.'' \emph{Quarterly Journal of Economics} 125(1): 215--261.
+
+Cole, [details to verify]. 2023. [details to verify: railroad-aid referenda and the constitutional response.]
+
+Dinan, John J. 2006. \emph{The American State Constitutional Tradition}. Lawrence: University Press of Kansas.
+
+Dove, John A. 2014. [details to verify: historical state and local debt restrictions.]
+
+Einhorn, Robin L. 2006. \emph{American Taxation, American Slavery}. Chicago: University of Chicago Press.
+
+Einstein, Katherine Levine, David M.\ Glick and Maxwell Palmer. 2019. \emph{Neighborhood Defenders: Participatory Politics and America's Housing Crisis}. Cambridge: Cambridge University Press.
+
+Fischel, William A. 2001. \emph{The Homevoter Hypothesis: How Home Values Influence Local Government Taxation, School Finance, and Land-Use Policies}. Cambridge, MA: Harvard University Press.
+
+Gerber, Elisabeth R. 1996. ``Legislative Response to the Threat of Popular Initiatives.'' \emph{American Journal of Political Science} 40(1): 99--128.
+
+Gerber, Elisabeth R., Arthur Lupia, Mathew D.\ McCubbins and D.\ Roderick Kiewiet. 2004. [details to verify: \emph{Stealing the Initiative: How State Government Responds to Direct Democracy} (2001), Prentice Hall -- year cited in text as 2004.]
+
+Grinath, Arthur III, John Joseph Wallis and Richard Sylla. 1997. ``Debt, Default, and Revenue Structure: The American State Debt Crisis in the Early 1840s.'' NBER Historical Working Paper 97.
+
+Hacker, Jacob S. 2004. ``Privatizing Risk without Privatizing the Welfare State: The Hidden Politics of Social Policy Retrenchment in the United States.'' \emph{American Political Science Review} 98(2): 243--260.
+
+Hackworth, Jason. 2007. \emph{The Neoliberal City: Governance, Ideology, and Development in American Urbanism}. Ithaca: Cornell University Press.
+
+Hajnal, Zoltan L., Vladimir Kogan and G.\ Agustin Markarian. 2022. ``Who Votes: City Election Timing and Voter Composition.'' \emph{American Political Science Review} 116(1): 374--383.
+
+Hajnal, Zoltan L., Paul G.\ Lewis and Hugh Louch. 2002. \emph{Municipal Elections in California: Turnout, Timing, and Competition}. San Francisco: Public Policy Institute of California.
+
+Hillhouse, Albert M. 1936. \emph{Municipal Bonds: A Century of Experience}. New York: Prentice-Hall.
+
+Hirt, [details to verify]. 2026. [details to verify: officeholder partisanship and municipal capital composition.]
+
+Huang, [details to verify], Munevar and Samuels. 2026. [details to verify: referendum regimes and city debt instruments/yield spreads.]
+
+Jenkins, Destin. 2021. \emph{The Bonds of Inequality: Debt and the Making of the American City}. Chicago: University of Chicago Press.
+
+Kiewiet, D.\ Roderick and Kristin Szakaly. 1996. ``Constitutional Limitations on Borrowing: An Analysis of State Bonded Indebtedness.'' \emph{Journal of Law, Economics, and Organization} 12(1): 62--97.
+
+Kogan, Vladimir, St\'ephane Lavertu and Zachary Peskowitz. 2018. ``Election Timing, Electorate Composition, and Policy Outcomes: Evidence from School Districts.'' \emph{American Journal of Political Science} 62(3): 637--651.
+
+Logan, John R.\ and Harvey L.\ Molotch. 1987. \emph{Urban Fortunes: The Political Economy of Place}. Berkeley: University of California Press.
+
+Lupia, Arthur and John G.\ Matsusaka. 2004. ``Direct Democracy: New Approaches to Old Questions.'' \emph{Annual Review of Political Science} 7: 463--482.
+
+Mahoney, James and Kathleen Thelen, eds. 2010. \emph{Explaining Institutional Change: Ambiguity, Agency, and Power}. Cambridge: Cambridge University Press.
+
+Matsusaka, John G. 2004. \emph{For the Many or the Few: The Initiative, Public Policy, and American Democracy}. Chicago: University of Chicago Press.
+
+McGann, Anthony J. 2004. ``The Tyranny of the Supermajority: How Majority Rule Protects Minorities.'' \emph{Journal of Theoretical Politics} 16(1): 53--77.
+
+Mettler, Suzanne. 2011. \emph{The Submerged State: How Invisible Government Policies Undermine American Democracy}. Chicago: University of Chicago Press.
+
+Milesi-Ferretti, Gian Maria. 2004. ``Good, Bad or Ugly? On the Effects of Fiscal Rules with Creative Accounting.'' \emph{Journal of Public Economics} 88(1--2): 377--394.
+
+Morris, [details to verify]. 1958. [details to verify: Yale Law Journal article on public building authorities; text elsewhere dates the piece 1962 -- reconcile.]
+
+Mullins, Daniel R.\ and Bruce A.\ Wallin. 2004. ``Tax and Expenditure Limitations: Introduction and Overview.'' \emph{Public Budgeting \& Finance} 24(4): 2--15.
+
+Oliver, J.\ Eric. 2001. \emph{Democracy in Suburbia}. Princeton: Princeton University Press.
+
+Orren, Karen and Stephen Skowronek. 2004. \emph{The Search for American Political Development}. Cambridge: Cambridge University Press.
+
+Peterson, Paul E. 1981. \emph{City Limits}. Chicago: University of Chicago Press.
+
+Pierson, Paul. 2004. \emph{Politics in Time: History, Institutions, and Social Analysis}. Princeton: Princeton University Press.
+
+Poterba, James M. 1994. ``State Responses to Fiscal Crises: The Effects of Budgetary Institutions and Politics.'' \emph{Journal of Political Economy} 102(4): 799--821.
+
+Primo, David M. 2007. \emph{Rules and Restraint: Government Spending and the Design of Institutions}. Chicago: University of Chicago Press.
+
+Rivera, [details to verify]. 2016. [details to verify: school district lease and certificate financing.]
+
+Romer, Thomas and Howard Rosenthal. 1978. ``Political Resource Allocation, Controlled Agendas, and the Status Quo.'' \emph{Public Choice} 33(4): 27--43.
+
+Romer, Thomas and Howard Rosenthal. 1982. ``Median Voters or Budget Maximizers: Evidence from School Expenditure Referenda.'' \emph{Economic Inquiry} 20(4): 556--578.
+
+Sbragia, Alberta M. 1996. \emph{Debt Wish: Entrepreneurial Cities, U.S.\ Federalism, and Economic Development}. Pittsburgh: University of Pittsburgh Press.
+
+Schwartzberg, Melissa. 2014. \emph{Counting the Many: The Origins and Limits of Supermajority Rule}. Cambridge: Cambridge University Press.
+
+Stone, Clarence N. 1989. \emph{Regime Politics: Governing Atlanta, 1946--1988}. Lawrence: University Press of Kansas.
+
+Streeck, Wolfgang and Kathleen Thelen, eds. 2005. \emph{Beyond Continuity: Institutional Change in Advanced Political Economies}. Oxford: Oxford University Press.
+
+Tarr, G.\ Alan. 1998. \emph{Understanding State Constitutions}. Princeton: Princeton University Press.
+
+Tiebout, Charles M. 1956. ``A Pure Theory of Local Expenditures.'' \emph{Journal of Political Economy} 64(5): 416--424.
+
+Trounstine, Jessica. 2018. \emph{Segregation by Design: Local Politics and Inequality in American Cities}. Cambridge: Cambridge University Press.
+
+Tsebelis, George. 2002. \emph{Veto Players: How Political Institutions Work}. Princeton: Princeton University Press.
+
+Wallis, John Joseph. 2005. ``Constitutions, Corporations, and Corruption: American States and Constitutional Change, 1842 to 1852.'' \emph{Journal of Economic History} 65(1): 211--256.
+
+Yu, [details to verify], Chen and Robbins. 2022. [details to verify: bond referenda and secondary-market yields of school district debt.]
+
+Zackin, Emily. 2013. \emph{Looking for Rights in All the Wrong Places: Why State Constitutions Contain America's Positive Rights}. Princeton: Princeton University Press.
+
+\medskip
+\noindent\textbf{Cases and statutes cited.}\ \emph{Gelpcke v.\ Dubuque}, 68 U.S.\ (1 Wall.) 175 (1863); \emph{Cipriano v.\ City of Houma}, 395 U.S.\ 701 (1969); \emph{City of Phoenix v.\ Kolodziejski}, 399 U.S.\ 204 (1970); \emph{Salyer Land Co.\ v.\ Tulare Lake Basin Water Storage District}, 410 U.S.\ 719 (1973); \emph{Ball v.\ James}, 451 U.S.\ 355 (1981); \emph{Rose v.\ Council for Better Education}, 790 S.W.2d 186 (Ky.\ 1989); Iowa Code \S\S 384.24--384.26.
+
+\endgroup
+
+\clearpage
+\appendix
+\section*{Appendix: additional tables and figures}
+\setcounter{table}{0}\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{figure}{0}\renewcommand{\thefigure}{A\arabic{figure}}
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Specification battery for the main estimate}\label{tab:battery}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Check & \multicolumn{5}{l}{Result} \\
+\midrule
+Donut $|m|>0.5$pp & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{RBC +0.208 [+0.087, +0.329]; conv.\ +0.195; N 1,502/2,622} \\ \addlinespace
+Donut $|m|>1.0$pp & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{RBC +0.188 [+0.033, +0.343]; conv.\ +0.186; N 1,409/2,498} \\ \addlinespace
+Donut $|m|>2.0$pp & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{RBC +0.249 [-0.024, +0.521]; conv.\ +0.199; N 1,199/2,240} \\ \addlinespace
+Excluding Louisiana & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{RBC +0.133 [+0.037, +0.229]; conv.\ +0.162} \\ \addlinespace
+Cluster by unit (2{,}480) & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{conv.\ +0.146, SE 0.036, $z$ 4.11} \\ \addlinespace
+Cluster by county (650) & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{conv.\ +0.146, SE 0.042, $z$ 3.47} \\ \addlinespace
+Lee bounds (crosswalk trim 2.52\%) & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{[+0.138, +0.163]} \\ \addlinespace
+Randomisation inference, $|m|\le 2$ & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{diff.\ +0.142, $p<0.0002$ (5{,}000 permutations)} \\ \addlinespace
+IK MSE-optimal bandwidth & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{$h$ = 1.81pp; $\tau$ = $-$0.001 (SE 0.075): slope-dominated on two points of support; the design-based tests above at the same window reject decisively} \\ \addlinespace
+Alternative horizons 1--6y & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{Appendix Figure A1a (coefficients rise to the 6y wedge)} \\ \addlinespace
+Bandwidth sensitivity $h\in[3,15]$ & \multicolumn{5}{@{}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}{Appendix Figure A1b (stable from $h\ge 6$)} \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Clustered, Lee, randomisation and IK rows from the committed polish battery (POLISH\_RESULTS.md).
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} The estimate survives every design-based and inference variant; the one non-rejecting diagnostic (the MSE-optimal local fit) is a power statement, reconciled in the note.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The main estimate, state by state}\label{tab:bystate}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+Texas (50\%) & +0.134\sig{**} & 0.032 & +0.141 & $\pm$10 & 892/1,398 \\
+ & [+0.011, +0.256] & & & & \\ \addlinespace
+California schools (55\%) & +0.059 & 0.589 & +0.105 & $\pm$10 & 261/692 \\
+ & [-0.154, +0.271] & & & & \\ \addlinespace
+California non-school (66.7\%) (small cell) & +0.295\sig{**} & 0.019 & +0.260 & $\pm$10 & 166/164 \\
+ & [+0.048, +0.541] & & & & \\ \addlinespace
+Wisconsin (50\%) & +0.167\sig{*} & 0.082 & +0.212 & $\pm$10 & 221/345 \\
+ & [-0.021, +0.356] & & & & \\ \addlinespace
+Louisiana (50\%) (small; parish-fold grain) & -0.396\sig{*} & 0.052 & -0.276 & $\pm$10 & 40/89 \\
+ & [-0.796, +0.004] & & & & \\ \addlinespace
+North Carolina (50\%) (small cell) & -0.209 & 0.720 & +0.216 & $\pm$10 & 16/53 \\
+ & [-1.353, +0.934] & & & & \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Louisiana outcomes fold to the parish; the pooled estimate excluding Louisiana appears in Appendix Table A1.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Three adequately powered states, three different thresholds, one answer; the small cells are directionally consistent except fold-grain Louisiana.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Placebo thresholds: no jump where the law draws no line}\label{tab:placebo}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Outcome & RBC & robust $p$ & Conv. & $h$ & Eff.\ $N$ (L/R) \\
+\midrule
+50\%-regime states, pseudo-cutoff 45 (both sides fail) & +0.143\sig{*} & 0.057 & +0.012 & $\pm$10 & 786/687 \\
+ & [-0.004, +0.290] & & & & \\ \addlinespace
+50\%-regime states, pseudo-cutoff 60 (both sides pass) & -0.045 & 0.296 & -0.014 & $\pm$10 & 1,874/1,852 \\
+ & [-0.129, +0.039] & & & & \\ \addlinespace
+CA 66.7\% regime, pseudo-cutoff 60 (both sides fail) & -0.068 & 0.685 & -0.007 & $\pm$10 & 69/126 \\
+ & [-0.394, +0.259] & & & & \\ \addlinespace
+CA 55\% regime, pseudo-cutoff 60 (both sides pass) & -0.039 & 0.736 & +0.052 & $\pm$10 & 280/764 \\
+ & [-0.264, +0.187] & & & & \\ \addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Frame: rd\_sample $\cap$ GO measures, corpus package v3 (frozen). RBC = robust bias-corrected local-quadratic estimate at $h$ with robust CI (Calonico--Cattaneo--Titiunik, $\rho=1$); conventional = local-linear, triangular kernel. Bandwidth fixed at $\pm$10pp per the reconciliation in Appendix Table A1 (MSE-optimal row and bandwidth-sensitivity curve there). \sig{*} $p<0.1$, \sig{**} $p<0.05$, \sig{***} $p<0.01$ (robust). Pseudo-cutoffs estimated within samples where both sides share the same legal outcome.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Issuance is smooth through vote shares at which nothing legal changes; the discontinuity appears only at the statutory threshold.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Classified-line coverage by regime (nc-share selection check)}\label{tab:ac1}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+sample & regime & units & unit coverage & \$ coverage \\
+\midrule
+all classes & strict & 12,838 & 63.5\% & 82.7\% \\
+all classes & non-strict & 2,040 & 77.6\% & 83.9\% \\
+all classes & not codable & 3,450 & 48.3\% & 80.1\% \\
+general-purpose (muni+county) & strict & 3,776 & 68.7\% & 90.3\% \\
+general-purpose (muni+county) & non-strict & 1,006 & 75.1\% & 84.9\% \\
+general-purpose (muni+county) & not codable & 1,926 & 60.9\% & 92.5\% \\
+schools & strict & 6,763 & 66.7\% & 80.7\% \\
+schools & non-strict & 263 & 90.9\% & 96.1\% \\
+schools & not codable & 604 & 3.8\% & 7.7\% \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Coverage of B3-classified project dollars among corpus-active units; regime labels PRELIMINARY. Count-based composition versions accompany every dollar-based exhibit.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Coverage is regime-unbalanced on the unit margin, so the text cites the count basis; both bases agree on direction.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The menu matrix: non-voted share of new-money dollars}\label{tab:menu}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.326\linewidth}>{\centering\arraybackslash}p{0.191\linewidth}>{\centering\arraybackslash}p{0.236\linewidth}>{\centering\arraybackslash}p{0.146\linewidth}@{}}
+\toprule
+entity type & non-voted \$ share & non-voted issue share & determined \$B \\
+\midrule
+school\_district & 36.6\% & 52.2\% & 509.9 \\
+municipal & 88.7\% & 87.6\% & 578.6 \\
+township & 62.0\% & 60.7\% & 33.7 \\
+county & 83.1\% & 86.0\% & 211.4 \\
+special\_district & 73.8\% & 51.9\% & 165.8 \\
+authority-class issuer (memo) & 97.6\% & 92.0\% & 124.7 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} National corpus, canonical new-money issues, package v3; determined dollars.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} School districts hold the poorest exit menu; authority-class issuers barely face an electorate at all.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The submerged local state}\label{tab:submerged}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+corpus function & project \$B & voted share & lines \\
+\midrule
+public\_hospital\_facility & 197.7 & 1.89\% & 2,404 \\
+affordable\_multifamily\_housing & 70.0 & 1.87\% & 6,017 \\
+electric\_generation & 67.1 & 0.54\% & 1,062 \\
+natural\_gas\_utility & 50.0 & 0.05\% & 232 \\
+airport\_terminal & 48.3 & 0.25\% & 540 \\
+industrial\_development & 32.6 & 0.41\% & 821 \\
+senior\_housing & 25.8 & 0.33\% & 1,087 \\
+student\_housing\_dormitory & 12.2 & 0.07\% & 383 \\
+single\_family\_homeownership & 11.4 & 0.01\% & 573 \\
+charter\_school\_facility & 6.9 & 0.00\% & 596 \\
+recycling\_waste\_facility & 6.2 & 0.34\% & 429 \\
+tax\_increment\_project\_area & 5.5 & 1.38\% & 852 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Local project functions $\ge$\$5B voted under 2\% of the time; financing mechanics excluded; named examples in text.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Hospitals, housing, power and airports are financed at scale with essentially no electoral moment.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{The near-miss chain}\label{tab:chain}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.242\linewidth}>{\centering\arraybackslash}p{0.346\linewidth}>{\centering\arraybackslash}p{0.254\linewidth}>{\centering\arraybackslash}p{0.060\linewidth}@{}}
+\toprule
+years since failure k & maj-fail issued $\le$k (n at risk) & min-fail issued $\le$k (n) & gap \\
+\midrule
+1 & 1.9\% (n=371) & 4.6\% (n=174) & -2.7\% \\
+2 & 4.9\% (n=327) & 8.4\% (n=155) & -3.5\% \\
+3 & 6.7\% (n=326) & 10.3\% (n=155) & -3.6\% \\
+4 & 7.9\% (n=303) & 12.8\% (n=148) & -4.9\% \\
+5 & 10.6\% (n=303) & 15.0\% (n=147) & -4.4\% \\
+6 & 10.7\% (n=270) & 16.0\% (n=106) & -5.3\% \\
+7 & 13.0\% (n=270) & 18.9\% (n=106) & -5.9\% \\
+8 & 14.5\% (n=256) & 20.8\% (n=96) & -6.4\% \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} CA failed GO measures; per-cell observability restrictions; new-money issues only.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} The near-miss deficit widens with the window: not a truncation artefact.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+% auto-generated by make exhibits -- do not edit
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Validation of extracted authorisation fields}\label{tab:validation}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.076\linewidth}>{\centering\arraybackslash}p{0.122\linewidth}>{\centering\arraybackslash}p{0.084\linewidth}>{\centering\arraybackslash}p{0.060\linewidth}>{\centering\arraybackslash}p{0.107\linewidth}>{\centering\arraybackslash}p{0.107\linewidth}>{\centering\arraybackslash}p{0.099\linewidth}>{\centering\arraybackslash}p{0.122\linewidth}>{\centering\arraybackslash}p{0.145\linewidth}@{}}
+\toprule
+state & T1: docs w/ date & exact match & ±7d & matched$\to$PASSED & T2: voter docs & supported $\le$6y & T3: council docs & no recent passed GO \\
+\midrule
+CA & 779 & 62.8\% & 64.1\% & 98.0\% & 849 & 66.4\% & 1238 & 91.0\% \\
+LA & 417 & 62.8\% & 63.3\% & 86.6\% & 412 & 86.7\% & 208 & 79.8\% \\
+MA & 260 & 34.6\% & 40.0\% & 94.4\% & 1619 & 76.9\% & 756 & 100.0\% \\
+MN & 209 & 19.6\% & 19.6\% & 85.4\% & 247 & 22.7\% & 1362 & 100.0\% \\
+NC & 258 & 65.9\% & 65.9\% & 98.8\% & 0 & -- & 0 & -- \\
+TX & 114 & 73.7\% & 73.7\% & 94.0\% & 7671 & 76.8\% & 4454 & 78.3\% \\
+WI & 900 & 95.4\% & 95.6\% & 87.1\% & 821 & 90.5\% & 443 & 86.0\% \\
+pooled & 2937 & 67.9\% & 68.8\% & 91.3\% & 11619 & 76.2\% & 8461 & 86.1\% \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}\vspace{2pt}\scriptsize
+\emph{Notes:} Election-date matches against independently observed referenda; support and consistency tests as defined in the text. GFD bridge: 2022 public-use issuance matches GFD within 0.5\% for 99.9\% of bridged units.
+\end{minipage}
+% BEGIN READING (strip for submission)
+\begin{minipage}{0.96\linewidth}\vspace{4pt}\scriptsize
+\textbf{Reading.} Where registries are complete the extracted fields track the election record at ninety per cent or better; shortfalls sit exactly where registry coverage is known-short.
+\end{minipage}
+% END READING
+\end{table}
+
+\clearpage
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/A1a_horizons.pdf}
+\caption{Effect by issuance horizon: RBC estimate and robust confidence interval for windows of one to six years.}\label{fig:horizons}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.9\linewidth]{figures/A1b_bandwidth.pdf}
+\caption{Bandwidth sensitivity: RBC estimate (solid), conventional (dashed) and robust confidence interval across bandwidths of 3 to 15pp.}\label{fig:bandwidth}
+\end{figure}
 \end{document}

@@ -143,52 +143,40 @@ Louisiana & Majority; bond commission & Const.\ [V: date] & [V] & Majority of el
 """
 
 def main():
-    open(os.path.join(PKG, "tables", "T_genealogy.tex"), "w").write(GEN)
-    # copy exhibit tables and figures
-    for t in MAIN_TABLES + APPX_TABLES:
-        if t == "T_genealogy":
-            continue
-        src = f"exhibits/out/{t}.tex"
-        tex = open(src).read().replace("exhibits/out/", "tables/")
-        open(os.path.join(PKG, "tables", f"{t}.tex"), "w").write(tex)
+    # figures only as separate files; ALL TeX inlined into one main.tex
     for f in MAIN_FIGS + [s for s, _ in APPX_FIGS]:
         shutil.copy(f"exhibits/out/{f}.pdf", os.path.join(PKG, "figures", f"{f}.pdf"))
+
+    def table_source(t):
+        if t == "T_genealogy":
+            return GEN
+        return open(f"exhibits/out/{t}.tex").read().replace("exhibits/out/", "figures/")
 
     intro = convert(load("paper/INTRO_ARGUMENT_HISTORY.md"))
     md = load("paper/MANUSCRIPT.md")
     body_start = next(j for j, l in enumerate(md) if l.strip() == "---")
     emp = convert(md[body_start + 1:])
-    body = [resolve_markers(l) for l in intro + emp]
-
-    # split into per-section files
-    files, cur, idx = [], [], 0
-    names = ["introduction", "argument", "history", "data", "landscape",
-             "threshold", "response", "binds", "agenda"]
-    for l in body:
-        if l.startswith(r"\section{") and cur:
-            files.append(cur); cur = []
-        cur.append(l)
-    files.append(cur)
-    sec_inputs = []
-    for k, chunk in enumerate(files):
-        name = names[k] if k < len(names) else f"section{k+1}"
-        open(os.path.join(PKG, "sections", f"{k+1:02d}_{name}.tex"), "w").write("\n".join(chunk) + "\n")
-        sec_inputs.append(f"\\input{{sections/{k+1:02d}_{name}}}")
-
-    shutil.copy("paper/references.tex", os.path.join(PKG, "sections", "references.tex"))
+    body = []
+    for l in intro + emp:
+        m = re.match(r"\\input\{tables/([\w.-]+)\.tex\}", l.strip())
+        if m:
+            body.append(table_source(m.group(1)))
+        else:
+            body.append(resolve_markers(l))
 
     appx = [r"\clearpage", r"\appendix",
             r"\section*{Appendix: additional tables and figures}",
             r"\setcounter{table}{0}\renewcommand{\thetable}{A\arabic{table}}",
             r"\setcounter{figure}{0}\renewcommand{\thefigure}{A\arabic{figure}}"]
     for t in APPX_TABLES:
-        appx += [f"\\input{{tables/{t}.tex}}", r"\clearpage"]
+        appx += [table_source(t), r"\clearpage"]
     for stem, cap in APPX_FIGS:
         appx += figure_block(stem, cap)
-    open(os.path.join(PKG, "sections", "appendix.tex"), "w").write("\n".join(appx) + "\n")
+
+    refs = open("paper/references.tex").read()
 
     main_tex = "\n".join([
-        r"% Who Must Agree -- Overleaf package (auto-assembled; see README.md)",
+        r"% Who Must Agree -- single-file Overleaf source (auto-assembled; see README.md)",
         r"\documentclass[12pt]{article}",
         r"\usepackage[margin=1.1in]{geometry}",
         r"\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}",
@@ -207,39 +195,32 @@ def main():
         r"\noindent American local governments must often ask their voters before borrowing, under rules written into nineteenth-century constitutions. Using a new corpus of 258,762 bond offering documents that states the legal authority behind every issue, this paper measures, for the first time in all fifty states, who actually authorises local debt: voters approve 32 cents of every borrowed dollar, governing boards 54, statutes the rest, with the voted share concentrated almost entirely in school districts. At the statutory thresholds, 11,889 close bond elections identify what consent causes: authorisation raises issuance immediately and durably, doubles borrowing, and moves construction nearly one-for-one. Refusal, followed forward, is a queue rather than a wall: most refused measures return within a year at the same amount and pass, and fewer than one in five blocked projects die. The requirement binds only where governments lack exits into unvoted debt, and hardest where the electorate is propertied, old and homogeneous. The oldest consent institution in American fiscal law survives by leaking: whoever can leave its jurisdiction does, and what remains under it is the unchargeable core of the local state.",
         r"\end{abstract}",
         "",
-        *sec_inputs,
-        r"\input{sections/references}",
-        r"\input{sections/appendix}",
+        *body,
+        refs,
+        *appx,
         r"\end{document}",
     ]) + "\n"
     open(os.path.join(PKG, "main.tex"), "w").write(main_tex)
 
-    open(os.path.join(PKG, "README.md"), "w").write(f"""# Who Must Agree -- Overleaf package
+    open(os.path.join(PKG, "README.md"), "w").write(f"""# Who Must Agree -- Overleaf package (single-file)
 
-Assembled {dt.date.today().isoformat()} from the analysis repository
-(corpus package v3, frozen). Upload this folder (or the zip) to Overleaf and
-compile `main.tex` with pdfLaTeX.
+Assembled {dt.date.today().isoformat()} from the analysis repository (corpus
+package v3, frozen). Upload the zip to Overleaf and compile `main.tex` with
+pdfLaTeX. Everything (sections 1-9, all tables, appendix, references) lives in
+the ONE file `main.tex`; only the figure PDFs are separate, in `figures/`.
 
-## Layout
-- `main.tex` -- preamble, title, abstract, inputs everything
-- `sections/01..09_*.tex` -- one file per section (1-3 owner text; 4-9 empirics)
-- `sections/references.tex` -- BEST-EFFORT auto-drafted entries. Verify every
-  entry; `[details to verify]` marks the ones the assistant could not confirm.
-  The text cites the Yale piece as 1962 in Section 2.2 and Morris 1958 in
+Notes:
+- References are BEST-EFFORT auto-drafted from the in-text citations; verify
+  every entry ([details to verify] marks the unconfirmed ones). The text cites
+  the Yale public-authorities piece as 1962 in Section 2.2 and Morris 1958 in
   Section 3 -- reconcile.
-- `sections/appendix.tex` -- 8 tables + 2 figures (kept light)
-- `tables/*.tex`, `figures/*.pdf` -- generated by `make exhibits` in the repo;
-  do not hand-edit (regenerate instead)
-
-## Numbers and flags
-- Every empirical number traces to a committed results file in the repository
-  (see analysis/ANALYSIS_REVIEW.md there). Rule coefficients are PRELIMINARY
-  (pass-1 coding) pending the human verification pass; [PENDING]/[V] flags in
-  the text are deliberate and should be resolved, not deleted, before
-  circulation.
-- Cross-references use \\ref throughout; numbering is stable under reordering.
+- Every empirical number traces to a committed results file in the repository.
+  Rule coefficients are PRELIMINARY pending the human verification pass;
+  [PENDING]/[V] flags are deliberate.
+- Tables and figures are generated by `make exhibits` in the repository; to
+  change one, regenerate rather than hand-edit, then re-run `make overleaf`.
 - Reading paragraphs under tables are drafting aids marked strippable
-  (%% BEGIN READING ... %% END READING).
+  (% BEGIN READING ... % END READING).
 """)
 
     # zip
