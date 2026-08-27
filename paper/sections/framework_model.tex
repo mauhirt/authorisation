@@ -1,0 +1,152 @@
+% ============================================================
+% FORMAL FRAMEWORK — authoritative source for the theory section.
+% For the Code session. This file consolidates the model developed in
+% chat and SUPERSEDES the earlier Revised_Framework doc: where the two
+% differ, this file governs. It is the model (§3, "A Constraint with
+% Exit"); the institution's definitions (Scope/Height/Exit, R_j, L, the
+% R x L match, the franchise cases) are in WhoMustAgree_section2_draft.tex
+% (§2) and are assumed here. Place the two sections adjacently.
+%
+% BINDING CONSTRAINTS (do not violate; these are the data-audit findings):
+%   1. Operationalise the legal menu L as government TYPE (ordinal, de jure,
+%      predetermined). No graded de jure L^law exists in the data; the
+%      continuous R_j x L^law match is a STATED EXTENSION, never a result.
+%   2. op_referendum_strict is theta (the requirement), NOT L. The
+%      R_j x theta comparison is the SUBSTITUTION test (P1/P3), not the exit
+%      match. Never label it as the match; it is cross-state and descriptive.
+%   3. P2 is a STRATIFIED RD reported as a schedule {tau_k} with honest CIs:
+%      heterogeneity across non-random groups, NOT an identified causal effect
+%      of exit. Do not give any single interaction coefficient a causal sign.
+%   4. P3's aggregate claim needs an EQUIVALENCE test, not an insignificant
+%      coefficient. Distinguish the extensive margin (whether a government
+%      borrows at all: a tight null) from the aggregate amount (imprecise,
+%      not to be read as zero).
+%   5. R_j and the strata are PREDETERMINED, coded from function and statute,
+%      never from realised avoidance behaviour.
+% ============================================================
+
+\section{Framework: A Constraint with Exit}
+
+The institution of the previous section gives a government a choice rather than
+a command. It must finance its investment somehow, and the consent requirement
+governs only one of the routes available to it. This section formalises that
+choice and states what it implies.
+
+\subsection{The choice}
+
+A government deciding to finance investment $j$ chooses a channel
+$m \in \{V, E\}$: the voted channel $V$, on which authorisation must be sought,
+or an exempt channel $E$, on which it need not. Conditional on undertaking the
+project it selects the cheaper channel,
+\[
+m^{*} = \arg\min_{m \in \{V,E\}} C_m,
+\]
+and undertakes the project when its benefit covers that cost,
+$B_j \geq \min\{C_V, C_E\}$.
+
+The voted channel carries $C_V = C_V(\theta_s, e_i)$: the financing cost
+together with the expected political and temporal cost of obtaining consent,
+rising in the formal stringency $\theta_s$ and shaped by the electorate $e_i$
+convened to grant it. The exempt channel carries $C_E = C_E(R_j, L_{is})$, low
+where the project is chargeable ($R_j$ high) and a lawful exempt instrument
+exists ($L_{is}$), and prohibitive where either is absent. The effective
+outside option is the match between the two, $E_{ijs} = g(R_j, L_{is})$, with
+economic feasibility and legal availability entering as complements.
+
+\subsection{Two margins}
+
+Raising the stringency of the requirement acts on two margins, whose relative
+weight is set by the outside option. Where an exempt channel is cheap, a
+stricter rule shifts financing onto it,
+\[
+\frac{\partial \Pr(E)}{\partial \theta} > 0,
+\]
+so that the requirement changes the instrument and the composition of what is
+built rather than its quantity. Where exit is costly, the same increase acts on
+quantity and timing: a project must obtain consent or wait. The response
+therefore runs through instrument substitution, project substitution, and
+quantity adjustment, in a mix governed by $E_{ijs}$.
+
+\subsection{After a refusal}
+
+A government that enters the voted channel and is refused chooses again, among
+returning to the voters, rerouting through an exempt channel, or abandoning the
+project. Rerouting is available where exit is cheap; where it is not, but
+future consent remains feasible, refusal buys delay and resubmission;
+abandonment is the residual, chosen only where both exit and renewed consent
+are too costly to bear. A consent requirement therefore prices an adjustment
+margin far more than it prevents the act.
+
+\subsection{Incidence runs through two channels}
+
+The requirement's incidence has two sources, and the analysis keeps them
+separate. The principal channel is the outside option $E_{ijs}$: the
+requirement binds where exit is poor and falls slack where it is rich. A second
+and distinct channel is the electorate $e_i$ that $C_V$ convenes, whose
+composition can make consent harder or easier to assemble; this channel is
+treated as exploratory. The two must not be conflated, since they enter at
+different points, $E$ through the exempt channel and $e_i$ through the cost of
+the voted one. That the legal menu $L$ is itself politically constituted, and
+in some forms restores a property-weighted franchise struck from the general
+channel (Salyer, Ball v. James), is what makes the exit channel a political
+institution rather than a financing detail.
+
+\subsection{Predictions}
+
+\paragraph{P1 (substitution).}
+Where the requirement is more stringent, financing shifts away from the voted
+instrument and toward exempt forms, and the composition of investment tilts
+toward chargeable purposes, wherever a feasible legal exit exists. The test is
+the association of rule stringency with the general-obligation share and with
+project composition, the $R_j \times \theta$ comparison. This is a substitution
+test and not the exit match: $\theta$ is the requirement, not the outside
+option, and the comparison is cross-state and descriptive.
+
+\paragraph{P2 (incidence through exit).}
+The causal effect of obtaining authorisation is larger where the outside option
+is poorer. The test stratifies the close-election design by predetermined exit
+availability, leading with the school versus general-purpose fork and reporting
+the effect as a schedule $\{\tau_k\}$ with honest confidence intervals. The
+ordering across strata characterises heterogeneity across non-randomly assigned
+groups; it does not identify the causal effect of exit itself, and no single
+interaction coefficient is given a causal sign.
+
+\paragraph{P3 (composition before quantity).}
+Where substitution is available, stringency changes the financing and
+composition of investment before it changes the aggregate. The composition
+margins are estimated directly. The aggregate claim is supported by an
+equivalence test rather than by an insignificant coefficient, and distinguishes
+whether a government borrows at all, the extensive margin, from how much it
+borrows, the aggregate amount, which is estimated with less precision.
+
+% ============================================================
+% GUIDANCE FOR ADJACENT SECTIONS (not part of §3; place as noted)
+%
+% EMPIRICAL STAGES (results architecture):
+%   Stage I  — pre-vote response: rule -> voted share, GO share, composition,
+%              and (extensive) total borrowing. Cross-state, descriptive
+%              (this is R1/R2; R1 = institutional validation, R2 = the P1/P3
+%              substitution test). NOT a first stage.
+%   Stage II — close elections: the RD effect of authorisation on borrowing
+%              and capital. Foreground the +11.5 out-of-design agreement here
+%              as "two independent designs, one answer."
+%   Stage III— where consent binds: the {tau_k} schedule, lead with the
+%              predetermined type fork (P2).
+%   Stage IV — response to refusal: delay, not denial.
+%
+% INFERENTIAL HIERARCHY (keep as its own short section):
+%   RD-causal (incl. within predetermined strata) / descriptive association
+%   (Stage I) / dynamic implication (persistence). State the boundaries before
+%   they are attacked.
+%
+% CONTRIBUTION (three points only; restore the who-pays clause):
+%   (1) constraints operate over choice sets: incidence cannot be read from
+%       formal stringency alone;
+%   (2) the outside option is an economics x institutions match (R_j x L),
+%       so a formally neutral rule has a structured, predictable incidence;
+%   (3) the design observes the behavioural response function, not only whether
+%       the constrained act occurs.
+%   Close on distribution: the requirement sorts who is governed AND who bears
+%   the cost -- the ratepayers and users who service the exempt debt with no
+%   vote. That who-pays clause is the distributive half and must be present.
+% ============================================================

@@ -13,17 +13,24 @@ state$\times$type binary (0/160 within-government variation); type is the
 ordinal $L$ for the fork; the continuous $R_j\times L^{\text{law}}$ match is an
 R&R extension. Nothing below claims a continuous de jure $L$.
 
-## Inputs still needed from the owner (blockers for the prose restructure)
-1. `Revised_Framework__De_Jure_Exit__Franchise__and_Electorate_Heterogeneity.md`
-   — the formal apparatus, predictions, stages, inferential hierarchy, compact
-   statement. NOT in repo. Required for the framework prose (Parts 1, 3).
-2. `WhoMustAgree_section2_draft.tex` — the drafted §2 to insert verbatim
-   (carries $R_j$, de jure $L$, the $R\times L$ match, the franchise cases).
-   NOT in repo. Required for §2 (Part 3).
+## Inputs from the owner (blockers for the prose restructure)
+1. ~~`Revised_Framework__...`~~ **RECEIVED, SUPERSEDED.** The owner instead sent
+   `WhoMustAgree_framework_model.tex` (the §3 model, "A Constraint with Exit"),
+   which states it *supersedes* the earlier Revised_Framework doc where they
+   differ. Stored verbatim at `paper/sections/framework_model.tex`; smoke-compiles
+   clean. Carries the choice model ($m\in\{V,E\}$, $C_V(\theta_s,e_i)$,
+   $C_E(R_j,L_{is})$, $E_{ijs}=g(R_j,L_{is})$), the two margins, after-refusal,
+   the two incidence channels ($E$ vs the electorate $e_i$, kept separate), P1--P3,
+   and end-comment guidance for the Stages (I--IV), the inferential hierarchy, and
+   the three-point Contribution with the who-pays close. Its binding constraints
+   (1--5) match the audit and the R1/R2 relabels already shipped.
+2. `WhoMustAgree_section2_draft.tex` — the drafted §2 the framework file assumes
+   adjacent (carries $R_j$, de jure $L$ = type, the $R\times L$ match, the
+   franchise cases Salyer / Ball v. James). **STILL NEEDED** for §2 (Part 3).
 3. The owner's **current `main.tex`** (the hand-rewritten version with the
-   "When Does a Political Constraint Constrain?" intro, §2, origins). The repo's
-   `MANUSCRIPT.md` / `INTRO_ARGUMENT_HISTORY.md` have diverged from it. Required
-   so the Part 3 section rewrites edit live text, not stale text.
+   "When Does a Political Constraint Constrain?" intro and origins). The repo's
+   `MANUSCRIPT.md` / `INTRO_ARGUMENT_HISTORY.md` have diverged from it. **STILL
+   NEEDED** so the Part 3 section rewrites edit live text, not stale text.
 
 ## Part 3 section-by-section map
 
