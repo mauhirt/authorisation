@@ -53,8 +53,11 @@ BASE_NOTE = ("Entity panel (90,604 local governments; estimation samples below a
              "homeownership, share 65+, racial fractionalisation, ln median household income, "
              "county Democratic presidential share 2020. Standard errors clustered by state in "
              "parentheses. The strict-rule indicator is the PRELIMINARY pass-1 coding "
-             "(verification pass in progress), so coefficients read as first-stage associations, "
-             "not causal estimates. \\sig{*} $p<0.1$, \\sig{**} $p<0.05$, \\sig{***} $p<0.01$.")
+             "(verification pass in progress). The rule indicator is $\\theta$ (the constraint), "
+             "not the exit menu $L$; it varies only across states (0 of 160 within-government "
+             "cells), so these are cross-state descriptive associations (Stage I: institutional "
+             "validation), not a first stage and not causal estimates. "
+             "\\sig{*} $p<0.1$, \\sig{**} $p<0.05$, \\sig{***} $p<0.01$.")
 
 # ---- R1: first stage by entity class (from N_RESULTS.md, N1) -----------------
 n1 = {
@@ -67,7 +70,7 @@ n1 = {
 order = ["pooled", "school", "muni", "county", "special"]
 reg_table(
     "R1_firststage",
-    "The fifty-state first stage: strict rules and the voted share of borrowing",
+    "Institutional validation: the referendum rule ($\\theta$) and the voted share of borrowing (descriptive association)",
     "tab:r1",
     None,
     ["Pooled", "Schools", "Municipalities", "Counties", "Special districts"],
@@ -96,7 +99,7 @@ r2 = [
 ]
 reg_table(
     "R2_substitution",
-    "Substitution away from the voted instrument, and the quiet extensive margin",
+    "The substitution test ($R_j \\times \\theta$): composition adjusts, aggregate quantity does not",
     "tab:r2",
     [x[0] for x in r2],
     [x[1] for x in r2],
@@ -112,7 +115,11 @@ reg_table(
     "(5) Any issue = linear probability of any corpus new-money issue 2005--25; (6) ln issued = log survey "
     "long-term debt issued per capita 2005--23 (Government Finance Database). "
     "GP = general-purpose governments (municipalities and counties); schools are near-degenerate for the "
-    "non-chargeable outcome and dilute the pooled composition rows. " + BASE_NOTE)
+    "non-chargeable outcome and dilute the pooled composition rows. This is the substitution / "
+    "composition prediction (P1: substitution requires a feasible legal exit; P3: composition adjusts "
+    "before aggregate quantity): columns (1)--(4) move, the extensive-margin columns (5)--(6) do not. "
+    "The rule indicator is $\\theta$; the test is cross-state associational (Stage I), not the exit "
+    "match. " + BASE_NOTE)
 write_csv("R2_substitution",
           ["column", "outcome", "sample", "beta_strict", "se_cluster", "t", "n", "clusters"],
           [[i+1, x[0].replace("\\$", "$"), x[1], x[2][0], x[2][1], x[2][2], x[3], x[4]]
