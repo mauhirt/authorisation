@@ -32,6 +32,41 @@ R&R extension. Nothing below claims a continuous de jure $L$.
    `MANUSCRIPT.md` / `INTRO_ARGUMENT_HISTORY.md` have diverged from it. **STILL
    NEEDED** so the Part 3 section rewrites edit live text, not stale text.
 
+## Consolidated draft — BUILT (this pass)
+`paper/overleaf/main.tex` is now the consolidated reframed draft (13 sections,
+50pp, compiles clean, no undefined refs). Assembled by
+`paper/assemble_consolidated.py` from the repo manuscript of record plus the two
+authoritative uploads. What changed, against the directive/plan:
+- Inserted §2 "The Institution: Scope, Height, and Exit" (uploaded draft) and
+  §3 "Framework: A Constraint with Exit" (framework model), replacing the old
+  "The Argument" section. Sources kept at `paper/sections/`.
+- Preserved the old section's operation/persistence/stakes prose (and its
+  literature) as §4 "The requirement in operation"; dropped the "Four
+  hypotheses" subsection (superseded by P1--P3); moved its two electorate
+  readings (assembly-cost vs transmission/homevoter) into the new Electorates
+  section.
+- Split old §8 into §10 "Where the requirement binds: the exit fork" (P2,
+  $\{\tau_k\}$, read for ordering) and §11 "Electorates and the cost of consent"
+  (explicitly exploratory, $C_V(\theta,e_i)$, load-bearing for nothing).
+- Foregrounded the $+11.5$ out-of-design agreement in §8 ("two independent
+  designs, one answer"); left a back-reference in §12.
+- Compressed the three origins paragraphs (all citations retained; genealogy
+  table unchanged).
+- Added §13 Conclusion: three-point contribution + the who-pays close.
+- Added `\label` to every section and converted every hardcoded "Section N"
+  cross-reference to `\ref` so numbering stays correct.
+- Repackaged `paper/who_must_agree_overleaf.zip` from the consolidated,
+  self-contained `main.tex` (NOT via `build_overleaf.py`).
+
+Section order (resolved): 1 Intro, 2 Institution, 3 Framework, 4 Operation,
+5 Origins, 6 Data, 7 Who must agree, 8 Close elections, 9 After a failure,
+10 Exit fork, 11 Electorates, 12 Agenda, 13 Conclusion.
+
+WARNING: `build_overleaf.py` rebuilds `main.tex` from `MANUSCRIPT.md` /
+`INTRO_ARGUMENT_HISTORY.md`, which are STALE. Do NOT run it against this
+consolidated draft; edit `main.tex` directly (or re-run
+`assemble_consolidated.py` from a clean base).
+
 ## Part 3 section-by-section map
 
 | Directive item | Action | Status |
